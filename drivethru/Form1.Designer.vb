@@ -24,19 +24,24 @@ Partial Class Form1
     Private Sub InitializeComponent()
         btnOrder = New Button()
         btnLogin = New Button()
+        Button1 = New Button()
         SuspendLayout()
         ' 
         ' btnOrder
         ' 
-        btnOrder.Location = New Point(66, 182)
+        btnOrder.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnOrder.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnOrder.Location = New Point(84, 186)
         btnOrder.Name = "btnOrder"
-        btnOrder.Size = New Size(151, 68)
+        btnOrder.Size = New Size(128, 76)
         btnOrder.TabIndex = 0
         btnOrder.Text = "Order Here"
+        btnOrder.UseCompatibleTextRendering = True
         btnOrder.UseVisualStyleBackColor = True
         ' 
         ' btnLogin
         ' 
+        btnLogin.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnLogin.Location = New Point(216, 403)
         btnLogin.Name = "btnLogin"
         btnLogin.Size = New Size(71, 35)
@@ -44,15 +49,29 @@ Partial Class Form1
         btnLogin.Text = "login"
         btnLogin.UseVisualStyleBackColor = True
         ' 
+        ' Button1
+        ' 
+        Button1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Button1.Location = New Point(12, 404)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(112, 34)
+        Button1.TabIndex = 2
+        Button1.Text = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoSize = True
+        AutoSizeMode = AutoSizeMode.GrowAndShrink
         ClientSize = New Size(299, 450)
+        Controls.Add(Button1)
         Controls.Add(btnLogin)
         Controls.Add(btnOrder)
-        FormBorderStyle = FormBorderStyle.FixedDialog
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
         ResumeLayout(False)
     End Sub
@@ -66,7 +85,13 @@ Partial Class Form1
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        formLogin.Show()
+        FormLogin.Show()
         Me.Hide()
+    End Sub
+
+    Friend WithEvents Button1 As Button
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        testing.Show()
     End Sub
 End Class

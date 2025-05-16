@@ -26,11 +26,16 @@ Partial Class formOrder
         GroupBox1 = New GroupBox()
         Button2 = New Button()
         Button1 = New Button()
-        Button3 = New Button()
-        Button4 = New Button()
+        btnBurgers = New Button()
+        btnSides = New Button()
+        PictureBox2 = New PictureBox()
+        PictureBox1 = New PictureBox()
         FlowLayoutPanel1 = New FlowLayoutPanel()
         Panel1.SuspendLayout()
         GroupBox1.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        FlowLayoutPanel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -70,29 +75,52 @@ Partial Class formOrder
         Button1.Text = "Reset Order"
         Button1.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' btnBurgers
         ' 
-        Button3.Location = New Point(12, 12)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(112, 34)
-        Button3.TabIndex = 1
-        Button3.Text = "Burgers"
-        Button3.UseVisualStyleBackColor = True
+        btnBurgers.Location = New Point(12, 12)
+        btnBurgers.Name = "btnBurgers"
+        btnBurgers.Size = New Size(112, 34)
+        btnBurgers.TabIndex = 1
+        btnBurgers.Text = "Burgers"
+        btnBurgers.UseVisualStyleBackColor = True
         ' 
-        ' Button4
+        ' btnSides
         ' 
-        Button4.Location = New Point(130, 12)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(112, 34)
-        Button4.TabIndex = 2
-        Button4.Text = "Sides"
-        Button4.UseVisualStyleBackColor = True
+        btnSides.Location = New Point(130, 12)
+        btnSides.Name = "btnSides"
+        btnSides.Size = New Size(112, 34)
+        btnSides.TabIndex = 2
+        btnSides.Text = "Sides"
+        btnSides.UseVisualStyleBackColor = True
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = My.Resources.Resources.doublebeef
+        PictureBox2.Location = New Point(141, 3)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(128, 128)
+        PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox2.TabIndex = 1
+        PictureBox2.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources.cheeseburger
+        PictureBox1.Location = New Point(5, 5)
+        PictureBox1.Margin = New Padding(5)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(128, 128)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 0
+        PictureBox1.TabStop = False
         ' 
         ' FlowLayoutPanel1
         ' 
+        FlowLayoutPanel1.Controls.Add(PictureBox1)
+        FlowLayoutPanel1.Controls.Add(PictureBox2)
         FlowLayoutPanel1.Location = New Point(12, 52)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        FlowLayoutPanel1.Size = New Size(505, 439)
+        FlowLayoutPanel1.Size = New Size(503, 439)
         FlowLayoutPanel1.TabIndex = 3
         ' 
         ' formOrder
@@ -101,14 +129,17 @@ Partial Class formOrder
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(971, 503)
         Controls.Add(FlowLayoutPanel1)
-        Controls.Add(Button4)
-        Controls.Add(Button3)
+        Controls.Add(btnSides)
+        Controls.Add(btnBurgers)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Name = "formOrder"
         Text = "formOrder"
         Panel1.ResumeLayout(False)
         GroupBox1.ResumeLayout(False)
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        FlowLayoutPanel1.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -116,7 +147,9 @@ Partial Class formOrder
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnBurgers As Button
+    Friend WithEvents btnSides As Button
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 End Class
