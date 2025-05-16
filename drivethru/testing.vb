@@ -4,8 +4,7 @@
         TabPage2.Text = "Sides"
         TabPage3.Text = "Drinks"
         TabPage4.Text = "Combos"
-        Me.FormBorderStyle = FormBorderStyle.None
-        Me.WindowState = FormWindowState.Maximized
+
 
         ' panel as container
         Panel1.AutoScroll = True
@@ -35,6 +34,10 @@
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

@@ -46,6 +46,9 @@ Partial Class testing
         Button14 = New Button()
         ListView1 = New ListView()
         Label1 = New Label()
+        Label2 = New Label()
+        Label3 = New Label()
+        Label4 = New Label()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         Panel1.SuspendLayout()
@@ -54,6 +57,7 @@ Partial Class testing
         ' 
         ' TabControl1
         ' 
+        TabControl1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         TabControl1.Controls.Add(TabPage1)
         TabControl1.Controls.Add(TabPage2)
         TabControl1.Controls.Add(TabPage3)
@@ -250,24 +254,27 @@ Partial Class testing
         ' 
         ' ComboBox1
         ' 
+        ComboBox1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"Tunai", "Kartu Kredit", "Kartu Debit", "Amba Card"})
-        ComboBox1.Location = New Point(733, 325)
+        ComboBox1.Location = New Point(733, 377)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(182, 33)
         ComboBox1.TabIndex = 2
         ' 
         ' Button13
         ' 
-        Button13.Location = New Point(418, 364)
+        Button13.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        Button13.Location = New Point(418, 116)
         Button13.Name = "Button13"
-        Button13.Size = New Size(497, 51)
+        Button13.Size = New Size(497, 38)
         Button13.TabIndex = 3
         Button13.Text = "Button13"
         Button13.UseVisualStyleBackColor = True
         ' 
         ' Button14
         ' 
+        Button14.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         Button14.Location = New Point(418, 421)
         Button14.Name = "Button14"
         Button14.Size = New Size(497, 57)
@@ -277,7 +284,8 @@ Partial Class testing
         ' 
         ' ListView1
         ' 
-        ListView1.Location = New Point(418, 117)
+        ListView1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        ListView1.Location = New Point(418, 160)
         ListView1.Name = "ListView1"
         ListView1.Size = New Size(497, 202)
         ListView1.TabIndex = 5
@@ -285,28 +293,61 @@ Partial Class testing
         ' 
         ' Label1
         ' 
+        Label1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         Label1.AutoSize = True
-        Label1.Location = New Point(575, 328)
+        Label1.Location = New Point(575, 380)
         Label1.Name = "Label1"
         Label1.Size = New Size(152, 25)
         Label1.TabIndex = 6
         Label1.Text = "Payment Method:"
+        ' 
+        ' Label2
+        ' 
+        Label2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        Label2.AutoSize = True
+        Label2.Location = New Point(806, 11)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(49, 25)
+        Label2.TabIndex = 7
+        Label2.Text = "Total"
+        ' 
+        ' Label3
+        ' 
+        Label3.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        Label3.AutoSize = True
+        Label3.Location = New Point(819, 34)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(36, 25)
+        Label3.TabIndex = 8
+        Label3.Text = "Tax"
+        ' 
+        ' Label4
+        ' 
+        Label4.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        Label4.AutoSize = True
+        Label4.Location = New Point(775, 59)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(80, 25)
+        Label4.TabIndex = 9
+        Label4.Text = "SubTotal"
         ' 
         ' testing
         ' 
         AutoScaleDimensions = New SizeF(144F, 144F)
         AutoScaleMode = AutoScaleMode.Dpi
         ClientSize = New Size(927, 494)
+        Controls.Add(Label4)
+        Controls.Add(Label3)
+        Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(ListView1)
         Controls.Add(Button14)
         Controls.Add(Button13)
         Controls.Add(ComboBox1)
         Controls.Add(TabControl1)
-        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "testing"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "h"
+        Text = "testing"
         TabControl1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         Panel1.ResumeLayout(False)
@@ -339,4 +380,7 @@ Partial Class testing
     Friend WithEvents Button14 As Button
     Friend WithEvents ListView1 As ListView
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class
