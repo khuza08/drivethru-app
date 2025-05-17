@@ -23,9 +23,11 @@
         ' listview pembelian
         pembelian.View = View.Details
         pembelian.Columns.Add("Item", 150, HorizontalAlignment.Left)
-        pembelian.Columns.Add("Qty", 50, HorizontalAlignment.Center)
-        pembelian.Columns.Add("Price", 70, HorizontalAlignment.Right)
-        pembelian.Columns.Add("Total", 70, HorizontalAlignment.Right)
+        pembelian.Columns.Add("Qty", 60, HorizontalAlignment.Center)
+        pembelian.Columns.Add("Price", 120, HorizontalAlignment.Right)
+        pembelian.Columns.Add("Total", 160, HorizontalAlignment.Right)
+
+
     End Sub
 
     ' fungsi tambah item ke order

@@ -123,16 +123,16 @@ Partial Class testing
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
-        TableLayoutPanel1.Size = New Size(571, 2456)
+        TableLayoutPanel1.Size = New Size(545, 2456)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' Button12
         ' 
         Button12.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button12.AutoSize = True
-        Button12.Location = New Point(288, 2033)
+        Button12.Location = New Point(275, 2033)
         Button12.Name = "Button12"
-        Button12.Size = New Size(280, 400)
+        Button12.Size = New Size(267, 400)
         Button12.TabIndex = 11
         Button12.Text = "Button12"
         Button12.UseVisualStyleBackColor = True
@@ -143,7 +143,7 @@ Partial Class testing
         Button11.AutoSize = True
         Button11.Location = New Point(3, 2033)
         Button11.Name = "Button11"
-        Button11.Size = New Size(279, 400)
+        Button11.Size = New Size(266, 400)
         Button11.TabIndex = 10
         Button11.Text = "Button11"
         Button11.UseVisualStyleBackColor = True
@@ -152,9 +152,9 @@ Partial Class testing
         ' 
         Button10.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button10.AutoSize = True
-        Button10.Location = New Point(288, 1627)
+        Button10.Location = New Point(275, 1627)
         Button10.Name = "Button10"
-        Button10.Size = New Size(280, 400)
+        Button10.Size = New Size(267, 400)
         Button10.TabIndex = 9
         Button10.Text = "Button10"
         Button10.UseVisualStyleBackColor = True
@@ -165,7 +165,7 @@ Partial Class testing
         Button9.AutoSize = True
         Button9.Location = New Point(3, 1627)
         Button9.Name = "Button9"
-        Button9.Size = New Size(279, 400)
+        Button9.Size = New Size(266, 400)
         Button9.TabIndex = 8
         Button9.Text = "Button9"
         Button9.UseVisualStyleBackColor = True
@@ -174,9 +174,9 @@ Partial Class testing
         ' 
         Button8.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button8.AutoSize = True
-        Button8.Location = New Point(288, 1221)
+        Button8.Location = New Point(275, 1221)
         Button8.Name = "Button8"
-        Button8.Size = New Size(280, 400)
+        Button8.Size = New Size(267, 400)
         Button8.TabIndex = 7
         Button8.Text = "Button8"
         Button8.UseVisualStyleBackColor = True
@@ -187,7 +187,7 @@ Partial Class testing
         Button7.AutoSize = True
         Button7.Location = New Point(3, 1221)
         Button7.Name = "Button7"
-        Button7.Size = New Size(279, 400)
+        Button7.Size = New Size(266, 400)
         Button7.TabIndex = 6
         Button7.Text = "Button7"
         Button7.UseVisualStyleBackColor = True
@@ -196,9 +196,9 @@ Partial Class testing
         ' 
         Button6.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button6.AutoSize = True
-        Button6.Location = New Point(288, 815)
+        Button6.Location = New Point(275, 815)
         Button6.Name = "Button6"
-        Button6.Size = New Size(280, 400)
+        Button6.Size = New Size(267, 400)
         Button6.TabIndex = 5
         Button6.Text = "Button6"
         Button6.UseVisualStyleBackColor = True
@@ -209,7 +209,7 @@ Partial Class testing
         Button5.AutoSize = True
         Button5.Location = New Point(3, 815)
         Button5.Name = "Button5"
-        Button5.Size = New Size(279, 400)
+        Button5.Size = New Size(266, 400)
         Button5.TabIndex = 4
         Button5.Text = "Button5"
         Button5.UseVisualStyleBackColor = True
@@ -218,9 +218,9 @@ Partial Class testing
         ' 
         Button4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button4.AutoSize = True
-        Button4.Location = New Point(288, 409)
+        Button4.Location = New Point(275, 409)
         Button4.Name = "Button4"
-        Button4.Size = New Size(280, 400)
+        Button4.Size = New Size(267, 400)
         Button4.TabIndex = 3
         Button4.Text = "Button4"
         Button4.UseVisualStyleBackColor = True
@@ -231,7 +231,7 @@ Partial Class testing
         Button3.AutoSize = True
         Button3.Location = New Point(3, 409)
         Button3.Name = "Button3"
-        Button3.Size = New Size(279, 400)
+        Button3.Size = New Size(266, 400)
         Button3.TabIndex = 2
         Button3.Text = "Button3"
         Button3.UseVisualStyleBackColor = True
@@ -242,9 +242,9 @@ Partial Class testing
         doublebeef.AutoSize = True
         doublebeef.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         doublebeef.Image = My.Resources.Resources.doublebeef
-        doublebeef.Location = New Point(288, 3)
+        doublebeef.Location = New Point(275, 3)
         doublebeef.Name = "doublebeef"
-        doublebeef.Size = New Size(280, 400)
+        doublebeef.Size = New Size(267, 400)
         doublebeef.TabIndex = 1
         doublebeef.Text = "Double Beef $10"
         doublebeef.TextAlign = ContentAlignment.BottomCenter
@@ -258,7 +258,7 @@ Partial Class testing
         cheeseburger.Image = My.Resources.Resources.cheeseburger
         cheeseburger.Location = New Point(3, 3)
         cheeseburger.Name = "cheeseburger"
-        cheeseburger.Size = New Size(279, 400)
+        cheeseburger.Size = New Size(266, 400)
         cheeseburger.TabIndex = 0
         cheeseburger.Text = "Cheese Burger   $5.99"
         cheeseburger.TextAlign = ContentAlignment.BottomCenter
@@ -332,7 +332,7 @@ Partial Class testing
         ' 
         lbltotal.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         lbltotal.AutoSize = True
-        lbltotal.Location = New Point(62, 68)
+        lbltotal.Location = New Point(29, 68)
         lbltotal.Name = "lbltotal"
         lbltotal.Size = New Size(53, 35)
         lbltotal.TabIndex = 7
@@ -343,7 +343,7 @@ Partial Class testing
         ' 
         lbltax.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         lbltax.AutoSize = True
-        lbltax.Location = New Point(75, 34)
+        lbltax.Location = New Point(42, 34)
         lbltax.Name = "lbltax"
         lbltax.Size = New Size(40, 34)
         lbltax.TabIndex = 8
@@ -354,9 +354,9 @@ Partial Class testing
         ' 
         lblsubtotal.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         lblsubtotal.AutoSize = True
-        lblsubtotal.Location = New Point(31, 0)
+        lblsubtotal.Location = New Point(6, 0)
         lblsubtotal.Name = "lblsubtotal"
-        lblsubtotal.Size = New Size(84, 34)
+        lblsubtotal.Size = New Size(76, 34)
         lblsubtotal.TabIndex = 9
         lblsubtotal.Text = "SubTotal:"
         lblsubtotal.TextAlign = ContentAlignment.MiddleCenter
@@ -375,7 +375,7 @@ Partial Class testing
         ' 
         labelsubtotal.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         labelsubtotal.AutoSize = True
-        labelsubtotal.Location = New Point(178, 0)
+        labelsubtotal.Location = New Point(112, 0)
         labelsubtotal.Name = "labelsubtotal"
         labelsubtotal.Size = New Size(56, 34)
         labelsubtotal.TabIndex = 14
@@ -386,7 +386,7 @@ Partial Class testing
         ' 
         labeltax.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         labeltax.AutoSize = True
-        labeltax.Location = New Point(178, 34)
+        labeltax.Location = New Point(112, 34)
         labeltax.Name = "labeltax"
         labeltax.Size = New Size(56, 34)
         labeltax.TabIndex = 13
@@ -397,7 +397,7 @@ Partial Class testing
         ' 
         labeltotal.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         labeltotal.AutoSize = True
-        labeltotal.Location = New Point(178, 68)
+        labeltotal.Location = New Point(112, 68)
         labeltotal.Name = "labeltotal"
         labeltotal.Size = New Size(56, 35)
         labeltotal.TabIndex = 12
@@ -417,13 +417,13 @@ Partial Class testing
         TableLayoutPanel2.Controls.Add(lbltax, 0, 1)
         TableLayoutPanel2.Controls.Add(lblsubtotal, 0, 0)
         TableLayoutPanel2.Controls.Add(labeltax, 1, 1)
-        TableLayoutPanel2.Location = New Point(1570, 11)
+        TableLayoutPanel2.Location = New Point(1636, 11)
         TableLayoutPanel2.Name = "TableLayoutPanel2"
         TableLayoutPanel2.RowCount = 3
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
         TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
-        TableLayoutPanel2.Size = New Size(237, 103)
+        TableLayoutPanel2.Size = New Size(171, 103)
         TableLayoutPanel2.TabIndex = 15
         ' 
         ' testing
