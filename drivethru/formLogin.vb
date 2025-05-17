@@ -7,7 +7,7 @@ Public Class FormLogin
 
     Private Sub login_Click(sender As Object, e As EventArgs) Handles login.Click
 
-        Dim conn As New MySqlConnection("server=localhost;user id=root;password=;database=fastfood_db")
+        Dim conn As New MySqlConnection("server=localhost;user id=root;password=;database=db_drivethru")
         Dim cmd As New MySqlCommand("SELECT * FROM users WHERE username=@username AND password=@password", conn)
 
         cmd.Parameters.AddWithValue("@username", tbuser.Text)
