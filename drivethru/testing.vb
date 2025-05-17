@@ -1,98 +1,89 @@
 ﻿Public Class testing
     Private Sub testing_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' tampilan menu tab
         TabPage1.Text = "Burgers"
         TabPage2.Text = "Sides"
         TabPage3.Text = "Drinks"
         TabPage4.Text = "Combos"
 
+        ' fullscreen
         Me.FormBorderStyle = FormBorderStyle.None
         Me.WindowState = FormWindowState.Maximized
 
-        ' panel as container
+        ' panel kontainer
         Panel1.AutoScroll = True
         Panel1.Dock = DockStyle.Fill
-        Panel1.Padding = New Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0) ' agar scrollbar tidak menutupi isi
+        Panel1.Padding = New Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0)
 
-        ' TableLayoutPanel di dalam Panel
+        ' tabel layout menu
         TableLayoutPanel1.AutoSize = False
-        TableLayoutPanel1.Dock = DockStyle.Top ' atau Fill jika ingin memenuhi panel
+        TableLayoutPanel1.Dock = DockStyle.Top
         TableLayoutPanel1.GrowStyle = TableLayoutPanelGrowStyle.AddRows
 
-
-        ' Kode List view
+        ' listview pembelian
         pembelian.View = View.Details
         pembelian.Columns.Add("Item", 150, HorizontalAlignment.Left)
         pembelian.Columns.Add("Qty", 50, HorizontalAlignment.Center)
         pembelian.Columns.Add("Price", 70, HorizontalAlignment.Right)
         pembelian.Columns.Add("Total", 70, HorizontalAlignment.Right)
-
-
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub doublebeef_Click(sender As Object, e As EventArgs) Handles doublebeef.Click
-        Dim menuNama As String = "Double Beef"
-        Dim hargaSatuan As Integer = 10
+    ' fungsi tambah item ke order
+    Private Sub AddToOrder(itemName As String, price As Decimal)
         Dim found As Boolean = False
 
-        ' Cek apakah item sudah ada
         For Each item As ListViewItem In pembelian.Items
-            If item.Text = menuNama Then
-                ' Tambah qty
-                Dim qty As Integer = Integer.Parse(item.SubItems(1).Text)
-                qty += 1
+            If item.SubItems(0).Text = itemName Then
+                ' kalo tiem udah ada, tambah qty dan update total
+                Dim qty As Integer = Integer.Parse(item.SubItems(1).Text) + 1
                 item.SubItems(1).Text = qty.ToString()
-
-                ' Update total harga
-                Dim totalHarga As Integer = qty * hargaSatuan
-                item.SubItems(2).Text = "$" & totalHarga.ToString()
+                item.SubItems(3).Text = (qty * price).ToString("C2")
                 found = True
                 Exit For
             End If
         Next
 
-        ' Kalau belum ada, tambahkan item baru
+        ' kalo item belum ada, tambahin
         If Not found Then
-            Dim newItem As New ListViewItem(menuNama)
+            Dim newItem As New ListViewItem(itemName)
             newItem.SubItems.Add("1")
-            newItem.SubItems.Add("$" & hargaSatuan.ToString())
+            newItem.SubItems.Add(price.ToString("C2"))
+            newItem.SubItems.Add(price.ToString("C2"))
             pembelian.Items.Add(newItem)
-            tbtotal.Text = hargaSatuan
-
         End If
+
+        ' update total listview
+        UpdateTotal()
     End Sub
 
-    Private Sub pembelian_SelectedIndexChanged(sender As Object, e As EventArgs) Handles pembelian.SelectedIndexChanged
-        ' Setup kolom ListView jika belum
-        pembelian.View = View.Details
-        pembelian.Columns.Add("Menu", 150)
-        pembelian.Columns.Add("Price", 70)
+    ' update subtotal, taxx, total 
+    Private Sub UpdateTotal()
+        Dim subtotal As Decimal = 0
+
+        For Each item As ListViewItem In pembelian.Items
+            subtotal += Decimal.Parse(item.SubItems(3).Text, Globalization.NumberStyles.Currency)
+        Next
+
+        Dim tax As Decimal = subtotal * 0.1D
+        Dim total As Decimal = subtotal + tax
+
+        labelsubtotal.Text = subtotal.ToString("C2")
+        labeltax.Text = tax.ToString("C2")
+        labeltotal.Text = total.ToString("C2")
+
     End Sub
 
-    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+
+    Private Sub doublebeef_Click(sender As Object, e As EventArgs) Handles doublebeef.Click
+        AddToOrder("Double Beef", 10D)
+    End Sub
+
+    ' Reset pesanan
+    Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
         pembelian.Items.Clear()
+        labelsubtotal.Text = "$0.00"
+        labeltax.Text = "$0.00"
+        labeltotal.Text = "$0.00"
     End Sub
 
-    Private Sub Total_Click(sender As Object, e As EventArgs) Handles Total.Click
-
-    End Sub
-
-    Private Sub tbtotal_TextChanged(sender As Object, e As EventArgs) Handles tbtotal.TextChanged
-
-    End Sub
 End Class
