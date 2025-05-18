@@ -34,7 +34,9 @@ Partial Class formStruk
         Label3 = New Label()
         Label2 = New Label()
         Label1 = New Label()
+        TableLayoutPanel1 = New TableLayoutPanel()
         tblStruk.SuspendLayout()
+        TableLayoutPanel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' lvStruk
@@ -42,9 +44,9 @@ Partial Class formStruk
         lvStruk.BackColor = SystemColors.ButtonHighlight
         lvStruk.Columns.AddRange(New ColumnHeader() {Item, Qty, Price, Total})
         lvStruk.Font = New Font("Courier New", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        lvStruk.Location = New Point(12, 84)
+        lvStruk.Location = New Point(3, 3)
         lvStruk.Name = "lvStruk"
-        lvStruk.Size = New Size(502, 146)
+        lvStruk.Size = New Size(502, 116)
         lvStruk.TabIndex = 0
         lvStruk.UseCompatibleStateImageBehavior = False
         ' 
@@ -100,7 +102,7 @@ Partial Class formStruk
         tblStruk.Controls.Add(Label1, 0, 0)
         tblStruk.Controls.Add(lblTotal, 1, 2)
         tblStruk.Controls.Add(lblSubtotal, 1, 0)
-        tblStruk.Location = New Point(12, 249)
+        tblStruk.Location = New Point(3, 125)
         tblStruk.Name = "tblStruk"
         tblStruk.RowCount = 3
         tblStruk.RowStyles.Add(New RowStyle())
@@ -139,19 +141,36 @@ Partial Class formStruk
         Label1.Text = "SubTotal :"
         Label1.TextAlign = ContentAlignment.MiddleRight
         ' 
+        ' TableLayoutPanel1
+        ' 
+        TableLayoutPanel1.AutoSize = True
+        TableLayoutPanel1.ColumnCount = 1
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel1.Controls.Add(lvStruk, 0, 0)
+        TableLayoutPanel1.Controls.Add(tblStruk, 0, 1)
+        TableLayoutPanel1.Dock = DockStyle.Fill
+        TableLayoutPanel1.Location = New Point(0, 0)
+        TableLayoutPanel1.Name = "TableLayoutPanel1"
+        TableLayoutPanel1.RowCount = 2
+        TableLayoutPanel1.RowStyles.Add(New RowStyle())
+        TableLayoutPanel1.RowStyles.Add(New RowStyle())
+        TableLayoutPanel1.Size = New Size(526, 450)
+        TableLayoutPanel1.TabIndex = 5
+        ' 
         ' formStruk
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(526, 450)
-        Controls.Add(tblStruk)
-        Controls.Add(lvStruk)
+        Controls.Add(TableLayoutPanel1)
         Name = "formStruk"
         Text = "formStruk"
         tblStruk.ResumeLayout(False)
         tblStruk.PerformLayout()
+        TableLayoutPanel1.ResumeLayout(False)
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents lvStruk As ListView
@@ -166,4 +185,5 @@ Partial Class formStruk
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
 End Class
