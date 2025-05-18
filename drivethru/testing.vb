@@ -9,7 +9,7 @@
         AturListViewPembelian()
     End Sub
 
-    ' konfigurasi ui
+    ' konfigurasi ui (use code/object grouping for better efficiency)
     Private Sub AturTabMenu()
         TabPage1.Text = "Burgers"
         TabPage2.Text = "Sides"
@@ -86,9 +86,13 @@
         labeltotal.Text = total.ToString("C2")
     End Sub
 
-    ' event handler
+    ' tombol items (event handler)
     Private Sub doublebeef_Click(sender As Object, e As EventArgs) Handles doublebeef.Click
         AddToOrder("Double Beef", 10D)
+    End Sub
+
+    Private Sub cheeseburger_Click(sender As Object, e As EventArgs) Handles cheeseburger.Click
+        AddToOrder("Cheese Burger", 5.99D)
     End Sub
 
     Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
@@ -96,6 +100,13 @@
         labelsubtotal.Text = "$0.00"
         labeltax.Text = "$0.00"
         labeltotal.Text = "$0.00"
+    End Sub
+
+
+    Private Sub btnorder_Click(sender As Object, e As EventArgs) Handles btnorder.Click
+        Dim formStruk As New formStruk()
+        formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text)
+        formStruk.ShowDialog()
     End Sub
 
 End Class
