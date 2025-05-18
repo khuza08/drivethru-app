@@ -88,11 +88,23 @@
 
     ' tombol items (event handler)
     Private Sub doublebeef_Click(sender As Object, e As EventArgs) Handles doublebeef.Click
-        AddToOrder("Double Beef", 10D)
+        AddToOrder("Double Beef", 14D)
     End Sub
 
     Private Sub cheeseburger_Click(sender As Object, e As EventArgs) Handles cheeseburger.Click
-        AddToOrder("Cheese Burger", 5.99D)
+        AddToOrder("Cheese Burger", 5D)
+    End Sub
+    Private Sub chickenburger_Click(sender As Object, e As EventArgs) Handles chickenburger.Click
+        AddToOrder("Chicken Burger", 11D)
+    End Sub
+    Private Sub sandwich_Click(sender As Object, e As EventArgs) Handles sandwich.Click
+        AddToOrder("Classic Sandwich", 4D)
+    End Sub
+    Private Sub fries_Click(sender As Object, e As EventArgs) Handles fries.Click
+        AddToOrder("Fries", 1D)
+    End Sub
+    Private Sub onionring_Click(sender As Object, e As EventArgs) Handles onionring.Click
+        AddToOrder("Fries", 1D)
     End Sub
 
     Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
@@ -105,8 +117,32 @@
 
     Private Sub btnorder_Click(sender As Object, e As EventArgs) Handles btnorder.Click
         Dim formStruk As New formStruk()
-        formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text)
-        formStruk.ShowDialog()
+
+        ' Cek apakah ada item yang dipesan
+        If pembelian.Items.Count = 0 Then
+            MessageBox.Show("Belum ada pesanan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        ' Cek apakah payment method sudah dipilih
+        If paymentbox.SelectedIndex = -1 Then
+            MessageBox.Show("Silakan pilih metode pembayaran terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        ' Konfirmasi final
+        Dim result As DialogResult = MessageBox.Show("Yakin pesanan sudah benar?", "Konfirmasi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+
+        If result = DialogResult.OK Then
+            ' cetak struk atau pindah ke formStruk
+            Me.Hide()
+            formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text)
+            formStruk.ShowDialog()
+
+        Else
+            ' do nothing
+        End If
+
     End Sub
 
 End Class

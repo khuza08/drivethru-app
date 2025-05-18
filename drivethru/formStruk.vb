@@ -10,7 +10,11 @@
         lvStruk.Columns.Add("Total", 100, HorizontalAlignment.Right)
         lvStruk.BackColor = Me.BackColor
         lvStruk.BorderStyle = BorderStyle.None
-        Me.Size = New Size(465, 400)   ' ukuran formStruk 
+
+        ' form var
+        Me.Size = New Size(465, 666)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
 
     End Sub
 
