@@ -514,6 +514,7 @@ Partial Class formStruk
         ClientSize = New Size(845, 746)
         Controls.Add(TableLayoutPanel1)
         Name = "formStruk"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "formStruk"
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()

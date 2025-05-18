@@ -34,33 +34,17 @@ Partial Class testing
         TabPage2 = New TabPage()
         Panel2 = New Panel()
         tblsides = New TableLayoutPanel()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button14 = New Button()
-        Button15 = New Button()
-        Button16 = New Button()
-        Button17 = New Button()
-        Button18 = New Button()
-        Button19 = New Button()
-        Button20 = New Button()
-        Button21 = New Button()
+        nugget = New Button()
+        pie = New Button()
         onionring = New Button()
         fries = New Button()
         TabPage3 = New TabPage()
         Panel3 = New Panel()
         tbldrinks = New TableLayoutPanel()
-        Button24 = New Button()
-        Button25 = New Button()
-        Button26 = New Button()
-        Button27 = New Button()
-        Button28 = New Button()
-        Button29 = New Button()
-        Button30 = New Button()
-        Button31 = New Button()
-        Button32 = New Button()
-        Button33 = New Button()
-        Button34 = New Button()
-        Button35 = New Button()
+        americano = New Button()
+        matcha = New Button()
+        mcflurry = New Button()
+        cola = New Button()
         TabPage4 = New TabPage()
         Panel4 = New Panel()
         tblcombos = New TableLayoutPanel()
@@ -158,7 +142,7 @@ Partial Class testing
         tblburgers.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblburgers.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblburgers.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        tblburgers.Size = New Size(805, 2456)
+        tblburgers.Size = New Size(597, 2456)
         tblburgers.TabIndex = 0
         ' 
         ' sandwich
@@ -168,11 +152,11 @@ Partial Class testing
         sandwich.BackgroundImage = CType(resources.GetObject("sandwich.BackgroundImage"), Image)
         sandwich.BackgroundImageLayout = ImageLayout.Zoom
         sandwich.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        sandwich.Location = New Point(405, 409)
+        sandwich.Location = New Point(301, 409)
         sandwich.Name = "sandwich"
-        sandwich.Size = New Size(397, 400)
+        sandwich.Size = New Size(293, 400)
         sandwich.TabIndex = 3
-        sandwich.Text = "Classic Sandwich     Rp4.000"
+        sandwich.Text = "Classic Sandwich Rp4.000"
         sandwich.TextAlign = ContentAlignment.BottomCenter
         sandwich.UseVisualStyleBackColor = True
         ' 
@@ -185,9 +169,9 @@ Partial Class testing
         chickenburger.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         chickenburger.Location = New Point(3, 409)
         chickenburger.Name = "chickenburger"
-        chickenburger.Size = New Size(396, 400)
+        chickenburger.Size = New Size(292, 400)
         chickenburger.TabIndex = 2
-        chickenburger.Text = "Chicken Burger      Rp11.000"
+        chickenburger.Text = "Chicken Burger Rp11.000"
         chickenburger.TextAlign = ContentAlignment.BottomCenter
         chickenburger.UseVisualStyleBackColor = True
         ' 
@@ -197,11 +181,11 @@ Partial Class testing
         doublebeef.AutoSize = True
         doublebeef.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         doublebeef.Image = CType(resources.GetObject("doublebeef.Image"), Image)
-        doublebeef.Location = New Point(405, 3)
+        doublebeef.Location = New Point(301, 3)
         doublebeef.Name = "doublebeef"
-        doublebeef.Size = New Size(397, 400)
+        doublebeef.Size = New Size(293, 400)
         doublebeef.TabIndex = 1
-        doublebeef.Text = "Double Beef          Rp14.000"
+        doublebeef.Text = "Double Beef Rp14.000"
         doublebeef.TextAlign = ContentAlignment.BottomCenter
         doublebeef.UseVisualStyleBackColor = True
         ' 
@@ -213,9 +197,9 @@ Partial Class testing
         cheeseburger.Image = My.Resources.Resources.cheeseburger1
         cheeseburger.Location = New Point(3, 3)
         cheeseburger.Name = "cheeseburger"
-        cheeseburger.Size = New Size(396, 400)
+        cheeseburger.Size = New Size(292, 400)
         cheeseburger.TabIndex = 0
-        cheeseburger.Text = "Cheese Burger         Rp5.000"
+        cheeseburger.Text = "Cheese Burger Rp5.000"
         cheeseburger.TextAlign = ContentAlignment.BottomCenter
         cheeseburger.UseVisualStyleBackColor = True
         ' 
@@ -244,16 +228,8 @@ Partial Class testing
         tblsides.ColumnCount = 2
         tblsides.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         tblsides.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        tblsides.Controls.Add(Button1, 1, 5)
-        tblsides.Controls.Add(Button2, 0, 5)
-        tblsides.Controls.Add(Button14, 1, 4)
-        tblsides.Controls.Add(Button15, 0, 4)
-        tblsides.Controls.Add(Button16, 1, 3)
-        tblsides.Controls.Add(Button17, 0, 3)
-        tblsides.Controls.Add(Button18, 1, 2)
-        tblsides.Controls.Add(Button19, 0, 2)
-        tblsides.Controls.Add(Button20, 1, 1)
-        tblsides.Controls.Add(Button21, 0, 1)
+        tblsides.Controls.Add(nugget, 1, 1)
+        tblsides.Controls.Add(pie, 0, 1)
         tblsides.Controls.Add(onionring, 1, 0)
         tblsides.Controls.Add(fries, 0, 0)
         tblsides.Location = New Point(3, 6)
@@ -266,118 +242,38 @@ Partial Class testing
         tblsides.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblsides.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblsides.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        tblsides.Size = New Size(805, 2456)
+        tblsides.Size = New Size(597, 2456)
         tblsides.TabIndex = 0
         ' 
-        ' Button1
+        ' nugget
         ' 
-        Button1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button1.AutoSize = True
-        Button1.Location = New Point(405, 2033)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(397, 400)
-        Button1.TabIndex = 11
-        Button1.Text = "Button1"
-        Button1.UseVisualStyleBackColor = True
+        nugget.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        nugget.AutoSize = True
+        nugget.BackgroundImage = CType(resources.GetObject("nugget.BackgroundImage"), Image)
+        nugget.BackgroundImageLayout = ImageLayout.Zoom
+        nugget.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        nugget.Location = New Point(301, 409)
+        nugget.Name = "nugget"
+        nugget.Size = New Size(293, 400)
+        nugget.TabIndex = 3
+        nugget.Text = "Amba Nugget Rp27.000"
+        nugget.TextAlign = ContentAlignment.BottomCenter
+        nugget.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' pie
         ' 
-        Button2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button2.AutoSize = True
-        Button2.Location = New Point(3, 2033)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(396, 400)
-        Button2.TabIndex = 10
-        Button2.Text = "Button2"
-        Button2.UseVisualStyleBackColor = True
-        ' 
-        ' Button14
-        ' 
-        Button14.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button14.AutoSize = True
-        Button14.Location = New Point(405, 1627)
-        Button14.Name = "Button14"
-        Button14.Size = New Size(397, 400)
-        Button14.TabIndex = 9
-        Button14.Text = "Button14"
-        Button14.UseVisualStyleBackColor = True
-        ' 
-        ' Button15
-        ' 
-        Button15.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button15.AutoSize = True
-        Button15.Location = New Point(3, 1627)
-        Button15.Name = "Button15"
-        Button15.Size = New Size(396, 400)
-        Button15.TabIndex = 8
-        Button15.Text = "Button15"
-        Button15.UseVisualStyleBackColor = True
-        ' 
-        ' Button16
-        ' 
-        Button16.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button16.AutoSize = True
-        Button16.Location = New Point(405, 1221)
-        Button16.Name = "Button16"
-        Button16.Size = New Size(397, 400)
-        Button16.TabIndex = 7
-        Button16.Text = "Button16"
-        Button16.UseVisualStyleBackColor = True
-        ' 
-        ' Button17
-        ' 
-        Button17.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button17.AutoSize = True
-        Button17.Location = New Point(3, 1221)
-        Button17.Name = "Button17"
-        Button17.Size = New Size(396, 400)
-        Button17.TabIndex = 6
-        Button17.Text = "Button17"
-        Button17.UseVisualStyleBackColor = True
-        ' 
-        ' Button18
-        ' 
-        Button18.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button18.AutoSize = True
-        Button18.Location = New Point(405, 815)
-        Button18.Name = "Button18"
-        Button18.Size = New Size(397, 400)
-        Button18.TabIndex = 5
-        Button18.Text = "Button18"
-        Button18.UseVisualStyleBackColor = True
-        ' 
-        ' Button19
-        ' 
-        Button19.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button19.AutoSize = True
-        Button19.Location = New Point(3, 815)
-        Button19.Name = "Button19"
-        Button19.Size = New Size(396, 400)
-        Button19.TabIndex = 4
-        Button19.Text = "Button19"
-        Button19.UseVisualStyleBackColor = True
-        ' 
-        ' Button20
-        ' 
-        Button20.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button20.AutoSize = True
-        Button20.Location = New Point(405, 409)
-        Button20.Name = "Button20"
-        Button20.Size = New Size(397, 400)
-        Button20.TabIndex = 3
-        Button20.Text = "Button20"
-        Button20.UseVisualStyleBackColor = True
-        ' 
-        ' Button21
-        ' 
-        Button21.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button21.AutoSize = True
-        Button21.Location = New Point(3, 409)
-        Button21.Name = "Button21"
-        Button21.Size = New Size(396, 400)
-        Button21.TabIndex = 2
-        Button21.Text = "Button21"
-        Button21.UseVisualStyleBackColor = True
+        pie.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        pie.AutoSize = True
+        pie.BackgroundImage = CType(resources.GetObject("pie.BackgroundImage"), Image)
+        pie.BackgroundImageLayout = ImageLayout.Zoom
+        pie.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        pie.Location = New Point(3, 409)
+        pie.Name = "pie"
+        pie.Size = New Size(292, 400)
+        pie.TabIndex = 2
+        pie.Text = "Amba Pie Rp13.000"
+        pie.TextAlign = ContentAlignment.BottomCenter
+        pie.UseVisualStyleBackColor = True
         ' 
         ' onionring
         ' 
@@ -386,11 +282,11 @@ Partial Class testing
         onionring.BackgroundImage = CType(resources.GetObject("onionring.BackgroundImage"), Image)
         onionring.BackgroundImageLayout = ImageLayout.Zoom
         onionring.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        onionring.Location = New Point(405, 3)
+        onionring.Location = New Point(301, 3)
         onionring.Name = "onionring"
-        onionring.Size = New Size(397, 400)
+        onionring.Size = New Size(293, 400)
         onionring.TabIndex = 1
-        onionring.Text = "Onion Ring              Rp1.000"
+        onionring.Text = "Amba Ring Rp1.000"
         onionring.TextAlign = ContentAlignment.BottomCenter
         onionring.UseVisualStyleBackColor = True
         ' 
@@ -403,9 +299,9 @@ Partial Class testing
         fries.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         fries.Location = New Point(3, 3)
         fries.Name = "fries"
-        fries.Size = New Size(396, 400)
+        fries.Size = New Size(292, 400)
         fries.TabIndex = 0
-        fries.Text = "Fries                         Rp1.000"
+        fries.Text = "Amba Fries Rp1.000"
         fries.TextAlign = ContentAlignment.BottomCenter
         fries.UseVisualStyleBackColor = True
         ' 
@@ -434,18 +330,10 @@ Partial Class testing
         tbldrinks.ColumnCount = 2
         tbldrinks.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         tbldrinks.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        tbldrinks.Controls.Add(Button24, 1, 5)
-        tbldrinks.Controls.Add(Button25, 0, 5)
-        tbldrinks.Controls.Add(Button26, 1, 4)
-        tbldrinks.Controls.Add(Button27, 0, 4)
-        tbldrinks.Controls.Add(Button28, 1, 3)
-        tbldrinks.Controls.Add(Button29, 0, 3)
-        tbldrinks.Controls.Add(Button30, 1, 2)
-        tbldrinks.Controls.Add(Button31, 0, 2)
-        tbldrinks.Controls.Add(Button32, 1, 1)
-        tbldrinks.Controls.Add(Button33, 0, 1)
-        tbldrinks.Controls.Add(Button34, 1, 0)
-        tbldrinks.Controls.Add(Button35, 0, 0)
+        tbldrinks.Controls.Add(americano, 1, 1)
+        tbldrinks.Controls.Add(matcha, 0, 1)
+        tbldrinks.Controls.Add(mcflurry, 1, 0)
+        tbldrinks.Controls.Add(cola, 0, 0)
         tbldrinks.Location = New Point(3, 6)
         tbldrinks.Name = "tbldrinks"
         tbldrinks.RowCount = 7
@@ -456,145 +344,68 @@ Partial Class testing
         tbldrinks.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tbldrinks.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tbldrinks.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        tbldrinks.Size = New Size(1962, 2456)
+        tbldrinks.Size = New Size(597, 2456)
         tbldrinks.TabIndex = 0
         ' 
-        ' Button24
+        ' americano
         ' 
-        Button24.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button24.AutoSize = True
-        Button24.Location = New Point(984, 2033)
-        Button24.Name = "Button24"
-        Button24.Size = New Size(975, 400)
-        Button24.TabIndex = 11
-        Button24.Text = "Button24"
-        Button24.UseVisualStyleBackColor = True
+        americano.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        americano.AutoSize = True
+        americano.BackgroundImage = CType(resources.GetObject("americano.BackgroundImage"), Image)
+        americano.BackgroundImageLayout = ImageLayout.Zoom
+        americano.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        americano.Location = New Point(301, 409)
+        americano.Name = "americano"
+        americano.Size = New Size(293, 400)
+        americano.TabIndex = 3
+        americano.Text = "Americano Ireng Rp10.000"
+        americano.TextAlign = ContentAlignment.BottomCenter
+        americano.UseVisualStyleBackColor = True
         ' 
-        ' Button25
+        ' matcha
         ' 
-        Button25.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button25.AutoSize = True
-        Button25.Location = New Point(3, 2033)
-        Button25.Name = "Button25"
-        Button25.Size = New Size(975, 400)
-        Button25.TabIndex = 10
-        Button25.Text = "Button25"
-        Button25.UseVisualStyleBackColor = True
+        matcha.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        matcha.AutoSize = True
+        matcha.BackgroundImage = CType(resources.GetObject("matcha.BackgroundImage"), Image)
+        matcha.BackgroundImageLayout = ImageLayout.Zoom
+        matcha.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        matcha.Location = New Point(3, 409)
+        matcha.Name = "matcha"
+        matcha.Size = New Size(292, 400)
+        matcha.TabIndex = 2
+        matcha.Text = "Matchaa Latte Rp15.000"
+        matcha.TextAlign = ContentAlignment.BottomCenter
+        matcha.UseVisualStyleBackColor = True
         ' 
-        ' Button26
+        ' mcflurry
         ' 
-        Button26.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button26.AutoSize = True
-        Button26.Location = New Point(984, 1627)
-        Button26.Name = "Button26"
-        Button26.Size = New Size(975, 400)
-        Button26.TabIndex = 9
-        Button26.Text = "Button26"
-        Button26.UseVisualStyleBackColor = True
+        mcflurry.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        mcflurry.AutoSize = True
+        mcflurry.BackgroundImage = CType(resources.GetObject("mcflurry.BackgroundImage"), Image)
+        mcflurry.BackgroundImageLayout = ImageLayout.Zoom
+        mcflurry.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        mcflurry.Location = New Point(301, 3)
+        mcflurry.Name = "mcflurry"
+        mcflurry.Size = New Size(293, 400)
+        mcflurry.TabIndex = 1
+        mcflurry.Text = "McFlurry Rp14.000"
+        mcflurry.TextAlign = ContentAlignment.BottomCenter
+        mcflurry.UseVisualStyleBackColor = True
         ' 
-        ' Button27
+        ' cola
         ' 
-        Button27.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button27.AutoSize = True
-        Button27.Location = New Point(3, 1627)
-        Button27.Name = "Button27"
-        Button27.Size = New Size(975, 400)
-        Button27.TabIndex = 8
-        Button27.Text = "Button27"
-        Button27.UseVisualStyleBackColor = True
-        ' 
-        ' Button28
-        ' 
-        Button28.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button28.AutoSize = True
-        Button28.Location = New Point(984, 1221)
-        Button28.Name = "Button28"
-        Button28.Size = New Size(975, 400)
-        Button28.TabIndex = 7
-        Button28.Text = "Button28"
-        Button28.UseVisualStyleBackColor = True
-        ' 
-        ' Button29
-        ' 
-        Button29.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button29.AutoSize = True
-        Button29.Location = New Point(3, 1221)
-        Button29.Name = "Button29"
-        Button29.Size = New Size(975, 400)
-        Button29.TabIndex = 6
-        Button29.Text = "Button29"
-        Button29.UseVisualStyleBackColor = True
-        ' 
-        ' Button30
-        ' 
-        Button30.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button30.AutoSize = True
-        Button30.Location = New Point(984, 815)
-        Button30.Name = "Button30"
-        Button30.Size = New Size(975, 400)
-        Button30.TabIndex = 5
-        Button30.Text = "Button30"
-        Button30.UseVisualStyleBackColor = True
-        ' 
-        ' Button31
-        ' 
-        Button31.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button31.AutoSize = True
-        Button31.Location = New Point(3, 815)
-        Button31.Name = "Button31"
-        Button31.Size = New Size(975, 400)
-        Button31.TabIndex = 4
-        Button31.Text = "Button31"
-        Button31.UseVisualStyleBackColor = True
-        ' 
-        ' Button32
-        ' 
-        Button32.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button32.AutoSize = True
-        Button32.Location = New Point(984, 409)
-        Button32.Name = "Button32"
-        Button32.Size = New Size(975, 400)
-        Button32.TabIndex = 3
-        Button32.Text = "Button32"
-        Button32.UseVisualStyleBackColor = True
-        ' 
-        ' Button33
-        ' 
-        Button33.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button33.AutoSize = True
-        Button33.Location = New Point(3, 409)
-        Button33.Name = "Button33"
-        Button33.Size = New Size(975, 400)
-        Button33.TabIndex = 2
-        Button33.Text = "Button33"
-        Button33.UseVisualStyleBackColor = True
-        ' 
-        ' Button34
-        ' 
-        Button34.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button34.AutoSize = True
-        Button34.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button34.Image = My.Resources.Resources.doublebeef
-        Button34.Location = New Point(984, 3)
-        Button34.Name = "Button34"
-        Button34.Size = New Size(975, 400)
-        Button34.TabIndex = 1
-        Button34.Text = "Double Beef $10"
-        Button34.TextAlign = ContentAlignment.BottomCenter
-        Button34.UseVisualStyleBackColor = True
-        ' 
-        ' Button35
-        ' 
-        Button35.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button35.AutoSize = True
-        Button35.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button35.Location = New Point(3, 3)
-        Button35.Name = "Button35"
-        Button35.Size = New Size(975, 400)
-        Button35.TabIndex = 0
-        Button35.Text = "Cheese Burger   $5.99"
-        Button35.TextAlign = ContentAlignment.BottomCenter
-        Button35.UseVisualStyleBackColor = True
+        cola.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        cola.AutoSize = True
+        cola.BackgroundImage = CType(resources.GetObject("cola.BackgroundImage"), Image)
+        cola.BackgroundImageLayout = ImageLayout.Zoom
+        cola.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cola.Location = New Point(3, 3)
+        cola.Name = "cola"
+        cola.Size = New Size(292, 400)
+        cola.TabIndex = 0
+        cola.Text = "Coca Cola Rp10.000"
+        cola.TextAlign = ContentAlignment.BottomCenter
+        cola.UseVisualStyleBackColor = True
         ' 
         ' TabPage4
         ' 
@@ -643,16 +454,16 @@ Partial Class testing
         tblcombos.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblcombos.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblcombos.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        tblcombos.Size = New Size(3119, 2456)
+        tblcombos.Size = New Size(675, 2456)
         tblcombos.TabIndex = 0
         ' 
         ' Button36
         ' 
         Button36.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button36.AutoSize = True
-        Button36.Location = New Point(1562, 2033)
+        Button36.Location = New Point(340, 2033)
         Button36.Name = "Button36"
-        Button36.Size = New Size(1554, 400)
+        Button36.Size = New Size(332, 400)
         Button36.TabIndex = 11
         Button36.Text = "Button36"
         Button36.UseVisualStyleBackColor = True
@@ -663,7 +474,7 @@ Partial Class testing
         Button37.AutoSize = True
         Button37.Location = New Point(3, 2033)
         Button37.Name = "Button37"
-        Button37.Size = New Size(1553, 400)
+        Button37.Size = New Size(331, 400)
         Button37.TabIndex = 10
         Button37.Text = "Button37"
         Button37.UseVisualStyleBackColor = True
@@ -672,9 +483,9 @@ Partial Class testing
         ' 
         Button38.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button38.AutoSize = True
-        Button38.Location = New Point(1562, 1627)
+        Button38.Location = New Point(340, 1627)
         Button38.Name = "Button38"
-        Button38.Size = New Size(1554, 400)
+        Button38.Size = New Size(332, 400)
         Button38.TabIndex = 9
         Button38.Text = "Button38"
         Button38.UseVisualStyleBackColor = True
@@ -685,7 +496,7 @@ Partial Class testing
         Button39.AutoSize = True
         Button39.Location = New Point(3, 1627)
         Button39.Name = "Button39"
-        Button39.Size = New Size(1553, 400)
+        Button39.Size = New Size(331, 400)
         Button39.TabIndex = 8
         Button39.Text = "Button39"
         Button39.UseVisualStyleBackColor = True
@@ -694,9 +505,9 @@ Partial Class testing
         ' 
         Button40.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button40.AutoSize = True
-        Button40.Location = New Point(1562, 1221)
+        Button40.Location = New Point(340, 1221)
         Button40.Name = "Button40"
-        Button40.Size = New Size(1554, 400)
+        Button40.Size = New Size(332, 400)
         Button40.TabIndex = 7
         Button40.Text = "Button40"
         Button40.UseVisualStyleBackColor = True
@@ -707,7 +518,7 @@ Partial Class testing
         Button41.AutoSize = True
         Button41.Location = New Point(3, 1221)
         Button41.Name = "Button41"
-        Button41.Size = New Size(1553, 400)
+        Button41.Size = New Size(331, 400)
         Button41.TabIndex = 6
         Button41.Text = "Button41"
         Button41.UseVisualStyleBackColor = True
@@ -716,9 +527,9 @@ Partial Class testing
         ' 
         Button42.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button42.AutoSize = True
-        Button42.Location = New Point(1562, 815)
+        Button42.Location = New Point(340, 815)
         Button42.Name = "Button42"
-        Button42.Size = New Size(1554, 400)
+        Button42.Size = New Size(332, 400)
         Button42.TabIndex = 5
         Button42.Text = "Button42"
         Button42.UseVisualStyleBackColor = True
@@ -729,7 +540,7 @@ Partial Class testing
         Button43.AutoSize = True
         Button43.Location = New Point(3, 815)
         Button43.Name = "Button43"
-        Button43.Size = New Size(1553, 400)
+        Button43.Size = New Size(331, 400)
         Button43.TabIndex = 4
         Button43.Text = "Button43"
         Button43.UseVisualStyleBackColor = True
@@ -738,9 +549,9 @@ Partial Class testing
         ' 
         Button44.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Button44.AutoSize = True
-        Button44.Location = New Point(1562, 409)
+        Button44.Location = New Point(340, 409)
         Button44.Name = "Button44"
-        Button44.Size = New Size(1554, 400)
+        Button44.Size = New Size(332, 400)
         Button44.TabIndex = 3
         Button44.Text = "Button44"
         Button44.UseVisualStyleBackColor = True
@@ -751,7 +562,7 @@ Partial Class testing
         Button45.AutoSize = True
         Button45.Location = New Point(3, 409)
         Button45.Name = "Button45"
-        Button45.Size = New Size(1553, 400)
+        Button45.Size = New Size(331, 400)
         Button45.TabIndex = 2
         Button45.Text = "Button45"
         Button45.UseVisualStyleBackColor = True
@@ -762,9 +573,9 @@ Partial Class testing
         Button46.AutoSize = True
         Button46.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button46.Image = My.Resources.Resources.doublebeef
-        Button46.Location = New Point(1562, 3)
+        Button46.Location = New Point(340, 3)
         Button46.Name = "Button46"
-        Button46.Size = New Size(1554, 400)
+        Button46.Size = New Size(332, 400)
         Button46.TabIndex = 1
         Button46.Text = "Double Beef $10"
         Button46.TextAlign = ContentAlignment.BottomCenter
@@ -777,7 +588,7 @@ Partial Class testing
         Button47.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button47.Location = New Point(3, 3)
         Button47.Name = "Button47"
-        Button47.Size = New Size(1553, 400)
+        Button47.Size = New Size(331, 400)
         Button47.TabIndex = 0
         Button47.Text = "Cheese Burger   $5.99"
         Button47.TextAlign = ContentAlignment.BottomCenter
@@ -983,33 +794,13 @@ Partial Class testing
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents tblsides As TableLayoutPanel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button14 As Button
-    Friend WithEvents Button15 As Button
-    Friend WithEvents Button16 As Button
-    Friend WithEvents Button17 As Button
-    Friend WithEvents Button18 As Button
-    Friend WithEvents Button19 As Button
-    Friend WithEvents Button20 As Button
-    Friend WithEvents Button21 As Button
     Friend WithEvents onionring As Button
     Friend WithEvents fries As Button
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Panel3 As Panel
     Friend WithEvents tbldrinks As TableLayoutPanel
-    Friend WithEvents Button24 As Button
-    Friend WithEvents Button25 As Button
-    Friend WithEvents Button26 As Button
-    Friend WithEvents Button27 As Button
-    Friend WithEvents Button28 As Button
-    Friend WithEvents Button29 As Button
-    Friend WithEvents Button30 As Button
-    Friend WithEvents Button31 As Button
-    Friend WithEvents Button32 As Button
-    Friend WithEvents Button33 As Button
-    Friend WithEvents Button34 As Button
-    Friend WithEvents Button35 As Button
+    Friend WithEvents mcflurry As Button
+    Friend WithEvents cola As Button
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents Panel4 As Panel
     Friend WithEvents tblcombos As TableLayoutPanel
@@ -1027,4 +818,8 @@ Partial Class testing
     Friend WithEvents Button47 As Button
     Friend WithEvents btnorder As Button
     Friend WithEvents sandwich As Button
+    Friend WithEvents nugget As Button
+    Friend WithEvents pie As Button
+    Friend WithEvents americano As Button
+    Friend WithEvents matcha As Button
 End Class

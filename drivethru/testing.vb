@@ -109,12 +109,33 @@ Public Class testing
     End Sub
 
     Private Sub fries_Click(sender As Object, e As EventArgs) Handles fries.Click
-        AddToOrder("Fries", 1000)
+        AddToOrder("Amba Fries", 1000)
     End Sub
 
     Private Sub onionring_Click(sender As Object, e As EventArgs) Handles onionring.Click
-        AddToOrder("Onion Ring", 1000)
+        AddToOrder("Amba Ring", 1000)
     End Sub
+    Private Sub pie_Click(sender As Object, e As EventArgs) Handles pie.Click
+        AddToOrder("Amba Pie", 13000)
+    End Sub
+    Private Sub nugget_Click(sender As Object, e As EventArgs) Handles nugget.Click
+        AddToOrder("Amba Nugget", 27000)
+    End Sub
+    Private Sub cola_Click(sender As Object, e As EventArgs) Handles cola.Click
+        AddToOrder("Coca Cola", 10000)
+    End Sub
+    Private Sub mcflurry_Click(sender As Object, e As EventArgs) Handles mcflurry.Click
+        AddToOrder("McFlurry", 14000)
+    End Sub
+    Private Sub matcha_Click(sender As Object, e As EventArgs) Handles matcha.Click
+        AddToOrder("Matcha Latter", 15000)
+    End Sub
+    Private Sub americano_Click(sender As Object, e As EventArgs) Handles americano.Click
+        AddToOrder("Americano Ireng", 10000)
+    End Sub
+
+
+
 
     Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
         pembelian.Items.Clear()
@@ -127,16 +148,16 @@ Public Class testing
         Dim formStruk As New formStruk()
 
         If pembelian.Items.Count = 0 Then
-            MessageBox.Show("Belum ada pesanan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Belum ada pesanan.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
         If paymentbox.SelectedIndex = -1 Then
-            MessageBox.Show("Silakan pilih metode pembayaran terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Silakan pilih metode pembayaran terlebih dahulu.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
-        Dim result As DialogResult = MessageBox.Show("Yakin pesanan sudah benar?", "Konfirmasi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+        Dim result As DialogResult = MessageBox.Show("Yakin pesananmu sudah benar?", "Konfirmasi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
         If result = DialogResult.OK Then
             ' generate ID transaksi dan tanggal
@@ -148,6 +169,5 @@ Public Class testing
             formStruk.ShowDialog()
         End If
     End Sub
-
 
 End Class
