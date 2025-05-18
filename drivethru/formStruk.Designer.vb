@@ -104,7 +104,7 @@ Partial Class formStruk
         lvStruk.HideSelection = True
         lvStruk.Location = New Point(3, 231)
         lvStruk.Name = "lvStruk"
-        lvStruk.Size = New Size(835, 71)
+        lvStruk.Size = New Size(639, 71)
         lvStruk.TabIndex = 0
         lvStruk.UseCompatibleStateImageBehavior = False
         ' 
@@ -126,7 +126,7 @@ Partial Class formStruk
         tblStruk.ColumnCount = 3
         tblStruk.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 88.39286F))
         tblStruk.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 11.6071424F))
-        tblStruk.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 269F))
+        tblStruk.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 207F))
         tblStruk.Controls.Add(Label19, 1, 2)
         tblStruk.Controls.Add(Label18, 1, 1)
         tblStruk.Controls.Add(Label4, 0, 4)
@@ -148,14 +148,14 @@ Partial Class formStruk
         tblStruk.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         tblStruk.RowStyles.Add(New RowStyle(SizeType.Absolute, 43F))
         tblStruk.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        tblStruk.Size = New Size(494, 216)
+        tblStruk.Size = New Size(680, 216)
         tblStruk.TabIndex = 4
         ' 
         ' Label19
         ' 
         Label19.AutoSize = True
         Label19.Font = New Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label19.Location = New Point(201, 56)
+        Label19.Location = New Point(421, 56)
         Label19.Name = "Label19"
         Label19.Size = New Size(20, 20)
         Label19.TabIndex = 15
@@ -166,7 +166,7 @@ Partial Class formStruk
         ' 
         Label18.AutoSize = True
         Label18.Font = New Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label18.Location = New Point(201, 28)
+        Label18.Location = New Point(421, 28)
         Label18.Name = "Label18"
         Label18.Size = New Size(20, 20)
         Label18.TabIndex = 14
@@ -220,7 +220,7 @@ Partial Class formStruk
         ' 
         lblSubtotal.AutoSize = True
         lblSubtotal.Font = New Font("Courier New", 12F, FontStyle.Bold Or FontStyle.Italic)
-        lblSubtotal.Location = New Point(227, 0)
+        lblSubtotal.Location = New Point(475, 0)
         lblSubtotal.Name = "lblSubtotal"
         lblSubtotal.Size = New Size(194, 28)
         lblSubtotal.TabIndex = 1
@@ -231,7 +231,7 @@ Partial Class formStruk
         ' 
         lblTax.AutoSize = True
         lblTax.Font = New Font("Courier New", 12F, FontStyle.Bold Or FontStyle.Italic)
-        lblTax.Location = New Point(227, 28)
+        lblTax.Location = New Point(475, 28)
         lblTax.Name = "lblTax"
         lblTax.Size = New Size(194, 28)
         lblTax.TabIndex = 2
@@ -241,7 +241,7 @@ Partial Class formStruk
         ' 
         lblTotal.AutoSize = True
         lblTotal.Font = New Font("Courier New", 12F, FontStyle.Bold Or FontStyle.Italic)
-        lblTotal.Location = New Point(227, 56)
+        lblTotal.Location = New Point(475, 56)
         lblTotal.Name = "lblTotal"
         lblTotal.Size = New Size(152, 27)
         lblTotal.TabIndex = 3
@@ -251,7 +251,7 @@ Partial Class formStruk
         ' 
         lblpaymentbox.AutoSize = True
         lblpaymentbox.Font = New Font("Courier New", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblpaymentbox.Location = New Point(227, 103)
+        lblpaymentbox.Location = New Point(475, 103)
         lblpaymentbox.Name = "lblpaymentbox"
         lblpaymentbox.Size = New Size(110, 27)
         lblpaymentbox.TabIndex = 9
@@ -261,7 +261,7 @@ Partial Class formStruk
         ' 
         Label21.AutoSize = True
         Label21.Font = New Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label21.Location = New Point(201, 0)
+        Label21.Location = New Point(421, 0)
         Label21.Name = "Label21"
         Label21.Size = New Size(20, 20)
         Label21.TabIndex = 13
@@ -272,7 +272,7 @@ Partial Class formStruk
         ' 
         Label20.AutoSize = True
         Label20.Font = New Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label20.Location = New Point(201, 103)
+        Label20.Location = New Point(421, 103)
         Label20.Name = "Label20"
         Label20.Size = New Size(20, 20)
         Label20.TabIndex = 16
@@ -300,14 +300,14 @@ Partial Class formStruk
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
         TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
-        TableLayoutPanel3.Size = New Size(520, 92)
+        TableLayoutPanel3.Size = New Size(680, 92)
         TableLayoutPanel3.TabIndex = 6
         ' 
         ' Label12
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Courier New", 9F)
-        Label12.Location = New Point(265, 60)
+        Label12.Location = New Point(406, 60)
         Label12.Name = "Label12"
         Label12.Size = New Size(20, 20)
         Label12.TabIndex = 8
@@ -317,7 +317,7 @@ Partial Class formStruk
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Courier New", 9F)
-        Label11.Location = New Point(265, 30)
+        Label11.Location = New Point(406, 30)
         Label11.Name = "Label11"
         Label11.Size = New Size(20, 20)
         Label11.TabIndex = 7
@@ -327,7 +327,7 @@ Partial Class formStruk
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Courier New", 9F)
-        Label10.Location = New Point(265, 0)
+        Label10.Location = New Point(406, 0)
         Label10.Name = "Label10"
         Label10.Size = New Size(20, 20)
         Label10.TabIndex = 6
@@ -367,7 +367,7 @@ Partial Class formStruk
         ' 
         lblTanggal.AutoSize = True
         lblTanggal.Font = New Font("Courier New", 12F, FontStyle.Bold Or FontStyle.Italic)
-        lblTanggal.Location = New Point(298, 0)
+        lblTanggal.Location = New Point(458, 0)
         lblTanggal.Name = "lblTanggal"
         lblTanggal.Size = New Size(152, 28)
         lblTanggal.TabIndex = 4
@@ -377,7 +377,7 @@ Partial Class formStruk
         ' 
         lblWaktu.AutoSize = True
         lblWaktu.Font = New Font("Courier New", 12F, FontStyle.Bold Or FontStyle.Italic)
-        lblWaktu.Location = New Point(298, 30)
+        lblWaktu.Location = New Point(458, 30)
         lblWaktu.Name = "lblWaktu"
         lblWaktu.Size = New Size(124, 28)
         lblWaktu.TabIndex = 3
@@ -387,7 +387,7 @@ Partial Class formStruk
         ' 
         lblTransaksi.AutoSize = True
         lblTransaksi.Font = New Font("Courier New", 12F, FontStyle.Bold Or FontStyle.Italic)
-        lblTransaksi.Location = New Point(298, 60)
+        lblTransaksi.Location = New Point(458, 60)
         lblTransaksi.Name = "lblTransaksi"
         lblTransaksi.Size = New Size(180, 28)
         lblTransaksi.TabIndex = 5
@@ -399,9 +399,9 @@ Partial Class formStruk
         Label13.Font = New Font("Courier New", 9F, FontStyle.Bold Or FontStyle.Italic)
         Label13.Location = New Point(3, 208)
         Label13.Name = "Label13"
-        Label13.Size = New Size(570, 20)
+        Label13.Size = New Size(680, 20)
         Label13.TabIndex = 7
-        Label13.Text = "==================================================="
+        Label13.Text = "============================================================="
         Label13.TextAlign = ContentAlignment.TopCenter
         ' 
         ' Label14
@@ -410,9 +410,9 @@ Partial Class formStruk
         Label14.Font = New Font("Courier New", 9F, FontStyle.Bold Or FontStyle.Italic)
         Label14.Location = New Point(3, 305)
         Label14.Name = "Label14"
-        Label14.Size = New Size(570, 20)
+        Label14.Size = New Size(680, 20)
         Label14.TabIndex = 8
-        Label14.Text = "==================================================="
+        Label14.Text = "============================================================="
         Label14.TextAlign = ContentAlignment.TopCenter
         ' 
         ' TableLayoutPanel2
@@ -429,7 +429,7 @@ Partial Class formStruk
         TableLayoutPanel2.RowStyles.Add(New RowStyle())
         TableLayoutPanel2.RowStyles.Add(New RowStyle())
         TableLayoutPanel2.RowStyles.Add(New RowStyle())
-        TableLayoutPanel2.Size = New Size(520, 104)
+        TableLayoutPanel2.Size = New Size(680, 104)
         TableLayoutPanel2.TabIndex = 5
         ' 
         ' Label17
@@ -437,7 +437,7 @@ Partial Class formStruk
         Label17.Anchor = AnchorStyles.Top
         Label17.AutoSize = True
         Label17.Font = New Font("Courier New", 13F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label17.Location = New Point(109, 20)
+        Label17.Location = New Point(189, 20)
         Label17.Name = "Label17"
         Label17.Size = New Size(301, 29)
         Label17.TabIndex = 2
@@ -446,21 +446,21 @@ Partial Class formStruk
         ' 
         ' Label6
         ' 
-        Label6.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
+        Label6.Anchor = AnchorStyles.Top
         Label6.AutoSize = True
         Label6.Font = New Font("Courier New", 10F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(153, 74)
+        Label6.Location = New Point(233, 74)
         Label6.Name = "Label6"
-        Label6.Size = New Size(214, 30)
+        Label6.Size = New Size(214, 23)
         Label6.TabIndex = 1
         Label6.Text = "Telp: 08388453463"
         ' 
         ' Label5
         ' 
-        Label5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom
+        Label5.Anchor = AnchorStyles.Top
         Label5.AutoSize = True
         Label5.Font = New Font("Courier New", 11F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(65, 49)
+        Label5.Location = New Point(145, 49)
         Label5.Name = "Label5"
         Label5.Size = New Size(389, 25)
         Label5.TabIndex = 0

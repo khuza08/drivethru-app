@@ -1,4 +1,9 @@
-﻿Public Class testing
+﻿Imports System.Globalization
+
+Public Class testing
+
+    ' Culture untuk format Rupiah
+    Dim cultureID As New CultureInfo("id-ID")
 
     ' form load
     Private Sub testing_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -9,7 +14,7 @@
         AturListViewPembelian()
     End Sub
 
-    ' konfigurasi ui (use code/object grouping for better efficiency)
+    ' konfigurasi ui
     Private Sub AturTabMenu()
         TabPage1.Text = "Burgers"
         TabPage2.Text = "Sides"
@@ -54,7 +59,7 @@
             If item.SubItems(0).Text = itemName Then
                 Dim qty As Integer = Integer.Parse(item.SubItems(1).Text) + 1
                 item.SubItems(1).Text = qty.ToString()
-                item.SubItems(3).Text = (qty * price).ToString("C2")
+                item.SubItems(3).Text = (qty * price).ToString("C2", cultureID)
                 found = True
                 Exit For
             End If
@@ -63,8 +68,8 @@
         If Not found Then
             Dim newItem As New ListViewItem(itemName)
             newItem.SubItems.Add("1")
-            newItem.SubItems.Add(price.ToString("C2"))
-            newItem.SubItems.Add(price.ToString("C2"))
+            newItem.SubItems.Add(price.ToString("C2", cultureID))
+            newItem.SubItems.Add(price.ToString("C2", cultureID))
             pembelian.Items.Add(newItem)
         End If
 
@@ -75,74 +80,74 @@
         Dim subtotal As Decimal = 0
 
         For Each item As ListViewItem In pembelian.Items
-            subtotal += Decimal.Parse(item.SubItems(3).Text, Globalization.NumberStyles.Currency)
+            subtotal += Decimal.Parse(item.SubItems(3).Text, NumberStyles.Currency, cultureID)
         Next
 
         Dim tax As Decimal = subtotal * 0.1D
         Dim total As Decimal = subtotal + tax
 
-        labelsubtotal.Text = subtotal.ToString("C2")
-        labeltax.Text = tax.ToString("C2")
-        labeltotal.Text = total.ToString("C2")
+        labelsubtotal.Text = subtotal.ToString("C2", cultureID)
+        labeltax.Text = tax.ToString("C2", cultureID)
+        labeltotal.Text = total.ToString("C2", cultureID)
     End Sub
 
-    ' tombol items (event handler)
+    ' tombol items
     Private Sub doublebeef_Click(sender As Object, e As EventArgs) Handles doublebeef.Click
-        AddToOrder("Double Beef", 14D)
+        AddToOrder("Double Beef", 14000)
     End Sub
 
     Private Sub cheeseburger_Click(sender As Object, e As EventArgs) Handles cheeseburger.Click
-        AddToOrder("Cheese Burger", 5D)
+        AddToOrder("Cheese Burger", 5000)
     End Sub
+
     Private Sub chickenburger_Click(sender As Object, e As EventArgs) Handles chickenburger.Click
-        AddToOrder("Chicken Burger", 11D)
+        AddToOrder("Chicken Burger", 11000)
     End Sub
+
     Private Sub sandwich_Click(sender As Object, e As EventArgs) Handles sandwich.Click
-        AddToOrder("Classic Sandwich", 4D)
+        AddToOrder("Classic Sandwich", 4000)
     End Sub
+
     Private Sub fries_Click(sender As Object, e As EventArgs) Handles fries.Click
-        AddToOrder("Fries", 1D)
+        AddToOrder("Fries", 1000)
     End Sub
+
     Private Sub onionring_Click(sender As Object, e As EventArgs) Handles onionring.Click
-        AddToOrder("Fries", 1D)
+        AddToOrder("Onion Ring", 1000)
     End Sub
 
     Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
         pembelian.Items.Clear()
-        labelsubtotal.Text = "$0.00"
-        labeltax.Text = "$0.00"
-        labeltotal.Text = "$0.00"
+        labelsubtotal.Text = 0.ToString("C2", cultureID)
+        labeltax.Text = 0.ToString("C2", cultureID)
+        labeltotal.Text = 0.ToString("C2", cultureID)
     End Sub
-
 
     Private Sub btnorder_Click(sender As Object, e As EventArgs) Handles btnorder.Click
         Dim formStruk As New formStruk()
 
-        ' Cek apakah ada item yang dipesan
         If pembelian.Items.Count = 0 Then
             MessageBox.Show("Belum ada pesanan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
-        ' Cek apakah payment method sudah dipilih
         If paymentbox.SelectedIndex = -1 Then
             MessageBox.Show("Silakan pilih metode pembayaran terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
-        ' Konfirmasi final
         Dim result As DialogResult = MessageBox.Show("Yakin pesanan sudah benar?", "Konfirmasi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
         If result = DialogResult.OK Then
-            ' cetak struk atau pindah ke formStruk
+            ' generate ID transaksi dan tanggal
+            Dim transactionId As String = "TRX" & Now.ToString("yyyyMMddHHmmss")
+            Dim tanggal As String = Now.ToString("dd MMMM yyyy HH:mm")
+
             Me.Hide()
-            formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text)
+            formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text, paymentbox.Text, transactionId, tanggal)
             formStruk.ShowDialog()
-
-        Else
-            ' do nothing
         End If
-
     End Sub
+
 
 End Class
