@@ -133,7 +133,18 @@ Public Class testing
     Private Sub americano_Click(sender As Object, e As EventArgs) Handles americano.Click
         AddToOrder("Americano Ireng", 10000)
     End Sub
-
+    Private Sub kombodeluxe_Click(sender As Object, e As EventArgs) Handles kombodeluxe.Click
+        AddToOrder("Kombo Deluxe", 55000)
+    End Sub
+    Private Sub starterpack_Click(sender As Object, e As EventArgs) Handles starterpack.Click
+        AddToOrder("Kombo Starter Pack", 22000)
+    End Sub
+    Private Sub kombocouple_Click(sender As Object, e As EventArgs) Handles kombocouple.Click
+        AddToOrder("Kombo Couple", 80000)
+    End Sub
+    Private Sub kombonguwawor_Click(sender As Object, e As EventArgs) Handles kombonguwawor.Click
+        AddToOrder("Kombo Nguwawor", 49000)
+    End Sub
 
 
 

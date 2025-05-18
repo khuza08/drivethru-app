@@ -48,18 +48,8 @@ Partial Class testing
         TabPage4 = New TabPage()
         Panel4 = New Panel()
         tblcombos = New TableLayoutPanel()
-        Button36 = New Button()
-        Button37 = New Button()
-        Button38 = New Button()
-        Button39 = New Button()
-        Button40 = New Button()
-        Button41 = New Button()
-        Button42 = New Button()
-        Button43 = New Button()
-        Button44 = New Button()
-        Button45 = New Button()
-        Button46 = New Button()
-        Button47 = New Button()
+        starterpack = New Button()
+        kombodeluxe = New Button()
         paymentbox = New ComboBox()
         pembelian = New ListView()
         Label1 = New Label()
@@ -72,6 +62,8 @@ Partial Class testing
         labeltotal = New Label()
         TableLayoutPanel2 = New TableLayoutPanel()
         btnorder = New Button()
+        kombocouple = New Button()
+        kombonguwawor = New Button()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         Panel1.SuspendLayout()
@@ -142,7 +134,7 @@ Partial Class testing
         tblburgers.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblburgers.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblburgers.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        tblburgers.Size = New Size(597, 2456)
+        tblburgers.Size = New Size(571, 2456)
         tblburgers.TabIndex = 0
         ' 
         ' sandwich
@@ -152,9 +144,9 @@ Partial Class testing
         sandwich.BackgroundImage = CType(resources.GetObject("sandwich.BackgroundImage"), Image)
         sandwich.BackgroundImageLayout = ImageLayout.Zoom
         sandwich.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        sandwich.Location = New Point(301, 409)
+        sandwich.Location = New Point(288, 409)
         sandwich.Name = "sandwich"
-        sandwich.Size = New Size(293, 400)
+        sandwich.Size = New Size(280, 400)
         sandwich.TabIndex = 3
         sandwich.Text = "Classic Sandwich Rp4.000"
         sandwich.TextAlign = ContentAlignment.BottomCenter
@@ -169,7 +161,7 @@ Partial Class testing
         chickenburger.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         chickenburger.Location = New Point(3, 409)
         chickenburger.Name = "chickenburger"
-        chickenburger.Size = New Size(292, 400)
+        chickenburger.Size = New Size(279, 400)
         chickenburger.TabIndex = 2
         chickenburger.Text = "Chicken Burger Rp11.000"
         chickenburger.TextAlign = ContentAlignment.BottomCenter
@@ -181,9 +173,9 @@ Partial Class testing
         doublebeef.AutoSize = True
         doublebeef.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         doublebeef.Image = CType(resources.GetObject("doublebeef.Image"), Image)
-        doublebeef.Location = New Point(301, 3)
+        doublebeef.Location = New Point(288, 3)
         doublebeef.Name = "doublebeef"
-        doublebeef.Size = New Size(293, 400)
+        doublebeef.Size = New Size(280, 400)
         doublebeef.TabIndex = 1
         doublebeef.Text = "Double Beef Rp14.000"
         doublebeef.TextAlign = ContentAlignment.BottomCenter
@@ -197,7 +189,7 @@ Partial Class testing
         cheeseburger.Image = My.Resources.Resources.cheeseburger1
         cheeseburger.Location = New Point(3, 3)
         cheeseburger.Name = "cheeseburger"
-        cheeseburger.Size = New Size(292, 400)
+        cheeseburger.Size = New Size(279, 400)
         cheeseburger.TabIndex = 0
         cheeseburger.Text = "Cheese Burger Rp5.000"
         cheeseburger.TextAlign = ContentAlignment.BottomCenter
@@ -242,7 +234,7 @@ Partial Class testing
         tblsides.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblsides.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblsides.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        tblsides.Size = New Size(597, 2456)
+        tblsides.Size = New Size(571, 2456)
         tblsides.TabIndex = 0
         ' 
         ' nugget
@@ -252,9 +244,9 @@ Partial Class testing
         nugget.BackgroundImage = CType(resources.GetObject("nugget.BackgroundImage"), Image)
         nugget.BackgroundImageLayout = ImageLayout.Zoom
         nugget.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        nugget.Location = New Point(301, 409)
+        nugget.Location = New Point(288, 409)
         nugget.Name = "nugget"
-        nugget.Size = New Size(293, 400)
+        nugget.Size = New Size(280, 400)
         nugget.TabIndex = 3
         nugget.Text = "Amba Nugget Rp27.000"
         nugget.TextAlign = ContentAlignment.BottomCenter
@@ -269,7 +261,7 @@ Partial Class testing
         pie.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         pie.Location = New Point(3, 409)
         pie.Name = "pie"
-        pie.Size = New Size(292, 400)
+        pie.Size = New Size(279, 400)
         pie.TabIndex = 2
         pie.Text = "Amba Pie Rp13.000"
         pie.TextAlign = ContentAlignment.BottomCenter
@@ -282,9 +274,9 @@ Partial Class testing
         onionring.BackgroundImage = CType(resources.GetObject("onionring.BackgroundImage"), Image)
         onionring.BackgroundImageLayout = ImageLayout.Zoom
         onionring.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        onionring.Location = New Point(301, 3)
+        onionring.Location = New Point(288, 3)
         onionring.Name = "onionring"
-        onionring.Size = New Size(293, 400)
+        onionring.Size = New Size(280, 400)
         onionring.TabIndex = 1
         onionring.Text = "Amba Ring Rp1.000"
         onionring.TextAlign = ContentAlignment.BottomCenter
@@ -299,7 +291,7 @@ Partial Class testing
         fries.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         fries.Location = New Point(3, 3)
         fries.Name = "fries"
-        fries.Size = New Size(292, 400)
+        fries.Size = New Size(279, 400)
         fries.TabIndex = 0
         fries.Text = "Amba Fries Rp1.000"
         fries.TextAlign = ContentAlignment.BottomCenter
@@ -344,7 +336,7 @@ Partial Class testing
         tbldrinks.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tbldrinks.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tbldrinks.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        tbldrinks.Size = New Size(597, 2456)
+        tbldrinks.Size = New Size(571, 2456)
         tbldrinks.TabIndex = 0
         ' 
         ' americano
@@ -354,9 +346,9 @@ Partial Class testing
         americano.BackgroundImage = CType(resources.GetObject("americano.BackgroundImage"), Image)
         americano.BackgroundImageLayout = ImageLayout.Zoom
         americano.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        americano.Location = New Point(301, 409)
+        americano.Location = New Point(288, 409)
         americano.Name = "americano"
-        americano.Size = New Size(293, 400)
+        americano.Size = New Size(280, 400)
         americano.TabIndex = 3
         americano.Text = "Americano Ireng Rp10.000"
         americano.TextAlign = ContentAlignment.BottomCenter
@@ -371,7 +363,7 @@ Partial Class testing
         matcha.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         matcha.Location = New Point(3, 409)
         matcha.Name = "matcha"
-        matcha.Size = New Size(292, 400)
+        matcha.Size = New Size(279, 400)
         matcha.TabIndex = 2
         matcha.Text = "Matchaa Latte Rp15.000"
         matcha.TextAlign = ContentAlignment.BottomCenter
@@ -384,9 +376,9 @@ Partial Class testing
         mcflurry.BackgroundImage = CType(resources.GetObject("mcflurry.BackgroundImage"), Image)
         mcflurry.BackgroundImageLayout = ImageLayout.Zoom
         mcflurry.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        mcflurry.Location = New Point(301, 3)
+        mcflurry.Location = New Point(288, 3)
         mcflurry.Name = "mcflurry"
-        mcflurry.Size = New Size(293, 400)
+        mcflurry.Size = New Size(280, 400)
         mcflurry.TabIndex = 1
         mcflurry.Text = "McFlurry Rp14.000"
         mcflurry.TextAlign = ContentAlignment.BottomCenter
@@ -401,7 +393,7 @@ Partial Class testing
         cola.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         cola.Location = New Point(3, 3)
         cola.Name = "cola"
-        cola.Size = New Size(292, 400)
+        cola.Size = New Size(279, 400)
         cola.TabIndex = 0
         cola.Text = "Coca Cola Rp10.000"
         cola.TextAlign = ContentAlignment.BottomCenter
@@ -432,18 +424,10 @@ Partial Class testing
         tblcombos.ColumnCount = 2
         tblcombos.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         tblcombos.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        tblcombos.Controls.Add(Button36, 1, 5)
-        tblcombos.Controls.Add(Button37, 0, 5)
-        tblcombos.Controls.Add(Button38, 1, 4)
-        tblcombos.Controls.Add(Button39, 0, 4)
-        tblcombos.Controls.Add(Button40, 1, 3)
-        tblcombos.Controls.Add(Button41, 0, 3)
-        tblcombos.Controls.Add(Button42, 1, 2)
-        tblcombos.Controls.Add(Button43, 0, 2)
-        tblcombos.Controls.Add(Button44, 1, 1)
-        tblcombos.Controls.Add(Button45, 0, 1)
-        tblcombos.Controls.Add(Button46, 1, 0)
-        tblcombos.Controls.Add(Button47, 0, 0)
+        tblcombos.Controls.Add(kombonguwawor, 1, 1)
+        tblcombos.Controls.Add(kombocouple, 0, 1)
+        tblcombos.Controls.Add(starterpack, 1, 0)
+        tblcombos.Controls.Add(kombodeluxe, 0, 0)
         tblcombos.Location = New Point(3, 6)
         tblcombos.Name = "tblcombos"
         tblcombos.RowCount = 7
@@ -454,145 +438,38 @@ Partial Class testing
         tblcombos.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblcombos.RowStyles.Add(New RowStyle(SizeType.Percent, 16.666666F))
         tblcombos.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        tblcombos.Size = New Size(675, 2456)
+        tblcombos.Size = New Size(649, 2456)
         tblcombos.TabIndex = 0
         ' 
-        ' Button36
+        ' starterpack
         ' 
-        Button36.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button36.AutoSize = True
-        Button36.Location = New Point(340, 2033)
-        Button36.Name = "Button36"
-        Button36.Size = New Size(332, 400)
-        Button36.TabIndex = 11
-        Button36.Text = "Button36"
-        Button36.UseVisualStyleBackColor = True
+        starterpack.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        starterpack.AutoSize = True
+        starterpack.BackgroundImage = CType(resources.GetObject("starterpack.BackgroundImage"), Image)
+        starterpack.BackgroundImageLayout = ImageLayout.Zoom
+        starterpack.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        starterpack.Location = New Point(327, 3)
+        starterpack.Name = "starterpack"
+        starterpack.Size = New Size(319, 400)
+        starterpack.TabIndex = 1
+        starterpack.Text = " Kombo Starter Pack Rp22.000" & vbCrLf
+        starterpack.TextAlign = ContentAlignment.BottomCenter
+        starterpack.UseVisualStyleBackColor = True
         ' 
-        ' Button37
+        ' kombodeluxe
         ' 
-        Button37.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button37.AutoSize = True
-        Button37.Location = New Point(3, 2033)
-        Button37.Name = "Button37"
-        Button37.Size = New Size(331, 400)
-        Button37.TabIndex = 10
-        Button37.Text = "Button37"
-        Button37.UseVisualStyleBackColor = True
-        ' 
-        ' Button38
-        ' 
-        Button38.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button38.AutoSize = True
-        Button38.Location = New Point(340, 1627)
-        Button38.Name = "Button38"
-        Button38.Size = New Size(332, 400)
-        Button38.TabIndex = 9
-        Button38.Text = "Button38"
-        Button38.UseVisualStyleBackColor = True
-        ' 
-        ' Button39
-        ' 
-        Button39.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button39.AutoSize = True
-        Button39.Location = New Point(3, 1627)
-        Button39.Name = "Button39"
-        Button39.Size = New Size(331, 400)
-        Button39.TabIndex = 8
-        Button39.Text = "Button39"
-        Button39.UseVisualStyleBackColor = True
-        ' 
-        ' Button40
-        ' 
-        Button40.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button40.AutoSize = True
-        Button40.Location = New Point(340, 1221)
-        Button40.Name = "Button40"
-        Button40.Size = New Size(332, 400)
-        Button40.TabIndex = 7
-        Button40.Text = "Button40"
-        Button40.UseVisualStyleBackColor = True
-        ' 
-        ' Button41
-        ' 
-        Button41.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button41.AutoSize = True
-        Button41.Location = New Point(3, 1221)
-        Button41.Name = "Button41"
-        Button41.Size = New Size(331, 400)
-        Button41.TabIndex = 6
-        Button41.Text = "Button41"
-        Button41.UseVisualStyleBackColor = True
-        ' 
-        ' Button42
-        ' 
-        Button42.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button42.AutoSize = True
-        Button42.Location = New Point(340, 815)
-        Button42.Name = "Button42"
-        Button42.Size = New Size(332, 400)
-        Button42.TabIndex = 5
-        Button42.Text = "Button42"
-        Button42.UseVisualStyleBackColor = True
-        ' 
-        ' Button43
-        ' 
-        Button43.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button43.AutoSize = True
-        Button43.Location = New Point(3, 815)
-        Button43.Name = "Button43"
-        Button43.Size = New Size(331, 400)
-        Button43.TabIndex = 4
-        Button43.Text = "Button43"
-        Button43.UseVisualStyleBackColor = True
-        ' 
-        ' Button44
-        ' 
-        Button44.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button44.AutoSize = True
-        Button44.Location = New Point(340, 409)
-        Button44.Name = "Button44"
-        Button44.Size = New Size(332, 400)
-        Button44.TabIndex = 3
-        Button44.Text = "Button44"
-        Button44.UseVisualStyleBackColor = True
-        ' 
-        ' Button45
-        ' 
-        Button45.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button45.AutoSize = True
-        Button45.Location = New Point(3, 409)
-        Button45.Name = "Button45"
-        Button45.Size = New Size(331, 400)
-        Button45.TabIndex = 2
-        Button45.Text = "Button45"
-        Button45.UseVisualStyleBackColor = True
-        ' 
-        ' Button46
-        ' 
-        Button46.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button46.AutoSize = True
-        Button46.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button46.Image = My.Resources.Resources.doublebeef
-        Button46.Location = New Point(340, 3)
-        Button46.Name = "Button46"
-        Button46.Size = New Size(332, 400)
-        Button46.TabIndex = 1
-        Button46.Text = "Double Beef $10"
-        Button46.TextAlign = ContentAlignment.BottomCenter
-        Button46.UseVisualStyleBackColor = True
-        ' 
-        ' Button47
-        ' 
-        Button47.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Button47.AutoSize = True
-        Button47.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button47.Location = New Point(3, 3)
-        Button47.Name = "Button47"
-        Button47.Size = New Size(331, 400)
-        Button47.TabIndex = 0
-        Button47.Text = "Cheese Burger   $5.99"
-        Button47.TextAlign = ContentAlignment.BottomCenter
-        Button47.UseVisualStyleBackColor = True
+        kombodeluxe.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        kombodeluxe.AutoSize = True
+        kombodeluxe.BackgroundImage = CType(resources.GetObject("kombodeluxe.BackgroundImage"), Image)
+        kombodeluxe.BackgroundImageLayout = ImageLayout.Zoom
+        kombodeluxe.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        kombodeluxe.Location = New Point(3, 3)
+        kombodeluxe.Name = "kombodeluxe"
+        kombodeluxe.Size = New Size(318, 400)
+        kombodeluxe.TabIndex = 0
+        kombodeluxe.Text = "Kombo Deluxe Rp55.000"
+        kombodeluxe.TextAlign = ContentAlignment.BottomCenter
+        kombodeluxe.UseVisualStyleBackColor = True
         ' 
         ' paymentbox
         ' 
@@ -735,6 +612,36 @@ Partial Class testing
         btnorder.Text = "Order Now"
         btnorder.UseVisualStyleBackColor = True
         ' 
+        ' kombocouple
+        ' 
+        kombocouple.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        kombocouple.AutoSize = True
+        kombocouple.BackgroundImage = CType(resources.GetObject("kombocouple.BackgroundImage"), Image)
+        kombocouple.BackgroundImageLayout = ImageLayout.Zoom
+        kombocouple.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        kombocouple.Location = New Point(3, 409)
+        kombocouple.Name = "kombocouple"
+        kombocouple.Size = New Size(318, 400)
+        kombocouple.TabIndex = 2
+        kombocouple.Text = "Kombo Couple Rp80.000"
+        kombocouple.TextAlign = ContentAlignment.BottomCenter
+        kombocouple.UseVisualStyleBackColor = True
+        ' 
+        ' kombonguwawor
+        ' 
+        kombonguwawor.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        kombonguwawor.AutoSize = True
+        kombonguwawor.BackgroundImage = CType(resources.GetObject("kombonguwawor.BackgroundImage"), Image)
+        kombonguwawor.BackgroundImageLayout = ImageLayout.Zoom
+        kombonguwawor.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        kombonguwawor.Location = New Point(327, 409)
+        kombonguwawor.Name = "kombonguwawor"
+        kombonguwawor.Size = New Size(319, 400)
+        kombonguwawor.TabIndex = 3
+        kombonguwawor.Text = "Kombo Hemat Nguwawor Rp49.000"
+        kombonguwawor.TextAlign = ContentAlignment.BottomCenter
+        kombonguwawor.UseVisualStyleBackColor = True
+        ' 
         ' testing
         ' 
         AutoScaleDimensions = New SizeF(144F, 144F)
@@ -804,22 +711,14 @@ Partial Class testing
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents Panel4 As Panel
     Friend WithEvents tblcombos As TableLayoutPanel
-    Friend WithEvents Button36 As Button
-    Friend WithEvents Button37 As Button
-    Friend WithEvents Button38 As Button
-    Friend WithEvents Button39 As Button
-    Friend WithEvents Button40 As Button
-    Friend WithEvents Button41 As Button
-    Friend WithEvents Button42 As Button
-    Friend WithEvents Button43 As Button
-    Friend WithEvents Button44 As Button
-    Friend WithEvents Button45 As Button
-    Friend WithEvents Button46 As Button
-    Friend WithEvents Button47 As Button
+    Friend WithEvents starterpack As Button
+    Friend WithEvents kombodeluxe As Button
     Friend WithEvents btnorder As Button
     Friend WithEvents sandwich As Button
     Friend WithEvents nugget As Button
     Friend WithEvents pie As Button
     Friend WithEvents americano As Button
     Friend WithEvents matcha As Button
+    Friend WithEvents kombonguwawor As Button
+    Friend WithEvents kombocouple As Button
 End Class
