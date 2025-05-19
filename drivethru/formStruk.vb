@@ -88,8 +88,69 @@
         lblTransaksi.Text = "KHZX" & Now.ToString("yyyyMMddHHmmss")
     End Sub
 
+
+    ' Untuk ListView lvStruk
+    Private Sub lvStruk_MouseDown(sender As Object, e As MouseEventArgs) Handles lvStruk.MouseDown
+        If e.Button = MouseButtons.Left Then
+            dragging = True
+            ' Hitung offset relatif ke form, bukan ke ListView
+            offset = Me.PointToClient(lvStruk.PointToScreen(e.Location))
+        End If
+    End Sub
+
+    Private Sub lvStruk_MouseMove(sender As Object, e As MouseEventArgs) Handles lvStruk.MouseMove
+        If dragging Then
+            Dim screenPos As Point = lvStruk.PointToScreen(e.Location)
+            Dim newLocation As Point = New Point(screenPos.X - offset.X, screenPos.Y - offset.Y)
+            Me.Location = newLocation
+        End If
+    End Sub
+
+    Private Sub lvStruk_MouseUp(sender As Object, e As MouseEventArgs) Handles lvStruk.MouseUp
+        dragging = False
+    End Sub
+
     Private Sub TableLayoutPanel1_Paint(sender As Object, evt As PaintEventArgs) Handles TableLayoutPanel1.Paint
         ' Kosong
+    End Sub
+
+    Private dragging As Boolean = False
+    Private offset As Point
+
+    Private Sub formStruk_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
+        If e.Button = MouseButtons.Left Then
+            dragging = True
+            offset = e.Location
+        End If
+    End Sub
+
+    Private Sub formStruk_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
+        If dragging Then
+            Me.Location = New Point(Me.Location.X + e.X - offset.X, Me.Location.Y + e.Y - offset.Y)
+        End If
+    End Sub
+
+    Private Sub formStruk_MouseUp(sender As Object, e As MouseEventArgs) Handles Me.MouseUp
+        dragging = False
+    End Sub
+    Protected Overrides Sub OnLoad(e As EventArgs)
+        MyBase.OnLoad(e)
+
+        ' Hilangkan border dan control box
+        ' Me.FormBorderStyle = FormBorderStyle.None
+
+        ' Atur ukuran form
+        ' Me.Size = New Size(400, 600) ' lebar > panjang
+
+        ' Buat rounded corners (radius 30)
+        Dim radius As Integer = 30
+        Dim path As New Drawing2D.GraphicsPath()
+        path.AddArc(0, 0, radius, radius, 180, 90)
+        path.AddArc(Me.Width - radius, 0, radius, radius, 270, 90)
+        path.AddArc(Me.Width - radius, Me.Height - radius, radius, radius, 0, 90)
+        path.AddArc(0, Me.Height - radius, radius, radius, 90, 90)
+        path.CloseAllFigures()
+        Me.Region = New Region(path)
     End Sub
 
 End Class
