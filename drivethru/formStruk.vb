@@ -137,7 +137,7 @@
         MyBase.OnLoad(e)
 
         ' Hilangkan border dan control box
-        ' Me.FormBorderStyle = FormBorderStyle.None
+        Me.FormBorderStyle = FormBorderStyle.None
 
         ' Atur ukuran form
         ' Me.Size = New Size(400, 600) ' lebar > panjang

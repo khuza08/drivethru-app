@@ -1,6 +1,10 @@
 ﻿Imports System.Globalization
+Imports MySql.Data.MySqlClient
 
 Public Class testing
+
+    Dim conn As New MySqlConnection("server=localhost;user id=root;password=killvoid;database=db_ambafood")
+
 
     ' Culture untuk format Rupiah
     Dim cultureID As New CultureInfo("id-ID")
@@ -91,13 +95,36 @@ Public Class testing
         labeltotal.Text = total.ToString("C2", cultureID)
     End Sub
 
+    Private Function ambilHarga(namaMenu As String) As Decimal
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand("SELECT harga FROM menu WHERE nama_menu = @nama", conn)
+            cmd.Parameters.AddWithValue("@nama", namaMenu)
+
+            Dim harga As Object = cmd.ExecuteScalar()
+            conn.Close()
+
+            If harga IsNot Nothing Then
+                Return Convert.ToDecimal(harga)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("gagal mengambil harga dari database: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+
+        Return 0
+    End Function
+
+
     ' tombol items
     Private Sub doublebeef_Click(sender As Object, e As EventArgs) Handles doublebeef.Click
-        AddToOrder("Double Beef", 14000)
+        Dim harga = ambilHarga("Double Beef")
+        AddToOrder("Double Beef", harga)
     End Sub
 
     Private Sub cheeseburger_Click(sender As Object, e As EventArgs) Handles cheeseburger.Click
-        AddToOrder("Cheese Burger", 5000)
+        Dim harga = ambilHarga("Cheese Burger")
+        AddToOrder("Cheese Burger", harga)
     End Sub
 
     Private Sub chickenburger_Click(sender As Object, e As EventArgs) Handles chickenburger.Click
