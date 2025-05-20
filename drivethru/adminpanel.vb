@@ -19,7 +19,7 @@ Public Class adminpanel
             adapter.Fill(table)
 
             dgvMenu.DataSource = table
-            dgvMenu.Columns("id_menu").Visible = False
+            dgvMenu.Columns("id_menu").Visible = True
             dgvMenu.Columns("nama_menu").HeaderText = "Nama Menu"
             dgvMenu.Columns("kategori").HeaderText = "Kategori"
             dgvMenu.Columns("harga").HeaderText = "Harga"
