@@ -6,7 +6,7 @@ Public Class testing
     Dim conn As New MySqlConnection("server=localhost;user id=root;password=killvoid;database=db_ambafood")
 
 
-    ' Culture untuk format Rupiah
+    ' pakai cultureID buat format Rupiah
     Dim cultureID As New CultureInfo("id-ID")
 
     ' form load
@@ -16,6 +16,25 @@ Public Class testing
         AturPanelKontainer()
         AturTabelMenu()
         AturListViewPembelian()
+
+        doublebeef.Tag = "Double Beef"
+        cheeseburger.Tag = "Cheese Burger"
+        chickenburger.Tag = "Chicken Burger"
+        sandwich.Tag = "Classic Sandwich"
+        fries.Tag = "Fries"
+        onionring.Tag = "Onion Ring"
+        pie.Tag = "Amba Pie"
+        nugget.Tag = "Amba Nugget"
+        cola.Tag = "Coca Cola"
+        mcflurry.Tag = "McFlurry"
+        matcha.Tag = "Matcha Latte"
+        americano.Tag = "Americano Ireng"
+        kombodeluxe.Tag = "Kombo Deluxe"
+        starterpack.Tag = "Kombo Starter Pack"
+        kombocouple.Tag = "Kombo Couple"
+        kombonguwawor.Tag = "Kombo Nguwawor"
+
+
     End Sub
 
     ' konfigurasi ui
@@ -116,63 +135,18 @@ Public Class testing
     End Function
 
 
-    ' tombol items
-    Private Sub doublebeef_Click(sender As Object, e As EventArgs) Handles doublebeef.Click
-        Dim harga = ambilHarga("Double Beef")
-        AddToOrder("Double Beef", harga)
-    End Sub
+    ' handler tombol
 
-    Private Sub cheeseburger_Click(sender As Object, e As EventArgs) Handles cheeseburger.Click
-        Dim harga = ambilHarga("Cheese Burger")
-        AddToOrder("Cheese Burger", harga)
-    End Sub
 
-    Private Sub chickenburger_Click(sender As Object, e As EventArgs) Handles chickenburger.Click
-        AddToOrder("Chicken Burger", 11000)
-    End Sub
+    Private Sub Item_Click(sender As Object, e As EventArgs) Handles doublebeef.Click, cheeseburger.Click, chickenburger.Click,
+            fries.Click, matcha.Click, nugget.Click, onionring.Click, sandwich.Click, americano.Click, pie.Click, cola.Click,
+            kombocouple.Click, kombonguwawor.Click, kombodeluxe.Click
 
-    Private Sub sandwich_Click(sender As Object, e As EventArgs) Handles sandwich.Click
-        AddToOrder("Classic Sandwich", 4000)
+        Dim btn As Button = CType(sender, Button)
+        Dim nama As String = btn.Tag.ToString()
+        Dim harga = ambilHarga(nama)
+        AddToOrder(nama, harga)
     End Sub
-
-    Private Sub fries_Click(sender As Object, e As EventArgs) Handles fries.Click
-        AddToOrder("Amba Fries", 1000)
-    End Sub
-
-    Private Sub onionring_Click(sender As Object, e As EventArgs) Handles onionring.Click
-        AddToOrder("Amba Ring", 1000)
-    End Sub
-    Private Sub pie_Click(sender As Object, e As EventArgs) Handles pie.Click
-        AddToOrder("Amba Pie", 13000)
-    End Sub
-    Private Sub nugget_Click(sender As Object, e As EventArgs) Handles nugget.Click
-        AddToOrder("Amba Nugget", 27000)
-    End Sub
-    Private Sub cola_Click(sender As Object, e As EventArgs) Handles cola.Click
-        AddToOrder("Coca Cola", 10000)
-    End Sub
-    Private Sub mcflurry_Click(sender As Object, e As EventArgs) Handles mcflurry.Click
-        AddToOrder("McFlurry", 14000)
-    End Sub
-    Private Sub matcha_Click(sender As Object, e As EventArgs) Handles matcha.Click
-        AddToOrder("Matcha Latter", 15000)
-    End Sub
-    Private Sub americano_Click(sender As Object, e As EventArgs) Handles americano.Click
-        AddToOrder("Americano Ireng", 10000)
-    End Sub
-    Private Sub kombodeluxe_Click(sender As Object, e As EventArgs) Handles kombodeluxe.Click
-        AddToOrder("Kombo Deluxe", 55000)
-    End Sub
-    Private Sub starterpack_Click(sender As Object, e As EventArgs) Handles starterpack.Click
-        AddToOrder("Kombo Starter Pack", 22000)
-    End Sub
-    Private Sub kombocouple_Click(sender As Object, e As EventArgs) Handles kombocouple.Click
-        AddToOrder("Kombo Couple", 80000)
-    End Sub
-    Private Sub kombonguwawor_Click(sender As Object, e As EventArgs) Handles kombonguwawor.Click
-        AddToOrder("Kombo Nguwawor", 49000)
-    End Sub
-
 
 
     Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
