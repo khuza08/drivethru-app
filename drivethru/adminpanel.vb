@@ -133,7 +133,7 @@ End Sub
 
         Try
             conn.Open()
-            Dim cmd As New MySqlCommand("UPDATE menu SET nama_menu=@nama, kategori=@kategori, harga=@harga, gambar=@gambar WHERE id=@id", conn)
+            Dim cmd As New MySqlCommand("UPDATE menu SET nama_menu=@nama, kategori=@kategori, harga=@harga, gambar=@gambar WHERE id_menu=@id_menu", conn)
             cmd.Parameters.AddWithValue("@nama", nama)
             cmd.Parameters.AddWithValue("@kategori", kategori)
             cmd.Parameters.AddWithValue("@harga", harga)
@@ -153,7 +153,29 @@ End Sub
     End Sub
 
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
-        ' TODO: tambah fungsi hapus
+        If selectedMenuId = -1 Then
+            MessageBox.Show("Pilih item menu dulu dari tabel.")
+            Exit Sub
+        End If
+
+        Dim confirm As DialogResult = MessageBox.Show("Yakin ingin menghapus menu ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If confirm = DialogResult.No Then Exit Sub
+
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand("DELETE FROM menu WHERE id_menu = @id_menu", conn)
+            cmd.Parameters.AddWithValue("@id_menu", selectedMenuId)
+            cmd.ExecuteNonQuery()
+            conn.Close()
+
+            MessageBox.Show("Menu berhasil dihapus.")
+            ResetForm()
+            LoadMenu()
+            selectedMenuId = -1
+        Catch ex As Exception
+            MessageBox.Show("Gagal menghapus menu: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
     End Sub
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
@@ -167,7 +189,7 @@ End Sub
     Private Sub dgvMenu_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvMenu.CellClick
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow = dgvMenu.Rows(e.RowIndex)
-            selectedMenuId = Convert.ToInt32(row.Cells("id").Value)
+            selectedMenuId = Convert.ToInt32(row.Cells("id_menu").Value)
             tbNama.Text = row.Cells("nama_menu").Value.ToString()
             cmbKategori.Text = row.Cells("kategori").Value.ToString()
             tbHarga.Text = row.Cells("harga").Value.ToString()
@@ -175,21 +197,29 @@ End Sub
             ' Tampilkan gambar dari DB
             Try
                 conn.Open()
-                Dim cmd As New MySqlCommand("SELECT gambar FROM menu WHERE id = @id", conn)
-                cmd.Parameters.AddWithValue("@id", selectedMenuId)
-                Dim imgBytes As Byte() = CType(cmd.ExecuteScalar(), Byte())
+                Dim cmd As New MySqlCommand("SELECT gambar FROM menu WHERE id_menu = @id_menu", conn)
+                cmd.Parameters.AddWithValue("@id_menu", selectedMenuId)
+                Dim result = cmd.ExecuteScalar()
                 conn.Close()
 
-                If imgBytes IsNot Nothing Then
-                    Dim ms As New IO.MemoryStream(imgBytes)
-                    gambarMenu.Image = Image.FromStream(ms)
-                    gambarMenu.SizeMode = PictureBoxSizeMode.Zoom
+                If result IsNot Nothing AndAlso Not Convert.IsDBNull(result) Then
+                    Dim imgBytes As Byte() = CType(result, Byte())
+                    Using ms As New MemoryStream(imgBytes)
+                        Dim img As Image = Image.FromStream(ms)
+                        gambarMenu.Image = img
+                        gambarMenu.SizeMode = PictureBoxSizeMode.Zoom
+                    End Using
+                Else
+                    gambarMenu.Image = Nothing
                 End If
+
             Catch ex As Exception
                 MessageBox.Show("Gagal ambil gambar: " & ex.Message)
                 If conn.State = ConnectionState.Open Then conn.Close()
             End Try
+
         End If
     End Sub
+
 
 End Class
