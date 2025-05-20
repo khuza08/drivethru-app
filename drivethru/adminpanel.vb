@@ -10,26 +10,26 @@ Public Class adminpanel
         LoadKategori()
         LoadMenu()
     End Sub
-  Private Sub LoadMenu()
-    Try
-        conn.Open()
+    Private Sub LoadMenu()
+        Try
+            conn.Open()
             Dim query As String = "SELECT id_menu, nama_menu, kategori, harga FROM menu"
             Dim adapter As New MySqlDataAdapter(query, conn)
-        Dim table As New DataTable()
-        adapter.Fill(table)
+            Dim table As New DataTable()
+            adapter.Fill(table)
 
-        dgvMenu.DataSource = table
+            dgvMenu.DataSource = table
             dgvMenu.Columns("id_menu").Visible = False
             dgvMenu.Columns("nama_menu").HeaderText = "Nama Menu"
-        dgvMenu.Columns("kategori").HeaderText = "Kategori"
-        dgvMenu.Columns("harga").HeaderText = "Harga"
+            dgvMenu.Columns("kategori").HeaderText = "Kategori"
+            dgvMenu.Columns("harga").HeaderText = "Harga"
 
-        conn.Close()
-    Catch ex As Exception
-        MessageBox.Show("Gagal memuat data menu: " & ex.Message)
-        If conn.State = ConnectionState.Open Then conn.Close()
-    End Try
-End Sub
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Gagal memuat data menu: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
 
 
     Private Sub LoadKategori()
@@ -221,5 +221,8 @@ End Sub
         End If
     End Sub
 
-
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Form1.Show()
+        Me.Hide()
+    End Sub
 End Class

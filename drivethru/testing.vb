@@ -1,81 +1,81 @@
 ﻿Imports System.Globalization
 Imports MySql.Data.MySqlClient
+Imports Guna.UI2.WinForms
 
 Public Class testing
 
     Dim conn As New MySqlConnection("server=localhost;user id=root;password=killvoid;database=db_ambafood")
+    Dim cultureID As New CultureInfo("id-ID") ' Format mata uang Rupiah
 
-
-    ' pakai cultureID buat format Rupiah
-    Dim cultureID As New CultureInfo("id-ID")
-
-    ' form load
+    ' === Form Load ===
     Private Sub testing_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        AturTabMenu()
         AturFullscreen()
-        AturPanelKontainer()
-        AturTabelMenu()
+        AturFlowPanel()
         AturListViewPembelian()
-
-
-        'tag tombol buat handler event
-        doublebeef.Tag = "Double Beef"
-        cheeseburger.Tag = "Cheese Burger"
-        chickenburger.Tag = "Chicken Burger"
-        sandwich.Tag = "Classic Sandwich"
-        fries.Tag = "Fries"
-        onionring.Tag = "Onion Ring"
-        pie.Tag = "Amba Pie"
-        nugget.Tag = "Amba Nugget"
-        cola.Tag = "Coca Cola"
-        mcflurry.Tag = "McFlurry"
-        matcha.Tag = "Matcha Latte"
-        americano.Tag = "Americano Ireng"
-        kombodeluxe.Tag = "Kombo Deluxe"
-        starterpack.Tag = "Kombo Starter Pack"
-        kombocouple.Tag = "Kombo Couple"
-        kombonguwawor.Tag = "Kombo Nguwawor"
-
+        LoadMenuDariDatabase()
     End Sub
 
-    ' konfigurasi ui
-    Private Sub AturTabMenu()
-        TabPage1.Text = "Burgers"
-        TabPage2.Text = "Sides"
-        TabPage3.Text = "Drinks"
-        TabPage4.Text = "Combos"
+    ' === Load kategori Drinks dari database ke FlowLayoutPanel ===
+    ' -- [Custom Component Integration: items.vb - Future Proof] --
+    ' Mengganti tombol biasa dengan komponen custom "items"
+    ' Properti digunakan: NamaMenu, HargaMenu, GambarMenu
+    ' Event digunakan: ItemClicked (handle untuk AddToOrder)
+    ' ------------------------------------------------------------
+    Public Sub LoadMenuDariDatabase()
+        Try
+            conn.Open()
+            Dim query As String = "SELECT nama_menu, harga, gambar FROM menu WHERE kategori = 'Drinks'"
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+            While reader.Read()
+                Dim menuItem As New items()
+                menuItem.NamaMenu = reader("nama_menu").ToString()
+                menuItem.HargaMenu = Convert.ToDecimal(reader("harga"))
+
+                If Not IsDBNull(reader("gambar")) Then
+                    Dim bytes As Byte() = CType(reader("gambar"), Byte())
+                    Using ms As New IO.MemoryStream(bytes)
+                        menuItem.GambarMenu = Image.FromStream(ms)
+                    End Using
+                End If
+
+                AddHandler menuItem.ItemClicked, AddressOf Item_Click
+                flowpanelDrinks.Controls.Add(menuItem)
+            End While
+
+            reader.Close()
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Gagal memuat menu: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
     End Sub
 
+    ' === Set Fullscreen Form ===
     Private Sub AturFullscreen()
         Me.FormBorderStyle = FormBorderStyle.None
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
-    Private Sub AturPanelKontainer()
-        For Each panel As Panel In {Panel1, Panel2, Panel3, Panel4}
-            panel.AutoScroll = True
-            panel.Dock = DockStyle.Fill
-            panel.Padding = New Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0)
-        Next
+    ' === Atur FlowLayoutPanel ===
+    Private Sub AturFlowPanel()
+        flowpanelDrinks.AutoScroll = True
+        flowpanelDrinks.Dock = DockStyle.Fill
+        flowpanelDrinks.WrapContents = True
+        flowpanelDrinks.FlowDirection = FlowDirection.LeftToRight
     End Sub
 
-    Private Sub AturTabelMenu()
-        For Each tbl As TableLayoutPanel In {tblburgers, tblsides, tbldrinks, tblcombos}
-            tbl.AutoSize = False
-            tbl.Dock = DockStyle.Top
-            tbl.GrowStyle = TableLayoutPanelGrowStyle.AddRows
-        Next
-    End Sub
-
+    ' === Atur ListView untuk daftar pembelian ===   
     Private Sub AturListViewPembelian()
         pembelian.View = View.Details
         pembelian.Columns.Add("Item", 150, HorizontalAlignment.Left)
         pembelian.Columns.Add("Qty", 60, HorizontalAlignment.Center)
         pembelian.Columns.Add("Price", 120, HorizontalAlignment.Right)
-        pembelian.Columns.Add("Total", 160, HorizontalAlignment.Right)
+        pembelian.Columns.Add("Total", 142, HorizontalAlignment.Right)
     End Sub
 
-    ' logika order
+    ' === Tambahkan item ke daftar pesanan ===
     Private Sub AddToOrder(itemName As String, price As Decimal)
         Dim found As Boolean = False
 
@@ -100,6 +100,7 @@ Public Class testing
         UpdateTotal()
     End Sub
 
+    ' === Update total keseluruhan dan pajak ===
     Private Sub UpdateTotal()
         Dim subtotal As Decimal = 0
 
@@ -115,6 +116,7 @@ Public Class testing
         labeltotal.Text = total.ToString("C2", cultureID)
     End Sub
 
+    ' === Ambil harga dari database berdasarkan nama menu ===
     Private Function ambilHarga(namaMenu As String) As Decimal
         Try
             conn.Open()
@@ -128,27 +130,20 @@ Public Class testing
                 Return Convert.ToDecimal(harga)
             End If
         Catch ex As Exception
-            MessageBox.Show("gagal mengambil harga dari database: " & ex.Message)
+            MessageBox.Show("Gagal mengambil harga dari database: " & ex.Message)
             If conn.State = ConnectionState.Open Then conn.Close()
         End Try
 
         Return 0
     End Function
 
-
-    ' handler tombol
-
-    Private Sub Item_Click(sender As Object, e As EventArgs) Handles doublebeef.Click, cheeseburger.Click, chickenburger.Click,
-            fries.Click, matcha.Click, nugget.Click, onionring.Click, sandwich.Click, americano.Click, pie.Click, cola.Click,
-            kombocouple.Click, kombonguwawor.Click, kombodeluxe.Click
-
-        Dim btn As Button = CType(sender, Button)
-        Dim nama As String = btn.Tag.ToString()
-        Dim harga = ambilHarga(nama)
-        AddToOrder(nama, harga)
+    ' === Event klik dari komponen item (custom button) ===
+    Private Sub Item_Click(namaMenu As String)
+        Dim harga = ambilHarga(namaMenu)
+        AddToOrder(namaMenu, harga)
     End Sub
 
-
+    ' === Reset daftar pesanan ===
     Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
         pembelian.Items.Clear()
         labelsubtotal.Text = 0.ToString("C2", cultureID)
@@ -156,6 +151,7 @@ Public Class testing
         labeltotal.Text = 0.ToString("C2", cultureID)
     End Sub
 
+    ' === Proses pesanan dan tampilkan form struk ===
     Private Sub btnorder_Click(sender As Object, e As EventArgs) Handles btnorder.Click
         Dim formStruk As New formStruk()
 
@@ -172,7 +168,6 @@ Public Class testing
         Dim result As DialogResult = MessageBox.Show("Yakin pesananmu sudah benar?", "Konfirmasi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
         If result = DialogResult.OK Then
-            ' generate ID transaksi dan tanggal
             Dim transactionId As String = "TRX" & Now.ToString("yyyyMMddHHmmss")
             Dim tanggal As String = Now.ToString("dd MMMM yyyy HH:mm")
 
@@ -180,6 +175,10 @@ Public Class testing
             formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text, paymentbox.Text, transactionId, tanggal)
             formStruk.ShowDialog()
         End If
+    End Sub
+
+    ' === Kosong untuk Designer event ===
+    Private Sub flowpanelDrinks_Paint(sender As Object, e As PaintEventArgs) Handles flowpanelDrinks.Paint
     End Sub
 
 End Class

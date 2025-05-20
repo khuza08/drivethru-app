@@ -5,7 +5,6 @@ Public Class FormLogin
         Form1.Show()
         Me.Hide()
     End Sub
-
     Private Sub tbpw_TextChanged(sender As Object, e As EventArgs)
         tbpw.UseSystemPasswordChar = True
 
@@ -27,12 +26,11 @@ Public Class FormLogin
     End Sub
 
     Private Sub formLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Me.FormBorderStyle = FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
+        Me.AcceptButton = login
 
     End Sub
-
 
     Private dragging As Boolean = False
     Private offset As Point
