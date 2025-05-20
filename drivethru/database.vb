@@ -8,7 +8,7 @@ Public Class database
 
     ' Koneksi ke database
     Public Sub Connect()
-        conn = New MySqlConnection("server=localhost;user id=root;password=;database=db_ambafood")
+        conn = New MySqlConnection("server=localhost;user id=root;password=killvoid;database=db_ambafood")
         Try
             conn.Open()
         Catch ex As Exception

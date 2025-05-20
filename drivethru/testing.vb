@@ -17,6 +17,8 @@ Public Class testing
         AturTabelMenu()
         AturListViewPembelian()
 
+
+        'tag tombol buat handler event
         doublebeef.Tag = "Double Beef"
         cheeseburger.Tag = "Cheese Burger"
         chickenburger.Tag = "Chicken Burger"
@@ -33,7 +35,6 @@ Public Class testing
         starterpack.Tag = "Kombo Starter Pack"
         kombocouple.Tag = "Kombo Couple"
         kombonguwawor.Tag = "Kombo Nguwawor"
-
 
     End Sub
 
@@ -136,7 +137,6 @@ Public Class testing
 
 
     ' handler tombol
-
 
     Private Sub Item_Click(sender As Object, e As EventArgs) Handles doublebeef.Click, cheeseburger.Click, chickenburger.Click,
             fries.Click, matcha.Click, nugget.Click, onionring.Click, sandwich.Click, americano.Click, pie.Click, cola.Click,

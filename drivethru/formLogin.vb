@@ -17,11 +17,12 @@ Public Class FormLogin
         Dim pass = tbpw.Text
 
         If db.Login(user, pass) Then
-            MessageBox.Show(" suki berhasil login !")
-            ' lanjut ke form utama
-            Hide()
+            MessageBox.Show("Admin telah Datang!!!")
+            ' lanjut ke atmin panel
+            adminpanel.Show()
+            Me.Hide()
         Else
-            MessageBox.Show("Username atau suki salah!")
+            MessageBox.Show("username atau password salah!")
         End If
     End Sub
 

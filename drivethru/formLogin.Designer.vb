@@ -89,9 +89,9 @@ Partial Class FormLogin
         loginBack.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         loginBack.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         loginBack.FillColor = Color.Gold
-        loginBack.Font = New Font("Montserrat Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        loginBack.Font = New Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         loginBack.ForeColor = Color.Black
-        loginBack.Location = New Point(240, 246)
+        loginBack.Location = New Point(235, 246)
         loginBack.Name = "loginBack"
         loginBack.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         loginBack.Size = New Size(110, 32)

@@ -1,0 +1,147 @@
+[33mcommit 923289122c3946f1d032b77803007054b4fd74a0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Mon May 19 20:19:59 2025 +0700
+
+    feat: implement basic CRUD functions
+
+[33mcommit 0226e0f171ba31e09e1b3c4c8c10d1a96ba4068e[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Mon May 19 16:49:17 2025 +0700
+
+    feat: added rouned corners and switch to GunaFramework
+
+[33mcommit 6b81c558acd17b12263d0c0d5b451610ee1f0b37[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 22:11:40 2025 +0700
+
+    feat: added basic database function
+
+[33mcommit 9c0abbe601f7caac1b6c9e2975ca3501f51c8964[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 20:02:34 2025 +0700
+
+    feat: add new combo meals to menu
+
+[33mcommit f1404a7ae05695db2d14db1a49da072d4b1501aa[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 19:19:30 2025 +0700
+
+    update: include more food and drink options
+
+[33mcommit 1ce9d68e3367a3d37338647aa36cea22aed5aa5d[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 17:58:52 2025 +0700
+
+    feat: add order button handler to validate input and show receipt form
+
+[33mcommit f8888376b10ce0284162f7964a60b5595f1dec01[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 17:55:53 2025 +0700
+
+    feat: implement receipt form with non-selectable ListView and dynamic sizing
+
+[33mcommit d7102b886db10ae355088a121b3e90b5a68b8d03[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 14:55:10 2025 +0700
+
+    feat: update currency display to Rupiah (IDR) using Indonesian culture formatting
+
+[33mcommit c53051a3a53d4db3764cfd3cc4cc8f92d6a9109c[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 14:24:27 2025 +0700
+
+    testing: added proper MenuItems & etc.
+
+[33mcommit 5fef835770ae675d73472c39c17ac00e67cc30f3[m
+Merge: 30abf76 f44f1fe
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 11:40:10 2025 +0700
+
+    Merge branch 'master' of https://github.com/khuza08/drivethru-app
+
+[33mcommit 30abf76570b170658a232d5ad1bc349eedd503b8[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 11:39:53 2025 +0700
+
+    testing: Improve formReceipt layout and rendering
+
+[33mcommit f44f1feae491fe624fdea373a3b38c4d35102ef7[m
+Author: huzawastaken <huzaifahasif3@gmail.com>
+Date:   Sun May 18 08:37:47 2025 +0700
+
+    Update README.md
+    
+    on my PC with a low-res 1366x768 monitor, the UI gets misaligned or broken.
+
+[33mcommit 38d87c5ecf89965485298ffd00fd007dcc54cc02[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 08:29:33 2025 +0700
+
+    testing: finish menu category items
+
+[33mcommit 25d1da364f75b2a036302f7e172a6f387a2a36b8[m
+Author: huzawastaken <huzaifahasif3@gmail.com>
+Date:   Sun May 18 07:26:48 2025 +0700
+
+    Update README.md
+
+[33mcommit 04def4f004254ea8cda47da51734de700ccde702[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 05:13:55 2025 +0700
+
+    testing: fix table width & listview width
+
+[33mcommit cabde2a5a7892b7e7c0c79002f472f1532d51985[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 04:55:45 2025 +0700
+
+    testing: proper calculating items
+
+[33mcommit e401179f08c75e3ab52f7ad887b190ba3b14962d[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sun May 18 03:28:16 2025 +0700
+
+    testing: add button functions
+
+[33mcommit a69965f16e69b6951359909fdd483f2bf33fb5a6[m
+Merge: f71068e 3173735
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sat May 17 00:09:13 2025 +0700
+
+    Merge branch 'master' of https://github.com/khuza08/drivethru-app
+
+[33mcommit f71068ea19877eff8101130ae4875182a9013b1c[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Sat May 17 00:08:47 2025 +0700
+
+    testing: semi responsive ui
+
+[33mcommit 3173735fcc1553dc446797653d7623648de5cf90[m
+Author: huzawastaken <huzaifahasif3@gmail.com>
+Date:   Fri May 16 23:32:16 2025 +0700
+
+    Update README.md
+
+[33mcommit 843ac1d2bea5c8fbf4d6fe22514e680e86f26af6[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Fri May 16 23:24:27 2025 +0700
+
+    testing: added purchase details
+
+[33mcommit fb0fdbe91e3e3d283c67e6dd68b9dc3a477dd32f[m
+Author: huza <huzaifahasif3@gmail.com>
+Date:   Fri May 16 23:09:13 2025 +0700
+
+    testing: experimental ui
+
+[33mcommit 085b9020ee0fa72d23d2c3c15bb26079f69d34e1[m
+Author: huza <huza@WIN-MB0F4A2KTE0>
+Date:   Fri May 16 19:11:01 2025 +0700
+
+    Add project files.
+
+[33mcommit 375d1d15ce3d1a8a8bf1db82ede70e043e1a3452[m
+Author: huza <huza@WIN-MB0F4A2KTE0>
+Date:   Fri May 16 19:10:57 2025 +0700
+
+    Add .gitattributes, .gitignore, README.md, and LICENSE.txt.
