@@ -3,13 +3,16 @@ Imports System.IO
 
 Public Class adminpanel
     Dim selectedMenuId As Integer = -1
+    Dim selectedKasirId As Integer = -1
+
     Dim conn As New MySqlConnection("server=localhost;user id=root;password=killvoid;database=db_ambafood")
 
-    'load function
     Private Sub adminpanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadKategori()
         LoadMenu()
+        LoadKasir()
     End Sub
+
     Private Sub LoadMenu()
         Try
             conn.Open()
@@ -31,7 +34,6 @@ Public Class adminpanel
         End Try
     End Sub
 
-
     Private Sub LoadKategori()
         cmbKategori.Items.Clear()
         cmbKategori.Items.Add("Burgers")
@@ -41,21 +43,38 @@ Public Class adminpanel
         cmbKategori.Items.Add("Special")
     End Sub
 
-    ' Upload gambar ke PictureBox
-    Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
-        Dim ofd As New OpenFileDialog() With {
-            .Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"
-        }
+    Private Sub LoadKasir()
+        Try
+            conn.Open()
+            Dim query As String = "SELECT id_kasir, username, password FROM kasir"
+            Dim adapter As New MySqlDataAdapter(query, conn)
+            Dim table As New DataTable()
+            adapter.Fill(table)
 
-        If ofd.ShowDialog() = DialogResult.OK Then
+            dgvKasir.DataSource = table
+            dgvKasir.Columns("id_kasir").Visible = False
+            dgvKasir.Columns("username").HeaderText = "Username"
+            dgvKasir.Columns("password").HeaderText = "Password"
+
+
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Gagal memuat data kasir: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
+    Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
+        Dim ofd As New OpenFileDialog With {.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"}
+
+        If ofd.ShowDialog = DialogResult.OK Then
             gambarMenu.Image = Image.FromFile(ofd.FileName)
             gambarMenu.SizeMode = PictureBoxSizeMode.Zoom
         End If
     End Sub
 
-    ' Tambah menu ke database
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
-        If tbNama.Text.Trim() = "" Or tbHarga.Text.Trim() = "" Or cmbKategori.Text = "" Or gambarMenu.Image Is Nothing Then
+        If tbNama.Text.Trim = "" Or tbHarga.Text.Trim = "" Or cmbKategori.Text = "" Or gambarMenu.Image Is Nothing Then
             MessageBox.Show("Lengkapi semua data.")
             Exit Sub
         End If
@@ -67,15 +86,15 @@ Public Class adminpanel
         End If
 
         Dim imgBytes As Byte()
-        Using ms As New MemoryStream()
+        Using ms As New MemoryStream
             gambarMenu.Image.Save(ms, Imaging.ImageFormat.Png)
-            imgBytes = ms.ToArray()
+            imgBytes = ms.ToArray
         End Using
 
         Try
             conn.Open()
             Dim cmd As New MySqlCommand("INSERT INTO menu (nama_menu, harga, kategori, gambar) VALUES (@nama, @harga, @kategori, @gambar)", conn)
-            cmd.Parameters.AddWithValue("@nama", tbNama.Text.Trim())
+            cmd.Parameters.AddWithValue("@nama", tbNama.Text.Trim)
             cmd.Parameters.AddWithValue("@harga", harga)
             cmd.Parameters.AddWithValue("@kategori", cmbKategori.Text)
             cmd.Parameters.AddWithValue("@gambar", imgBytes)
@@ -91,7 +110,6 @@ Public Class adminpanel
         End Try
     End Sub
 
-    ' Reset semua input
     Private Sub ResetForm()
         tbNama.Clear()
         tbHarga.Clear()
@@ -99,15 +117,14 @@ Public Class adminpanel
         gambarMenu.Image = Nothing
     End Sub
 
-    ' placeholder untuk Update, Hapus, Reset
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         If selectedMenuId = -1 Then
             MessageBox.Show("Pilih item menu dulu dari tabel.")
             Exit Sub
         End If
 
-        Dim nama As String = tbNama.Text.Trim()
-        Dim kategori As String = cmbKategori.Text
+        Dim nama = tbNama.Text.Trim
+        Dim kategori = cmbKategori.Text
         Dim harga As Decimal
 
         If Not Decimal.TryParse(tbHarga.Text, harga) Then
@@ -117,16 +134,16 @@ Public Class adminpanel
 
         Dim imgBytes As Byte() = Nothing
         If gambarMenu.Image IsNot Nothing Then
-            Dim ms As New IO.MemoryStream()
+            Dim ms As New MemoryStream
             gambarMenu.Image.Save(ms, Imaging.ImageFormat.Png)
-            imgBytes = ms.ToArray()
+            imgBytes = ms.ToArray
         End If
 
         Try
             conn.Open()
             Dim cmd As New MySqlCommand("UPDATE menu SET nama_menu=@nama, kategori=@kategori, harga=@harga, gambar=@gambar WHERE id_menu=@id_menu", conn)
             cmd.Parameters.AddWithValue("@nama", nama)
-            cmd.Parameters.AddWithValue("@kategori", cmbKategori.Text)
+            cmd.Parameters.AddWithValue("@kategori", kategori)
             cmd.Parameters.AddWithValue("@harga", harga)
             cmd.Parameters.AddWithValue("@gambar", imgBytes)
             cmd.Parameters.AddWithValue("@id_menu", selectedMenuId)
@@ -149,7 +166,7 @@ Public Class adminpanel
             Exit Sub
         End If
 
-        Dim confirm As DialogResult = MessageBox.Show("Yakin ingin menghapus menu ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        Dim confirm = MessageBox.Show("Yakin ingin menghapus menu ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If confirm = DialogResult.No Then Exit Sub
 
         Try
@@ -173,19 +190,14 @@ Public Class adminpanel
         ResetForm()
     End Sub
 
-    Private Sub cmbKategori_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbKategori.SelectedIndexChanged
-        ' Optional: saat kategori berubah
-    End Sub
-
     Private Sub dgvMenu_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvMenu.CellClick
         If e.RowIndex >= 0 Then
-            Dim row As DataGridViewRow = dgvMenu.Rows(e.RowIndex)
+            Dim row = dgvMenu.Rows(e.RowIndex)
             selectedMenuId = Convert.ToInt32(row.Cells("id_menu").Value)
-            tbNama.Text = row.Cells("nama_menu").Value.ToString()
-            cmbKategori.Text = row.Cells("kategori").Value.ToString()
-            tbHarga.Text = row.Cells("harga").Value.ToString()
+            tbNama.Text = row.Cells("nama_menu").Value.ToString
+            cmbKategori.Text = row.Cells("kategori").Value.ToString
+            tbHarga.Text = row.Cells("harga").Value.ToString
 
-            ' Tampilkan gambar dari DB
             Try
                 conn.Open()
                 Dim cmd As New MySqlCommand("SELECT gambar FROM menu WHERE id_menu = @id_menu", conn)
@@ -194,10 +206,9 @@ Public Class adminpanel
                 conn.Close()
 
                 If result IsNot Nothing AndAlso Not Convert.IsDBNull(result) Then
-                    Dim imgBytes As Byte() = CType(result, Byte())
+                    Dim imgBytes = CType(result, Byte())
                     Using ms As New MemoryStream(imgBytes)
-                        Dim img As Image = Image.FromStream(ms)
-                        gambarMenu.Image = img
+                        gambarMenu.Image = Image.FromStream(ms)
                         gambarMenu.SizeMode = PictureBoxSizeMode.Zoom
                     End Using
                 Else
@@ -208,7 +219,6 @@ Public Class adminpanel
                 MessageBox.Show("Gagal ambil gambar: " & ex.Message)
                 If conn.State = ConnectionState.Open Then conn.Close()
             End Try
-
         End If
     End Sub
 
@@ -219,4 +229,98 @@ Public Class adminpanel
         Form1.Show()
         Me.Hide()
     End Sub
+
+    Private Sub btnTambahKasir_Click(sender As Object, e As EventArgs) Handles btnkasirTambah.Click
+        If txtUsername.Text = "" Or txtPassword.Text = "" Then
+            MessageBox.Show("Lengkapi data kasir.")
+            Exit Sub
+        End If
+
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand("INSERT INTO kasir (username, password) VALUES (@user, @pass)", conn)
+            cmd.Parameters.AddWithValue("@user", txtUsername.Text)
+            cmd.Parameters.AddWithValue("@pass", txtPassword.Text)
+            cmd.ExecuteNonQuery()
+            conn.Close()
+
+            MessageBox.Show("Kasir ditambahkan.")
+            ResetKasirForm()
+            LoadKasir()
+        Catch ex As Exception
+            MessageBox.Show("Gagal tambah kasir: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
+    Private Sub dgvKasir_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvKasir.CellClick
+        If e.RowIndex >= 0 Then
+            Dim row = dgvKasir.Rows(e.RowIndex)
+            selectedKasirId = CInt(row.Cells("id_kasir").Value)
+            txtUsername.Text = row.Cells("username").Value.ToString()
+            txtPassword.Text = ""
+        End If
+    End Sub
+
+    Private Sub btnUpdateKasir_Click(sender As Object, e As EventArgs) Handles btnkasirUpdate.Click
+        If selectedKasirId = -1 Then
+            MessageBox.Show("Pilih kasir dahulu.")
+            Exit Sub
+        End If
+
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand("UPDATE kasir SET username=@user" & If(txtPassword.Text <> "", ", password=@pass", "") & " WHERE id_kasir=@id", conn)
+            cmd.Parameters.AddWithValue("@user", txtUsername.Text)
+            If txtPassword.Text <> "" Then cmd.Parameters.AddWithValue("@pass", txtPassword.Text)
+            cmd.Parameters.AddWithValue("@id", selectedKasirId)
+            cmd.ExecuteNonQuery()
+            conn.Close()
+
+            MessageBox.Show("Data kasir diupdate.")
+            ResetKasirForm()
+            LoadKasir()
+            selectedKasirId = -1
+        Catch ex As Exception
+            MessageBox.Show("Gagal update kasir: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
+    Private Sub btnHapusKasir_Click(sender As Object, e As EventArgs) Handles btnkasirHapus.Click
+        If selectedKasirId = -1 Then
+            MessageBox.Show("Pilih kasir dahulu.")
+            Exit Sub
+        End If
+
+        Dim confirm = MessageBox.Show("Yakin hapus kasir ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If confirm = DialogResult.No Then Exit Sub
+
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand("DELETE FROM kasir WHERE id_kasir=@id", conn)
+            cmd.Parameters.AddWithValue("@id", selectedKasirId)
+            cmd.ExecuteNonQuery()
+            conn.Close()
+
+            MessageBox.Show("Kasir dihapus.")
+            ResetKasirForm()
+            LoadKasir()
+            selectedKasirId = -1
+        Catch ex As Exception
+            MessageBox.Show("Gagal hapus kasir: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
+    Private Sub btnResetKasir_Click(sender As Object, e As EventArgs) Handles btnkasirReset.Click
+        ResetKasirForm()
+    End Sub
+
+    Private Sub ResetKasirForm()
+        txtUsername.Clear()
+        txtPassword.Clear()
+        selectedKasirId = -1
+    End Sub
+
 End Class
