@@ -73,7 +73,8 @@
                                      End Sub
     End Sub
 
-    Public Sub SetData(items As ListView.ListViewItemCollection, subtotal As String, tax As String, total As String, paymentMethod As String, transactionId As String, tanggal As String)
+    ' Tambahkan parameter namaKasir di sini
+    Public Sub SetData(items As ListView.ListViewItemCollection, subtotal As String, tax As String, total As String, paymentMethod As String, transactionId As String, tanggal As String, namaKasir As String)
         lvStruk.Items.Clear()
         For Each item As ListViewItem In items
             lvStruk.Items.Add(CType(item.Clone(), ListViewItem))
@@ -83,17 +84,21 @@
         lblTax.Text = tax
         lblTotal.Text = total
         lblpaymentbox.Text = paymentMethod
-        lblTanggal.Text = Now.ToString("dd MMMM yyyy")
+        lblTanggal.Text = tanggal
         lblWaktu.Text = Now.ToString("HH:mm:ss")
-        lblTransaksi.Text = "KHZX" & Now.ToString("yyyyMMddHHmmss")
+        lblTransaksi.Text = transactionId
+
+        ' Tampilkan nama kasir di label
+        lblKasir.Text = namaKasir
     End Sub
 
+    ' Drag form code tetap sama...
+    Private dragging As Boolean = False
+    Private offset As Point
 
-    ' Untuk ListView lvStruk
     Private Sub lvStruk_MouseDown(sender As Object, e As MouseEventArgs) Handles lvStruk.MouseDown
         If e.Button = MouseButtons.Left Then
             dragging = True
-            ' Hitung offset relatif ke form, bukan ke ListView
             offset = Me.PointToClient(lvStruk.PointToScreen(e.Location))
         End If
     End Sub
@@ -109,13 +114,6 @@
     Private Sub lvStruk_MouseUp(sender As Object, e As MouseEventArgs) Handles lvStruk.MouseUp
         dragging = False
     End Sub
-
-    Private Sub TableLayoutPanel1_Paint(sender As Object, evt As PaintEventArgs) Handles TableLayoutPanel1.Paint
-        ' Kosong
-    End Sub
-
-    Private dragging As Boolean = False
-    Private offset As Point
 
     Private Sub formStruk_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
         If e.Button = MouseButtons.Left Then
@@ -133,16 +131,10 @@
     Private Sub formStruk_MouseUp(sender As Object, e As MouseEventArgs) Handles Me.MouseUp
         dragging = False
     End Sub
+
     Protected Overrides Sub OnLoad(e As EventArgs)
         MyBase.OnLoad(e)
-
-        ' Hilangkan border dan control box
         Me.FormBorderStyle = FormBorderStyle.None
-
-        ' Atur ukuran form
-        ' Me.Size = New Size(400, 600) ' lebar > panjang
-
-        ' Buat rounded corners (radius 30)
         Dim radius As Integer = 30
         Dim path As New Drawing2D.GraphicsPath()
         path.AddArc(0, 0, radius, radius, 180, 90)

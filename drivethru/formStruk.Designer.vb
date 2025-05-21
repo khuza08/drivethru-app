@@ -63,6 +63,9 @@ Partial Class formStruk
         Label15 = New Label()
         Label16 = New Label()
         btnExit = New Guna.UI2.WinForms.Guna2Button()
+        Label22 = New Label()
+        kasieer = New Label()
+        lblKasir = New Label()
         TableLayoutPanel1.SuspendLayout()
         tblStruk.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
@@ -289,6 +292,7 @@ Partial Class formStruk
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 88.54626F))
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 11.4537449F))
         TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 224F))
+        TableLayoutPanel3.Controls.Add(lblKasir, 2, 3)
         TableLayoutPanel3.Controls.Add(Label12, 1, 2)
         TableLayoutPanel3.Controls.Add(Label11, 1, 1)
         TableLayoutPanel3.Controls.Add(Label10, 1, 0)
@@ -298,12 +302,15 @@ Partial Class formStruk
         TableLayoutPanel3.Controls.Add(lblTanggal, 2, 0)
         TableLayoutPanel3.Controls.Add(lblWaktu, 2, 1)
         TableLayoutPanel3.Controls.Add(lblTransaksi, 2, 2)
+        TableLayoutPanel3.Controls.Add(Label22, 1, 3)
+        TableLayoutPanel3.Controls.Add(kasieer, 0, 3)
         TableLayoutPanel3.Location = New Point(3, 113)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
-        TableLayoutPanel3.RowCount = 3
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
-        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
+        TableLayoutPanel3.RowCount = 4
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0626545F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0626583F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0626583F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 24.8120327F))
         TableLayoutPanel3.Size = New Size(680, 92)
         TableLayoutPanel3.TabIndex = 6
         ' 
@@ -311,7 +318,7 @@ Partial Class formStruk
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Courier New", 9F)
-        Label12.Location = New Point(406, 60)
+        Label12.Location = New Point(406, 46)
         Label12.Name = "Label12"
         Label12.Size = New Size(20, 20)
         Label12.TabIndex = 8
@@ -321,7 +328,7 @@ Partial Class formStruk
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Courier New", 9F)
-        Label11.Location = New Point(406, 30)
+        Label11.Location = New Point(406, 23)
         Label11.Name = "Label11"
         Label11.Size = New Size(20, 20)
         Label11.TabIndex = 7
@@ -343,7 +350,7 @@ Partial Class formStruk
         Label7.Font = New Font("Courier New", 12F)
         Label7.Location = New Point(3, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(110, 27)
+        Label7.Size = New Size(110, 23)
         Label7.TabIndex = 0
         Label7.Text = "Tanggal"
         ' 
@@ -351,9 +358,9 @@ Partial Class formStruk
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Courier New", 12F)
-        Label8.Location = New Point(3, 30)
+        Label8.Location = New Point(3, 23)
         Label8.Name = "Label8"
-        Label8.Size = New Size(82, 27)
+        Label8.Size = New Size(82, 23)
         Label8.TabIndex = 1
         Label8.Text = "Waktu"
         ' 
@@ -361,9 +368,9 @@ Partial Class formStruk
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Courier New", 12F)
-        Label9.Location = New Point(3, 60)
+        Label9.Location = New Point(3, 46)
         Label9.Name = "Label9"
-        Label9.Size = New Size(180, 27)
+        Label9.Size = New Size(180, 23)
         Label9.TabIndex = 2
         Label9.Text = "ID Transaksi"
         ' 
@@ -373,7 +380,7 @@ Partial Class formStruk
         lblTanggal.Font = New Font("Courier New", 12F, FontStyle.Bold Or FontStyle.Italic)
         lblTanggal.Location = New Point(458, 0)
         lblTanggal.Name = "lblTanggal"
-        lblTanggal.Size = New Size(152, 28)
+        lblTanggal.Size = New Size(152, 23)
         lblTanggal.TabIndex = 4
         lblTanggal.Text = "lblTanggal"
         ' 
@@ -381,9 +388,9 @@ Partial Class formStruk
         ' 
         lblWaktu.AutoSize = True
         lblWaktu.Font = New Font("Courier New", 12F, FontStyle.Bold Or FontStyle.Italic)
-        lblWaktu.Location = New Point(458, 30)
+        lblWaktu.Location = New Point(458, 23)
         lblWaktu.Name = "lblWaktu"
-        lblWaktu.Size = New Size(124, 28)
+        lblWaktu.Size = New Size(124, 23)
         lblWaktu.TabIndex = 3
         lblWaktu.Text = "lblWaktu"
         ' 
@@ -391,9 +398,9 @@ Partial Class formStruk
         ' 
         lblTransaksi.AutoSize = True
         lblTransaksi.Font = New Font("Courier New", 12F, FontStyle.Bold Or FontStyle.Italic)
-        lblTransaksi.Location = New Point(458, 60)
+        lblTransaksi.Location = New Point(458, 46)
         lblTransaksi.Name = "lblTransaksi"
-        lblTransaksi.Size = New Size(180, 28)
+        lblTransaksi.Size = New Size(180, 23)
         lblTransaksi.TabIndex = 5
         lblTransaksi.Text = "lblTransaksi"
         ' 
@@ -531,6 +538,36 @@ Partial Class formStruk
         btnExit.TabIndex = 12
         btnExit.Text = "CLOSE RECEIPT"
         ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Font = New Font("Courier New", 9F)
+        Label22.Location = New Point(406, 69)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(20, 20)
+        Label22.TabIndex = 11
+        Label22.Text = ":"
+        ' 
+        ' kasieer
+        ' 
+        kasieer.AutoSize = True
+        kasieer.Font = New Font("Courier New", 12F)
+        kasieer.Location = New Point(3, 69)
+        kasieer.Name = "kasieer"
+        kasieer.Size = New Size(82, 23)
+        kasieer.TabIndex = 9
+        kasieer.Text = "Kasir"
+        ' 
+        ' lblKasir
+        ' 
+        lblKasir.AutoSize = True
+        lblKasir.Font = New Font("Courier New", 12F, FontStyle.Bold Or FontStyle.Italic)
+        lblKasir.Location = New Point(458, 69)
+        lblKasir.Name = "lblKasir"
+        lblKasir.Size = New Size(124, 23)
+        lblKasir.TabIndex = 10
+        lblKasir.Text = "lblKasir"
+        ' 
         ' formStruk
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -595,4 +632,7 @@ Partial Class formStruk
     Friend WithEvents Label18 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents btnExit As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblKasir As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents kasieer As Label
 End Class

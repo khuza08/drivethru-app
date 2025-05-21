@@ -2,6 +2,8 @@
 Imports System.IO
 
 Public Class adminpanel
+    Dim WithEvents laporanRefreshTimer As New Timer()
+    Dim lastTransaksiCount As Integer = -1
     Dim selectedMenuId As Integer = -1
     Dim selectedKasirId As Integer = -1
 
@@ -11,6 +13,9 @@ Public Class adminpanel
         LoadKategori()
         LoadMenu()
         LoadKasir()
+        LoadLaporan()
+        laporanRefreshTimer.Interval = 3000 ' setiap 3 detik
+        laporanRefreshTimer.Start()
     End Sub
 
     Private Sub LoadMenu()
@@ -202,7 +207,7 @@ Public Class adminpanel
                 conn.Open()
                 Dim cmd As New MySqlCommand("SELECT gambar FROM menu WHERE id_menu = @id_menu", conn)
                 cmd.Parameters.AddWithValue("@id_menu", selectedMenuId)
-                Dim result = cmd.ExecuteScalar()
+                Dim result = cmd.ExecuteScalar
                 conn.Close()
 
                 If result IsNot Nothing AndAlso Not Convert.IsDBNull(result) Then
@@ -322,5 +327,73 @@ Public Class adminpanel
         txtPassword.Clear()
         selectedKasirId = -1
     End Sub
+
+    Private Sub laporanRefreshTimer_Tick(sender As Object, e As EventArgs) Handles laporanRefreshTimer.Tick
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand("SELECT COUNT(*) FROM transaksi", conn)
+            Dim currentCount As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+            conn.Close()
+
+            If currentCount <> lastTransaksiCount Then
+                lastTransaksiCount = currentCount
+                LoadLaporan()
+            End If
+        Catch ex As Exception
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
+    'laporan
+    Public Class Transaksi
+        Public Property ID_Transaksi As String
+        Public Property Tanggal_Waktu As DateTime
+        Public Property Nama_Kasir As String
+        Public Property Item As String
+        Public Property Qty As Integer
+        Public Property Harga_Satuan As Decimal
+        Public Property Total As Decimal
+        Public Property Total_Bayar As Decimal
+        Public Property Metode_Bayar As String
+    End Class
+
+
+
+    Private Sub LoadLaporan()
+        Try
+            conn.Open()
+            Dim query As String = "SELECT t.id_transaksi, t.tanggal, t.nama_kasir, 
+                                    GROUP_CONCAT(td.item SEPARATOR ', ') AS items,
+                                    SUM(td.total) AS subtotal,
+                                    t.total_bayar,
+                                    (t.total_bayar - SUM(td.total)) AS tax,
+                                    t.metode_bayar
+                             FROM transaksi t
+                             JOIN transaksi_detail td ON t.id_transaksi = td.id_transaksi
+                             GROUP BY t.id_transaksi, t.tanggal, t.nama_kasir, t.total_bayar, t.metode_bayar
+                             ORDER BY t.tanggal DESC"
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim adapter As New MySqlDataAdapter(cmd)
+            Dim dt As New DataTable()
+            adapter.Fill(dt)
+            conn.Close()
+
+            dgvLaporan.DataSource = dt
+
+            dgvLaporan.Columns("id_transaksi").HeaderText = "ID Transaksi"
+            dgvLaporan.Columns("tanggal").HeaderText = "Tanggal/Waktu"
+            dgvLaporan.Columns("nama_kasir").HeaderText = "Nama Kasir"
+            dgvLaporan.Columns("items").HeaderText = "Items"
+            dgvLaporan.Columns("subtotal").HeaderText = "Subtotal"
+            dgvLaporan.Columns("tax").HeaderText = "Tax"
+            dgvLaporan.Columns("total_bayar").HeaderText = "Total Bayar"
+            dgvLaporan.Columns("metode_bayar").HeaderText = "Metode Bayar"
+
+        Catch ex As Exception
+            MessageBox.Show("Gagal load laporan: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+
 
 End Class

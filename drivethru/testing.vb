@@ -13,8 +13,21 @@ Public Class testing
         AturFlowPanel()
         AturListViewPembelian()
         LoadMenuDariDatabase()
-        menuRefreshTimer.Interval = 2500
+        menuRefreshTimer.Interval = 1000
         menuRefreshTimer.Start()
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand("SELECT username FROM kasir", conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            cmbKasir.Items.Clear()
+            While reader.Read()
+                cmbKasir.Items.Add(reader("username").ToString())
+            End While
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Gagal memuat data kasir: " & ex.Message)
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
     End Sub
 
     ' === Load kategori Drinks dari database ke FlowLayoutPanel ===
@@ -220,9 +233,21 @@ Public Class testing
         labeltotal.Text = 0.ToString("C2", cultureID)
     End Sub
 
+    Sub LoadKasir()
+        conn.Open()
+        Dim cmd As New MySqlCommand("SELECT username FROM kasir", conn)
+        Dim rdr As MySqlDataReader = cmd.ExecuteReader()
+        cmbKasir.Items.Clear()
+        While rdr.Read()
+            cmbKasir.Items.Add(rdr("username").ToString())
+        End While
+        conn.Close()
+    End Sub
+
+
+
     ' === Proses pesanan dan tampilkan form struk ===
     Private Sub btnorder_Click(sender As Object, e As EventArgs) Handles btnorder.Click
-        Dim formStruk As New formStruk()
 
         If pembelian.Items.Count = 0 Then
             MessageBox.Show("Belum ada pesanan.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -235,19 +260,65 @@ Public Class testing
         End If
 
         Dim result As DialogResult = MessageBox.Show("Yakin pesananmu sudah benar?", "Konfirmasi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+        If result <> DialogResult.OK Then Exit Sub
 
-        If result = DialogResult.OK Then
-            Dim transactionId As String = "TRX" & Now.ToString("yyyyMMddHHmmss")
-            Dim tanggal As String = Now.ToString("dd MMMM yyyy HH:mm")
+        Try
+            conn.Open()
+            Dim trans = conn.BeginTransaction()
+            Dim transactionId As String = "KHZX" & Now.ToString("yyyyMMddHHmmss")
+            Dim tanggal As String = Now.ToString("yyyy-MM-dd HH:mm:ss")
+            Dim kasirDipilih As String = If(cmbKasir.SelectedItem IsNot Nothing, cmbKasir.SelectedItem.ToString(), "")
+            If String.IsNullOrEmpty(kasirDipilih) Then
+                MessageBox.Show("Pilih kasir dulu")
+                Exit Sub
+            End If
+
+            ' Insert transaksi
+            Dim sqlTrans = "INSERT INTO transaksi (id_transaksi, tanggal, nama_kasir, total_bayar, metode_bayar) VALUES (@id_transaksi, @tanggal, @nama_kasir, @total_bayar, @metode_bayar)"
+            Dim cmdTrans As New MySqlCommand(sqlTrans, conn, trans)
+            cmdTrans.Parameters.AddWithValue("@id_transaksi", transactionId)
+            cmdTrans.Parameters.AddWithValue("@tanggal", tanggal)
+            cmdTrans.Parameters.AddWithValue("@nama_kasir", kasirDipilih)
+
+            Dim totalBersih As Decimal = Decimal.Parse(labeltotal.Text.Replace("Rp", "").Replace(".", "").Trim())
+            cmdTrans.Parameters.AddWithValue("@total_bayar", totalBersih)
+            cmdTrans.Parameters.AddWithValue("@metode_bayar", paymentbox.Text)
+            cmdTrans.ExecuteNonQuery()
+
+            ' Insert transaksi_detail
+            Dim sqlDetail = "INSERT INTO transaksi_detail (id_transaksi, item, qty, harga_satuan, total) VALUES (@id_transaksi, @item, @qty, @harga_satuan, @total)"
+            For Each item As ListViewItem In pembelian.Items
+                Dim hargaSatuan As Decimal = Decimal.Parse(item.SubItems(2).Text.Replace("Rp", "").Replace(".", "").Trim())
+                Dim totalItem As Decimal = Decimal.Parse(item.SubItems(3).Text.Replace("Rp", "").Replace(".", "").Trim())
+
+                Dim cmdDetail As New MySqlCommand(sqlDetail, conn, trans)
+                cmdDetail.Parameters.AddWithValue("@id_transaksi", transactionId)
+                cmdDetail.Parameters.AddWithValue("@item", item.SubItems(0).Text)
+                cmdDetail.Parameters.AddWithValue("@qty", Convert.ToInt32(item.SubItems(1).Text))
+                cmdDetail.Parameters.AddWithValue("@harga_satuan", hargaSatuan)
+                cmdDetail.Parameters.AddWithValue("@total", totalItem)
+                cmdDetail.ExecuteNonQuery()
+            Next
+
+            trans.Commit()
+
+            ' Tampilkan form struk dengan parameter namaKasir
+            Dim formStruk As New formStruk()
+            formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text, paymentbox.Text, transactionId, Now.ToString("dd MMMM yyyy HH:mm"), kasirDipilih)
 
             Me.Hide()
-            formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text, paymentbox.Text, transactionId, tanggal)
             Me.Close()
             formStruk.ShowDialog()
-        End If
+
+        Catch ex As Exception
+            MessageBox.Show("Gagal menyimpan transaksi: " & ex.Message)
+        Finally
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
     End Sub
 
-    ' === Kosong untuk Designer event ===
+
+    ' === zero ===
     Private Sub flowpanelDrinks_Paint(sender As Object, e As PaintEventArgs) Handles flowpanelDrinks.Paint
     End Sub
 
