@@ -82,7 +82,7 @@ Partial Class Form1
         btnLogin.FillColor = Color.Gold
         btnLogin.Font = New Font("Montserrat SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnLogin.ForeColor = Color.Black
-        btnLogin.Location = New Point(216, 408)
+        btnLogin.Location = New Point(213, 410)
         btnLogin.Name = "btnLogin"
         btnLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnLogin.Size = New Size(108, 38)
@@ -97,7 +97,7 @@ Partial Class Form1
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges5
         Guna2PictureBox1.FillColor = Color.Transparent
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(48, 32)
+        Guna2PictureBox1.Location = New Point(29, 36)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2PictureBox1.Size = New Size(256, 256)
@@ -114,7 +114,7 @@ Partial Class Form1
         btnClose.FillColor = Color.Gold
         btnClose.Font = New Font("Segoe UI Black", 16F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnClose.ForeColor = Color.Black
-        btnClose.Location = New Point(291, 3)
+        btnClose.Location = New Point(289, 3)
         btnClose.Name = "btnClose"
         btnClose.ShadowDecoration.CustomizableEdges = CustomizableEdges7
         btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
@@ -127,7 +127,7 @@ Partial Class Form1
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Firebrick
-        ClientSize = New Size(326, 450)
+        ClientSize = New Size(323, 450)
         ControlBox = False
         Controls.Add(btnClose)
         Controls.Add(Guna2PictureBox1)

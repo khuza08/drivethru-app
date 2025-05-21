@@ -209,7 +209,7 @@ Partial Class testing
         tabControl.Location = New Point(0, 0)
         tabControl.Name = "tabControl"
         tabControl.SelectedIndex = 0
-        tabControl.Size = New Size(904, 729)
+        tabControl.Size = New Size(914, 729)
         tabControl.TabButtonHoverState.BorderColor = Color.Transparent
         tabControl.TabButtonHoverState.FillColor = Color.Firebrick
         tabControl.TabButtonHoverState.Font = New Font("Montserrat SemiBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -237,7 +237,7 @@ Partial Class testing
         TabPage1.Location = New Point(204, 4)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(696, 721)
+        TabPage1.Size = New Size(706, 721)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Burgers"
         ' 
@@ -247,7 +247,7 @@ Partial Class testing
         flowpanelBurgers.BackgroundImageLayout = ImageLayout.Zoom
         flowpanelBurgers.Location = New Point(3, 1)
         flowpanelBurgers.Name = "flowpanelBurgers"
-        flowpanelBurgers.Size = New Size(691, 718)
+        flowpanelBurgers.Size = New Size(703, 718)
         flowpanelBurgers.TabIndex = 1
         ' 
         ' TabPage2
@@ -256,25 +256,26 @@ Partial Class testing
         TabPage2.Location = New Point(204, 4)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(696, 721)
+        TabPage2.Size = New Size(706, 721)
         TabPage2.TabIndex = 1
         TabPage2.Text = "Sides"
         TabPage2.UseVisualStyleBackColor = True
         ' 
         ' flowpanelSides
         ' 
-        flowpanelSides.Location = New Point(3, 1)
+        flowpanelSides.BackColor = Color.Transparent
+        flowpanelSides.BackgroundImageLayout = ImageLayout.Zoom
+        flowpanelSides.Location = New Point(2, 1)
         flowpanelSides.Name = "flowpanelSides"
-        flowpanelSides.Size = New Size(691, 718)
-        flowpanelSides.TabIndex = 1
+        flowpanelSides.Size = New Size(703, 718)
+        flowpanelSides.TabIndex = 2
         ' 
         ' TabPage3
         ' 
-        TabPage3.BackgroundImageLayout = ImageLayout.Center
         TabPage3.Controls.Add(flowpanelDrinks)
         TabPage3.Location = New Point(204, 4)
         TabPage3.Name = "TabPage3"
-        TabPage3.Size = New Size(696, 721)
+        TabPage3.Size = New Size(706, 721)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Drinks"
         TabPage3.UseVisualStyleBackColor = True
@@ -283,7 +284,7 @@ Partial Class testing
         ' 
         flowpanelDrinks.Location = New Point(3, 3)
         flowpanelDrinks.Name = "flowpanelDrinks"
-        flowpanelDrinks.Size = New Size(691, 718)
+        flowpanelDrinks.Size = New Size(700, 718)
         flowpanelDrinks.TabIndex = 0
         ' 
         ' TabPage4
@@ -291,7 +292,7 @@ Partial Class testing
         TabPage4.Controls.Add(flowpanelCombos)
         TabPage4.Location = New Point(204, 4)
         TabPage4.Name = "TabPage4"
-        TabPage4.Size = New Size(696, 721)
+        TabPage4.Size = New Size(706, 721)
         TabPage4.TabIndex = 3
         TabPage4.Text = "Combos"
         TabPage4.UseVisualStyleBackColor = True
@@ -308,7 +309,7 @@ Partial Class testing
         TabPage5.Controls.Add(flowpanelSpecial)
         TabPage5.Location = New Point(204, 4)
         TabPage5.Name = "TabPage5"
-        TabPage5.Size = New Size(696, 721)
+        TabPage5.Size = New Size(706, 721)
         TabPage5.TabIndex = 4
         TabPage5.Text = "Special"
         TabPage5.UseVisualStyleBackColor = True
@@ -366,8 +367,8 @@ Partial Class testing
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents flowpanelDrinks As FlowLayoutPanel
     Friend WithEvents flowpanelBurgers As FlowLayoutPanel
-    Friend WithEvents flowpanelSides As FlowLayoutPanel
     Friend WithEvents flowpanelCombos As FlowLayoutPanel
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents flowpanelSpecial As FlowLayoutPanel
+    Friend WithEvents flowpanelSides As FlowLayoutPanel
 End Class

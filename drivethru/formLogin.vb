@@ -16,8 +16,10 @@ Public Class FormLogin
         Dim pass = tbpw.Text
 
         If db.Login(user, pass) Then
-            MessageBox.Show("Admin telah Datang!!!")
+            MessageBox.Show("Admin telah Datang Wak!!!")
             ' lanjut ke atmin panel
+            tbuser.Clear()
+            tbpw.Clear()
             adminpanel.Show()
             Me.Hide()
         Else

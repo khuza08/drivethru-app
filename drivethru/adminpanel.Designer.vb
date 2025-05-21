@@ -22,63 +22,63 @@ Partial Class adminpanel
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TabPage3 = New TabPage()
         TabPage2 = New TabPage()
         TabPage1 = New TabPage()
-        dgvMenu = New Guna.UI2.WinForms.Guna2DataGridView()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        TableLayoutPanel1 = New TableLayoutPanel()
-        tbHarga = New Guna.UI2.WinForms.Guna2TextBox()
-        cmbKategori = New Guna.UI2.WinForms.Guna2ComboBox()
-        tbNama = New Guna.UI2.WinForms.Guna2TextBox()
-        btnUpload = New Guna.UI2.WinForms.Guna2Button()
-        TableLayoutPanel2 = New TableLayoutPanel()
-        btnTambah = New Guna.UI2.WinForms.Guna2Button()
-        btnUpdate = New Guna.UI2.WinForms.Guna2Button()
-        btnHapus = New Guna.UI2.WinForms.Guna2Button()
-        btnReset = New Guna.UI2.WinForms.Guna2Button()
         gambarMenu = New Guna.UI2.WinForms.Guna2PictureBox()
-        tabcontrol = New Guna.UI2.WinForms.Guna2TabControl()
-        Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        TableLayoutPanel2 = New TableLayoutPanel()
+        btnReset = New Guna.UI2.WinForms.Guna2Button()
+        btnHapus = New Guna.UI2.WinForms.Guna2Button()
+        btnUpdate = New Guna.UI2.WinForms.Guna2Button()
+        btnTambah = New Guna.UI2.WinForms.Guna2Button()
+        TableLayoutPanel1 = New TableLayoutPanel()
+        btnUpload = New Guna.UI2.WinForms.Guna2Button()
         Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        tbNama = New Guna.UI2.WinForms.Guna2TextBox()
+        Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        cmbKategori = New Guna.UI2.WinForms.Guna2ComboBox()
+        tbHarga = New Guna.UI2.WinForms.Guna2TextBox()
+        dgvMenu = New Guna.UI2.WinForms.Guna2DataGridView()
+        tabcontrol = New Guna.UI2.WinForms.Guna2TabControl()
         btnExit = New Guna.UI2.WinForms.Guna2Button()
         TabPage1.SuspendLayout()
-        CType(dgvMenu, ComponentModel.ISupportInitialize).BeginInit()
         Guna2Panel1.SuspendLayout()
-        TableLayoutPanel1.SuspendLayout()
-        TableLayoutPanel2.SuspendLayout()
         CType(gambarMenu, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel2.SuspendLayout()
+        TableLayoutPanel1.SuspendLayout()
+        CType(dgvMenu, ComponentModel.ISupportInitialize).BeginInit()
         tabcontrol.SuspendLayout()
         SuspendLayout()
         ' 
@@ -87,7 +87,7 @@ Partial Class adminpanel
         TabPage3.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
         TabPage3.Location = New Point(184, 4)
         TabPage3.Name = "TabPage3"
-        TabPage3.Size = New Size(613, 598)
+        TabPage3.Size = New Size(612, 598)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Laporan"
         TabPage3.UseVisualStyleBackColor = True
@@ -98,7 +98,7 @@ Partial Class adminpanel
         TabPage2.Location = New Point(184, 4)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(613, 598)
+        TabPage2.Size = New Size(612, 598)
         TabPage2.TabIndex = 1
         TabPage2.Text = "Data Kasir"
         TabPage2.UseVisualStyleBackColor = True
@@ -111,15 +111,314 @@ Partial Class adminpanel
         TabPage1.Location = New Point(184, 4)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(613, 552)
+        TabPage1.Size = New Size(612, 598)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Menu Makanan"
         TabPage1.UseVisualStyleBackColor = True
+        ' 
+        ' Guna2Panel1
+        ' 
+        Guna2Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Guna2Panel1.Controls.Add(gambarMenu)
+        Guna2Panel1.Controls.Add(TableLayoutPanel2)
+        Guna2Panel1.Controls.Add(TableLayoutPanel1)
+        Guna2Panel1.CustomizableEdges = CustomizableEdges19
+        Guna2Panel1.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2Panel1.Location = New Point(7, 315)
+        Guna2Panel1.Name = "Guna2Panel1"
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        Guna2Panel1.Size = New Size(600, 237)
+        Guna2Panel1.TabIndex = 2
+        ' 
+        ' gambarMenu
+        ' 
+        gambarMenu.CustomizableEdges = CustomizableEdges1
+        gambarMenu.ImageRotate = 0F
+        gambarMenu.Location = New Point(363, 6)
+        gambarMenu.Name = "gambarMenu"
+        gambarMenu.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        gambarMenu.Size = New Size(234, 169)
+        gambarMenu.TabIndex = 6
+        gambarMenu.TabStop = False
+        ' 
+        ' TableLayoutPanel2
+        ' 
+        TableLayoutPanel2.ColumnCount = 4
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle())
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle())
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle())
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle())
+        TableLayoutPanel2.Controls.Add(btnReset, 3, 0)
+        TableLayoutPanel2.Controls.Add(btnHapus, 2, 0)
+        TableLayoutPanel2.Controls.Add(btnUpdate, 1, 0)
+        TableLayoutPanel2.Controls.Add(btnTambah, 0, 0)
+        TableLayoutPanel2.Location = New Point(3, 181)
+        TableLayoutPanel2.Name = "TableLayoutPanel2"
+        TableLayoutPanel2.RowCount = 1
+        TableLayoutPanel2.RowStyles.Add(New RowStyle())
+        TableLayoutPanel2.Size = New Size(594, 53)
+        TableLayoutPanel2.TabIndex = 5
+        ' 
+        ' btnReset
+        ' 
+        btnReset.BorderRadius = 15
+        btnReset.CustomizableEdges = CustomizableEdges3
+        btnReset.DisabledState.BorderColor = Color.DarkGray
+        btnReset.DisabledState.CustomBorderColor = Color.DarkGray
+        btnReset.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnReset.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnReset.FillColor = SystemColors.ControlDarkDark
+        btnReset.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnReset.ForeColor = Color.White
+        btnReset.Location = New Point(360, 3)
+        btnReset.Name = "btnReset"
+        btnReset.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnReset.Size = New Size(113, 41)
+        btnReset.TabIndex = 3
+        btnReset.Text = "Reset"
+        ' 
+        ' btnHapus
+        ' 
+        btnHapus.BorderRadius = 15
+        btnHapus.CustomizableEdges = CustomizableEdges5
+        btnHapus.DisabledState.BorderColor = Color.DarkGray
+        btnHapus.DisabledState.CustomBorderColor = Color.DarkGray
+        btnHapus.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnHapus.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnHapus.FillColor = SystemColors.ControlDarkDark
+        btnHapus.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnHapus.ForeColor = Color.White
+        btnHapus.Location = New Point(241, 3)
+        btnHapus.Name = "btnHapus"
+        btnHapus.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnHapus.Size = New Size(113, 41)
+        btnHapus.TabIndex = 2
+        btnHapus.Text = "Hapus"
+        ' 
+        ' btnUpdate
+        ' 
+        btnUpdate.BorderRadius = 15
+        btnUpdate.CustomizableEdges = CustomizableEdges7
+        btnUpdate.DisabledState.BorderColor = Color.DarkGray
+        btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray
+        btnUpdate.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnUpdate.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnUpdate.FillColor = SystemColors.ControlDarkDark
+        btnUpdate.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnUpdate.ForeColor = Color.White
+        btnUpdate.Location = New Point(122, 3)
+        btnUpdate.Name = "btnUpdate"
+        btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnUpdate.Size = New Size(113, 41)
+        btnUpdate.TabIndex = 1
+        btnUpdate.Text = "Update"
+        ' 
+        ' btnTambah
+        ' 
+        btnTambah.BorderRadius = 15
+        btnTambah.CustomizableEdges = CustomizableEdges9
+        btnTambah.DisabledState.BorderColor = Color.DarkGray
+        btnTambah.DisabledState.CustomBorderColor = Color.DarkGray
+        btnTambah.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnTambah.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnTambah.FillColor = SystemColors.ControlDarkDark
+        btnTambah.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTambah.ForeColor = Color.White
+        btnTambah.Location = New Point(3, 3)
+        btnTambah.Name = "btnTambah"
+        btnTambah.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        btnTambah.Size = New Size(113, 41)
+        btnTambah.TabIndex = 0
+        btnTambah.Text = "Tambah"
+        ' 
+        ' TableLayoutPanel1
+        ' 
+        TableLayoutPanel1.ColumnCount = 3
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle())
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle())
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle())
+        TableLayoutPanel1.Controls.Add(btnUpload, 2, 3)
+        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel8, 1, 3)
+        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel5, 0, 3)
+        TableLayoutPanel1.Controls.Add(tbNama, 2, 0)
+        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel6, 1, 1)
+        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel4, 1, 0)
+        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel1, 0, 0)
+        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel3, 0, 2)
+        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel2, 0, 1)
+        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel7, 1, 2)
+        TableLayoutPanel1.Controls.Add(cmbKategori, 2, 1)
+        TableLayoutPanel1.Controls.Add(tbHarga, 2, 2)
+        TableLayoutPanel1.Location = New Point(3, 3)
+        TableLayoutPanel1.Name = "TableLayoutPanel1"
+        TableLayoutPanel1.RowCount = 4
+        TableLayoutPanel1.RowStyles.Add(New RowStyle())
+        TableLayoutPanel1.RowStyles.Add(New RowStyle())
+        TableLayoutPanel1.RowStyles.Add(New RowStyle())
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel1.Size = New Size(354, 172)
+        TableLayoutPanel1.TabIndex = 4
+        ' 
+        ' btnUpload
+        ' 
+        btnUpload.BorderRadius = 15
+        btnUpload.CustomizableEdges = CustomizableEdges11
+        btnUpload.DisabledState.BorderColor = Color.DarkGray
+        btnUpload.DisabledState.CustomBorderColor = Color.DarkGray
+        btnUpload.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnUpload.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnUpload.FillColor = SystemColors.ControlDarkDark
+        btnUpload.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnUpload.ForeColor = Color.White
+        btnUpload.Location = New Point(138, 137)
+        btnUpload.Name = "btnUpload"
+        btnUpload.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnUpload.Size = New Size(208, 32)
+        btnUpload.TabIndex = 16
+        btnUpload.Text = "Pilih Gambar"
+        ' 
+        ' Guna2HtmlLabel8
+        ' 
+        Guna2HtmlLabel8.BackColor = Color.Transparent
+        Guna2HtmlLabel8.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel8.Location = New Point(125, 137)
+        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Guna2HtmlLabel8.Size = New Size(7, 30)
+        Guna2HtmlLabel8.TabIndex = 15
+        Guna2HtmlLabel8.Text = ":"
+        ' 
+        ' Guna2HtmlLabel5
+        ' 
+        Guna2HtmlLabel5.BackColor = Color.Transparent
+        Guna2HtmlLabel5.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel5.Location = New Point(3, 137)
+        Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
+        Guna2HtmlLabel5.Size = New Size(78, 30)
+        Guna2HtmlLabel5.TabIndex = 14
+        Guna2HtmlLabel5.Text = "Gambar"
+        ' 
+        ' tbNama
+        ' 
+        tbNama.CustomizableEdges = CustomizableEdges13
+        tbNama.DefaultText = ""
+        tbNama.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        tbNama.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        tbNama.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        tbNama.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        tbNama.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        tbNama.Font = New Font("Segoe UI", 9F)
+        tbNama.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        tbNama.Location = New Point(139, 5)
+        tbNama.Margin = New Padding(4, 5, 4, 5)
+        tbNama.Name = "tbNama"
+        tbNama.PlaceholderText = ""
+        tbNama.SelectedText = ""
+        tbNama.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        tbNama.Size = New Size(208, 36)
+        tbNama.TabIndex = 12
+        ' 
+        ' Guna2HtmlLabel6
+        ' 
+        Guna2HtmlLabel6.BackColor = Color.Transparent
+        Guna2HtmlLabel6.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel6.Location = New Point(125, 49)
+        Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
+        Guna2HtmlLabel6.Size = New Size(7, 30)
+        Guna2HtmlLabel6.TabIndex = 9
+        Guna2HtmlLabel6.Text = ":"
+        ' 
+        ' Guna2HtmlLabel4
+        ' 
+        Guna2HtmlLabel4.BackColor = Color.Transparent
+        Guna2HtmlLabel4.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel4.Location = New Point(125, 3)
+        Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
+        Guna2HtmlLabel4.Size = New Size(7, 30)
+        Guna2HtmlLabel4.TabIndex = 4
+        Guna2HtmlLabel4.Text = ":"
+        ' 
+        ' Guna2HtmlLabel1
+        ' 
+        Guna2HtmlLabel1.BackColor = Color.Transparent
+        Guna2HtmlLabel1.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel1.Location = New Point(3, 3)
+        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Guna2HtmlLabel1.Size = New Size(116, 30)
+        Guna2HtmlLabel1.TabIndex = 1
+        Guna2HtmlLabel1.Text = "Nama Menu"
+        ' 
+        ' Guna2HtmlLabel3
+        ' 
+        Guna2HtmlLabel3.BackColor = Color.Transparent
+        Guna2HtmlLabel3.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel3.Location = New Point(3, 91)
+        Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+        Guna2HtmlLabel3.Size = New Size(60, 30)
+        Guna2HtmlLabel3.TabIndex = 3
+        Guna2HtmlLabel3.Text = "Harga"
+        ' 
+        ' Guna2HtmlLabel2
+        ' 
+        Guna2HtmlLabel2.BackColor = Color.Transparent
+        Guna2HtmlLabel2.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel2.Location = New Point(3, 49)
+        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Guna2HtmlLabel2.Size = New Size(83, 30)
+        Guna2HtmlLabel2.TabIndex = 2
+        Guna2HtmlLabel2.Text = "Kategori"
+        ' 
+        ' Guna2HtmlLabel7
+        ' 
+        Guna2HtmlLabel7.BackColor = Color.Transparent
+        Guna2HtmlLabel7.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel7.Location = New Point(125, 91)
+        Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
+        Guna2HtmlLabel7.Size = New Size(7, 30)
+        Guna2HtmlLabel7.TabIndex = 7
+        Guna2HtmlLabel7.Text = ":"
+        ' 
+        ' cmbKategori
+        ' 
+        cmbKategori.BackColor = Color.Transparent
+        cmbKategori.CustomizableEdges = CustomizableEdges15
+        cmbKategori.DrawMode = DrawMode.OwnerDrawFixed
+        cmbKategori.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbKategori.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cmbKategori.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cmbKategori.Font = New Font("Segoe UI", 10F)
+        cmbKategori.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cmbKategori.ItemHeight = 30
+        cmbKategori.Location = New Point(138, 49)
+        cmbKategori.Name = "cmbKategori"
+        cmbKategori.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        cmbKategori.Size = New Size(208, 36)
+        cmbKategori.TabIndex = 13
+        ' 
+        ' tbHarga
+        ' 
+        tbHarga.CustomizableEdges = CustomizableEdges17
+        tbHarga.DefaultText = ""
+        tbHarga.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        tbHarga.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        tbHarga.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        tbHarga.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        tbHarga.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        tbHarga.Font = New Font("Segoe UI", 9F)
+        tbHarga.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        tbHarga.Location = New Point(139, 93)
+        tbHarga.Margin = New Padding(4, 5, 4, 5)
+        tbHarga.Name = "tbHarga"
+        tbHarga.PlaceholderText = ""
+        tbHarga.SelectedText = ""
+        tbHarga.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        tbHarga.Size = New Size(208, 36)
+        tbHarga.TabIndex = 11
         ' 
         ' dgvMenu
         ' 
         DataGridViewCellStyle1.BackColor = Color.White
         dgvMenu.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        dgvMenu.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvMenu.BackgroundColor = Color.LightGray
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
@@ -168,235 +467,18 @@ Partial Class adminpanel
         dgvMenu.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         dgvMenu.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
-        ' Guna2Panel1
-        ' 
-        Guna2Panel1.Controls.Add(gambarMenu)
-        Guna2Panel1.Controls.Add(TableLayoutPanel2)
-        Guna2Panel1.Controls.Add(TableLayoutPanel1)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges19
-        Guna2Panel1.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2Panel1.Location = New Point(7, 315)
-        Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges20
-        Guna2Panel1.Size = New Size(600, 237)
-        Guna2Panel1.TabIndex = 2
-        ' 
-        ' TableLayoutPanel1
-        ' 
-        TableLayoutPanel1.ColumnCount = 3
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle())
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle())
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle())
-        TableLayoutPanel1.Controls.Add(btnUpload, 2, 3)
-        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel8, 1, 3)
-        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel5, 0, 3)
-        TableLayoutPanel1.Controls.Add(tbNama, 2, 0)
-        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel6, 1, 1)
-        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel4, 1, 0)
-        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel1, 0, 0)
-        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel3, 0, 2)
-        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel2, 0, 1)
-        TableLayoutPanel1.Controls.Add(Guna2HtmlLabel7, 1, 2)
-        TableLayoutPanel1.Controls.Add(cmbKategori, 2, 1)
-        TableLayoutPanel1.Controls.Add(tbHarga, 2, 2)
-        TableLayoutPanel1.Location = New Point(3, 3)
-        TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 4
-        TableLayoutPanel1.RowStyles.Add(New RowStyle())
-        TableLayoutPanel1.RowStyles.Add(New RowStyle())
-        TableLayoutPanel1.RowStyles.Add(New RowStyle())
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.Size = New Size(354, 172)
-        TableLayoutPanel1.TabIndex = 4
-        ' 
-        ' tbHarga
-        ' 
-        tbHarga.CustomizableEdges = CustomizableEdges17
-        tbHarga.DefaultText = ""
-        tbHarga.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        tbHarga.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        tbHarga.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        tbHarga.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        tbHarga.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        tbHarga.Font = New Font("Segoe UI", 9F)
-        tbHarga.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        tbHarga.Location = New Point(139, 93)
-        tbHarga.Margin = New Padding(4, 5, 4, 5)
-        tbHarga.Name = "tbHarga"
-        tbHarga.PlaceholderText = ""
-        tbHarga.SelectedText = ""
-        tbHarga.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        tbHarga.Size = New Size(208, 36)
-        tbHarga.TabIndex = 11
-        ' 
-        ' cmbKategori
-        ' 
-        cmbKategori.BackColor = Color.Transparent
-        cmbKategori.CustomizableEdges = CustomizableEdges15
-        cmbKategori.DrawMode = DrawMode.OwnerDrawFixed
-        cmbKategori.DropDownStyle = ComboBoxStyle.DropDownList
-        cmbKategori.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbKategori.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cmbKategori.Font = New Font("Segoe UI", 10F)
-        cmbKategori.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
-        cmbKategori.ItemHeight = 30
-        cmbKategori.Location = New Point(138, 49)
-        cmbKategori.Name = "cmbKategori"
-        cmbKategori.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        cmbKategori.Size = New Size(208, 36)
-        cmbKategori.TabIndex = 13
-        ' 
-        ' tbNama
-        ' 
-        tbNama.CustomizableEdges = CustomizableEdges13
-        tbNama.DefaultText = ""
-        tbNama.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        tbNama.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        tbNama.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        tbNama.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        tbNama.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        tbNama.Font = New Font("Segoe UI", 9F)
-        tbNama.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        tbNama.Location = New Point(139, 5)
-        tbNama.Margin = New Padding(4, 5, 4, 5)
-        tbNama.Name = "tbNama"
-        tbNama.PlaceholderText = ""
-        tbNama.SelectedText = ""
-        tbNama.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        tbNama.Size = New Size(208, 36)
-        tbNama.TabIndex = 12
-        ' 
-        ' btnUpload
-        ' 
-        btnUpload.BorderRadius = 15
-        btnUpload.CustomizableEdges = CustomizableEdges11
-        btnUpload.DisabledState.BorderColor = Color.DarkGray
-        btnUpload.DisabledState.CustomBorderColor = Color.DarkGray
-        btnUpload.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnUpload.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnUpload.FillColor = SystemColors.ControlDarkDark
-        btnUpload.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnUpload.ForeColor = Color.White
-        btnUpload.Location = New Point(138, 137)
-        btnUpload.Name = "btnUpload"
-        btnUpload.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        btnUpload.Size = New Size(208, 32)
-        btnUpload.TabIndex = 16
-        btnUpload.Text = "Pilih Gambar"
-        ' 
-        ' TableLayoutPanel2
-        ' 
-        TableLayoutPanel2.ColumnCount = 4
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle())
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle())
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle())
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle())
-        TableLayoutPanel2.Controls.Add(btnReset, 3, 0)
-        TableLayoutPanel2.Controls.Add(btnHapus, 2, 0)
-        TableLayoutPanel2.Controls.Add(btnUpdate, 1, 0)
-        TableLayoutPanel2.Controls.Add(btnTambah, 0, 0)
-        TableLayoutPanel2.Location = New Point(3, 181)
-        TableLayoutPanel2.Name = "TableLayoutPanel2"
-        TableLayoutPanel2.RowCount = 1
-        TableLayoutPanel2.RowStyles.Add(New RowStyle())
-        TableLayoutPanel2.Size = New Size(594, 53)
-        TableLayoutPanel2.TabIndex = 5
-        ' 
-        ' btnTambah
-        ' 
-        btnTambah.BorderRadius = 15
-        btnTambah.CustomizableEdges = CustomizableEdges9
-        btnTambah.DisabledState.BorderColor = Color.DarkGray
-        btnTambah.DisabledState.CustomBorderColor = Color.DarkGray
-        btnTambah.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnTambah.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnTambah.FillColor = SystemColors.ControlDarkDark
-        btnTambah.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnTambah.ForeColor = Color.White
-        btnTambah.Location = New Point(3, 3)
-        btnTambah.Name = "btnTambah"
-        btnTambah.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        btnTambah.Size = New Size(113, 41)
-        btnTambah.TabIndex = 0
-        btnTambah.Text = "Tambah"
-        ' 
-        ' btnUpdate
-        ' 
-        btnUpdate.BorderRadius = 15
-        btnUpdate.CustomizableEdges = CustomizableEdges7
-        btnUpdate.DisabledState.BorderColor = Color.DarkGray
-        btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray
-        btnUpdate.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnUpdate.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnUpdate.FillColor = SystemColors.ControlDarkDark
-        btnUpdate.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnUpdate.ForeColor = Color.White
-        btnUpdate.Location = New Point(122, 3)
-        btnUpdate.Name = "btnUpdate"
-        btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        btnUpdate.Size = New Size(113, 41)
-        btnUpdate.TabIndex = 1
-        btnUpdate.Text = "Update"
-        ' 
-        ' btnHapus
-        ' 
-        btnHapus.BorderRadius = 15
-        btnHapus.CustomizableEdges = CustomizableEdges5
-        btnHapus.DisabledState.BorderColor = Color.DarkGray
-        btnHapus.DisabledState.CustomBorderColor = Color.DarkGray
-        btnHapus.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnHapus.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnHapus.FillColor = SystemColors.ControlDarkDark
-        btnHapus.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnHapus.ForeColor = Color.White
-        btnHapus.Location = New Point(241, 3)
-        btnHapus.Name = "btnHapus"
-        btnHapus.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        btnHapus.Size = New Size(113, 41)
-        btnHapus.TabIndex = 2
-        btnHapus.Text = "Hapus"
-        ' 
-        ' btnReset
-        ' 
-        btnReset.BorderRadius = 15
-        btnReset.CustomizableEdges = CustomizableEdges3
-        btnReset.DisabledState.BorderColor = Color.DarkGray
-        btnReset.DisabledState.CustomBorderColor = Color.DarkGray
-        btnReset.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnReset.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnReset.FillColor = SystemColors.ControlDarkDark
-        btnReset.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnReset.ForeColor = Color.White
-        btnReset.Location = New Point(360, 3)
-        btnReset.Name = "btnReset"
-        btnReset.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnReset.Size = New Size(113, 41)
-        btnReset.TabIndex = 3
-        btnReset.Text = "Reset"
-        ' 
-        ' gambarMenu
-        ' 
-        gambarMenu.CustomizableEdges = CustomizableEdges1
-        gambarMenu.ImageRotate = 0F
-        gambarMenu.Location = New Point(363, 6)
-        gambarMenu.Name = "gambarMenu"
-        gambarMenu.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        gambarMenu.Size = New Size(234, 169)
-        gambarMenu.TabIndex = 6
-        gambarMenu.TabStop = False
-        ' 
         ' tabcontrol
         ' 
         tabcontrol.Alignment = TabAlignment.Left
-        tabcontrol.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         tabcontrol.Controls.Add(TabPage1)
         tabcontrol.Controls.Add(TabPage2)
         tabcontrol.Controls.Add(TabPage3)
+        tabcontrol.Dock = DockStyle.Fill
         tabcontrol.ItemSize = New Size(180, 40)
         tabcontrol.Location = New Point(0, 0)
         tabcontrol.Name = "tabcontrol"
         tabcontrol.SelectedIndex = 0
-        tabcontrol.Size = New Size(801, 560)
+        tabcontrol.Size = New Size(800, 606)
         tabcontrol.TabButtonHoverState.BorderColor = Color.Empty
         tabcontrol.TabButtonHoverState.FillColor = Color.FromArgb(CByte(40), CByte(52), CByte(70))
         tabcontrol.TabButtonHoverState.Font = New Font("Segoe UI Semibold", 10F)
@@ -417,88 +499,9 @@ Partial Class adminpanel
         tabcontrol.TabIndex = 0
         tabcontrol.TabMenuBackColor = Color.FromArgb(CByte(33), CByte(42), CByte(57))
         ' 
-        ' Guna2HtmlLabel7
-        ' 
-        Guna2HtmlLabel7.BackColor = Color.Transparent
-        Guna2HtmlLabel7.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel7.Location = New Point(125, 91)
-        Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-        Guna2HtmlLabel7.Size = New Size(7, 30)
-        Guna2HtmlLabel7.TabIndex = 7
-        Guna2HtmlLabel7.Text = ":"
-        ' 
-        ' Guna2HtmlLabel2
-        ' 
-        Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel2.Location = New Point(3, 49)
-        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(83, 30)
-        Guna2HtmlLabel2.TabIndex = 2
-        Guna2HtmlLabel2.Text = "Kategori"
-        ' 
-        ' Guna2HtmlLabel3
-        ' 
-        Guna2HtmlLabel3.BackColor = Color.Transparent
-        Guna2HtmlLabel3.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel3.Location = New Point(3, 91)
-        Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Guna2HtmlLabel3.Size = New Size(60, 30)
-        Guna2HtmlLabel3.TabIndex = 3
-        Guna2HtmlLabel3.Text = "Harga"
-        ' 
-        ' Guna2HtmlLabel1
-        ' 
-        Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel1.Location = New Point(3, 3)
-        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(116, 30)
-        Guna2HtmlLabel1.TabIndex = 1
-        Guna2HtmlLabel1.Text = "Nama Menu"
-        ' 
-        ' Guna2HtmlLabel4
-        ' 
-        Guna2HtmlLabel4.BackColor = Color.Transparent
-        Guna2HtmlLabel4.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel4.Location = New Point(125, 3)
-        Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Guna2HtmlLabel4.Size = New Size(7, 30)
-        Guna2HtmlLabel4.TabIndex = 4
-        Guna2HtmlLabel4.Text = ":"
-        ' 
-        ' Guna2HtmlLabel6
-        ' 
-        Guna2HtmlLabel6.BackColor = Color.Transparent
-        Guna2HtmlLabel6.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel6.Location = New Point(125, 49)
-        Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-        Guna2HtmlLabel6.Size = New Size(7, 30)
-        Guna2HtmlLabel6.TabIndex = 9
-        Guna2HtmlLabel6.Text = ":"
-        ' 
-        ' Guna2HtmlLabel5
-        ' 
-        Guna2HtmlLabel5.BackColor = Color.Transparent
-        Guna2HtmlLabel5.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel5.Location = New Point(3, 137)
-        Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Guna2HtmlLabel5.Size = New Size(78, 30)
-        Guna2HtmlLabel5.TabIndex = 14
-        Guna2HtmlLabel5.Text = "Gambar"
-        ' 
-        ' Guna2HtmlLabel8
-        ' 
-        Guna2HtmlLabel8.BackColor = Color.Transparent
-        Guna2HtmlLabel8.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel8.Location = New Point(125, 137)
-        Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Guna2HtmlLabel8.Size = New Size(7, 30)
-        Guna2HtmlLabel8.TabIndex = 15
-        Guna2HtmlLabel8.Text = ":"
-        ' 
         ' btnExit
         ' 
+        btnExit.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         btnExit.CustomizableEdges = CustomizableEdges21
         btnExit.DisabledState.BorderColor = Color.DarkGray
         btnExit.DisabledState.CustomBorderColor = Color.DarkGray
@@ -525,12 +528,12 @@ Partial Class adminpanel
         StartPosition = FormStartPosition.CenterScreen
         Text = "adminpanel"
         TabPage1.ResumeLayout(False)
-        CType(dgvMenu, ComponentModel.ISupportInitialize).EndInit()
         Guna2Panel1.ResumeLayout(False)
+        CType(gambarMenu, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
-        TableLayoutPanel2.ResumeLayout(False)
-        CType(gambarMenu, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvMenu, ComponentModel.ISupportInitialize).EndInit()
         tabcontrol.ResumeLayout(False)
         ResumeLayout(False)
     End Sub

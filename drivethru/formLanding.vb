@@ -6,8 +6,6 @@ Public Class Form1
         Me.FormBorderStyle = FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
 
-
-
     End Sub
 
     Private dragging As Boolean = False
@@ -29,8 +27,6 @@ Public Class Form1
     Private Sub Form1_MouseUp(sender As Object, e As MouseEventArgs) Handles Me.MouseUp
         dragging = False
     End Sub
-
-
 
     Protected Overrides Sub OnLoad(e As EventArgs)
         MyBase.OnLoad(e)

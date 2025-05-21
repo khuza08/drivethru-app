@@ -33,21 +33,12 @@ Public Class adminpanel
 
 
     Private Sub LoadKategori()
-        Try
-            conn.Open()
-            Dim cmd As New MySqlCommand("SELECT DISTINCT kategori FROM menu", conn)
-            Dim reader As MySqlDataReader = cmd.ExecuteReader()
-
-            cmbKategori.Items.Clear()
-            While reader.Read()
-                cmbKategori.Items.Add(reader("kategori").ToString())
-            End While
-
-            conn.Close()
-        Catch ex As Exception
-            MessageBox.Show("Gagal memuat kategori: " & ex.Message)
-            If conn.State = ConnectionState.Open Then conn.Close()
-        End Try
+        cmbKategori.Items.Clear()
+        cmbKategori.Items.Add("Burgers")
+        cmbKategori.Items.Add("Sides")
+        cmbKategori.Items.Add("Drinks")
+        cmbKategori.Items.Add("Combos")
+        cmbKategori.Items.Add("Special")
     End Sub
 
     ' Upload gambar ke PictureBox
@@ -135,7 +126,7 @@ Public Class adminpanel
             conn.Open()
             Dim cmd As New MySqlCommand("UPDATE menu SET nama_menu=@nama, kategori=@kategori, harga=@harga, gambar=@gambar WHERE id_menu=@id_menu", conn)
             cmd.Parameters.AddWithValue("@nama", nama)
-            cmd.Parameters.AddWithValue("@kategori", kategori)
+            cmd.Parameters.AddWithValue("@kategori", cmbKategori.Text)
             cmd.Parameters.AddWithValue("@harga", harga)
             cmd.Parameters.AddWithValue("@gambar", imgBytes)
             cmd.Parameters.AddWithValue("@id_menu", selectedMenuId)
@@ -178,7 +169,7 @@ Public Class adminpanel
         End Try
     End Sub
 
-    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+    Public Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
         ResetForm()
     End Sub
 
@@ -222,6 +213,9 @@ Public Class adminpanel
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Dim confirm As DialogResult = MessageBox.Show("Are you sure?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If confirm = DialogResult.No Then Exit Sub
+
         Form1.Show()
         Me.Hide()
     End Sub

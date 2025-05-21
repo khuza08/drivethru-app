@@ -22,6 +22,8 @@ Partial Class formStruk
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         lvStruk = New ListView()
         Item = New ColumnHeader()
@@ -60,6 +62,7 @@ Partial Class formStruk
         TableLayoutPanel4 = New TableLayoutPanel()
         Label15 = New Label()
         Label16 = New Label()
+        btnExit = New Guna.UI2.WinForms.Guna2Button()
         TableLayoutPanel1.SuspendLayout()
         tblStruk.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
@@ -79,6 +82,7 @@ Partial Class formStruk
         TableLayoutPanel1.Controls.Add(Label14, 0, 4)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 0)
         TableLayoutPanel1.Controls.Add(TableLayoutPanel4, 0, 7)
+        TableLayoutPanel1.Controls.Add(btnExit, 0, 8)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -504,6 +508,29 @@ Partial Class formStruk
         Label16.TabIndex = 10
         Label16.Text = "Terimakasih!"
         ' 
+        ' btnExit
+        ' 
+        btnExit.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnExit.Animated = True
+        btnExit.AnimatedGIF = True
+        btnExit.AutoRoundedCorners = True
+        btnExit.BorderRadius = 54
+        btnExit.CustomizableEdges = CustomizableEdges1
+        btnExit.DefaultAutoSize = True
+        btnExit.DisabledState.BorderColor = Color.DarkGray
+        btnExit.DisabledState.CustomBorderColor = Color.DarkGray
+        btnExit.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnExit.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnExit.FillColor = SystemColors.ControlDark
+        btnExit.Font = New Font("Montserrat", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnExit.ForeColor = Color.Black
+        btnExit.Location = New Point(3, 633)
+        btnExit.Name = "btnExit"
+        btnExit.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnExit.Size = New Size(839, 110)
+        btnExit.TabIndex = 12
+        btnExit.Text = "CLOSE RECEIPT"
+        ' 
         ' formStruk
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -567,4 +594,5 @@ Partial Class formStruk
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label20 As Label
+    Friend WithEvents btnExit As Guna.UI2.WinForms.Guna2Button
 End Class

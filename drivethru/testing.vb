@@ -1,6 +1,5 @@
 ﻿Imports System.Globalization
 Imports MySql.Data.MySqlClient
-Imports Guna.UI2.WinForms
 
 Public Class testing
     Dim WithEvents menuRefreshTimer As New Timer()
@@ -165,7 +164,6 @@ Public Class testing
         flowpanelDrinks.Controls.Clear()
         flowpanelCombos.Controls.Clear()
         flowpanelSpecial.Controls.Clear()
-
         LoadMenuDariDatabase()
     End Sub
 
@@ -244,6 +242,7 @@ Public Class testing
 
             Me.Hide()
             formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text, paymentbox.Text, transactionId, tanggal)
+            Me.Close()
             formStruk.ShowDialog()
         End If
     End Sub
