@@ -3,7 +3,8 @@ Imports MySql.Data.MySqlClient
 Imports Guna.UI2.WinForms
 
 Public Class testing
-
+    Dim WithEvents menuRefreshTimer As New Timer()
+    Dim lastMenuCount As Integer = -1
     Dim conn As New MySqlConnection("server=localhost;user id=root;password=killvoid;database=db_ambafood")
     Dim cultureID As New CultureInfo("id-ID") ' Format mata uang Rupiah
 
@@ -13,6 +14,8 @@ Public Class testing
         AturFlowPanel()
         AturListViewPembelian()
         LoadMenuDariDatabase()
+        menuRefreshTimer.Interval = 2500
+        menuRefreshTimer.Start()
     End Sub
 
     ' === Load kategori Drinks dari database ke FlowLayoutPanel ===
@@ -24,7 +27,7 @@ Public Class testing
     Public Sub LoadMenuDariDatabase()
         Try
             conn.Open()
-            Dim query As String = "SELECT nama_menu, harga, gambar FROM menu WHERE kategori = 'Drinks'"
+            Dim query As String = "SELECT nama_menu, harga, gambar, kategori FROM menu"
             Dim cmd As New MySqlCommand(query, conn)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
@@ -41,7 +44,22 @@ Public Class testing
                 End If
 
                 AddHandler menuItem.ItemClicked, AddressOf Item_Click
-                flowpanelDrinks.Controls.Add(menuItem)
+
+                ' Tentukan panel berdasarkan kategori
+                Dim kategori As String = reader("kategori").ToString().ToLower()
+                Select Case kategori
+                    Case "burgers"
+                        flowpanelBurgers.Controls.Add(menuItem)
+                    Case "sides"
+                        flowpanelSides.Controls.Add(menuItem)
+                    Case "drinks"
+                        flowpanelDrinks.Controls.Add(menuItem)
+                    Case "combos"
+                        flowpanelCombos.Controls.Add(menuItem)
+                    Case "special"
+                        flowpanelSpecial.Controls.Add(menuItem)
+
+                End Select
             End While
 
             reader.Close()
@@ -60,10 +78,35 @@ Public Class testing
 
     ' === Atur FlowLayoutPanel ===
     Private Sub AturFlowPanel()
+        'burgers
+        flowpanelBurgers.Dock = DockStyle.Fill
+        flowpanelBurgers.AutoScroll = True
+        flowpanelBurgers.WrapContents = True
+        flowpanelBurgers.FlowDirection = FlowDirection.LeftToRight
+
+        'sides
+        flowpanelSides.AutoScroll = True
+        flowpanelSides.Dock = DockStyle.Fill
+        flowpanelSides.WrapContents = True
+        flowpanelSides.FlowDirection = FlowDirection.LeftToRight
+
+        'drinks
         flowpanelDrinks.AutoScroll = True
         flowpanelDrinks.Dock = DockStyle.Fill
         flowpanelDrinks.WrapContents = True
         flowpanelDrinks.FlowDirection = FlowDirection.LeftToRight
+
+        'combos
+        flowpanelCombos.AutoScroll = True
+        flowpanelCombos.Dock = DockStyle.Fill
+        flowpanelCombos.WrapContents = True
+        flowpanelCombos.FlowDirection = FlowDirection.LeftToRight
+
+        'special
+        flowpanelSpecial.AutoScroll = True
+        flowpanelSpecial.Dock = DockStyle.Fill
+        flowpanelSpecial.WrapContents = True
+        flowpanelSpecial.FlowDirection = FlowDirection.LeftToRight
     End Sub
 
     ' === Atur ListView untuk daftar pembelian ===   
@@ -99,6 +142,34 @@ Public Class testing
 
         UpdateTotal()
     End Sub
+    'menuRefreshTimer buat refresh menu di form pas database udah di tambah/update/del items
+    Private Sub menuRefreshTimer_Tick(sender As Object, e As EventArgs) Handles menuRefreshTimer.Tick
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand("SELECT COUNT(*) FROM menu", conn)
+            Dim currentCount As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+            conn.Close()
+
+            If currentCount <> lastMenuCount Then
+                lastMenuCount = currentCount
+                ReloadMenu()
+            End If
+        Catch ex As Exception
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Sub
+    Private Sub ReloadMenu()
+        'clear semua flowpanel
+        flowpanelBurgers.Controls.Clear()
+        flowpanelSides.Controls.Clear()
+        flowpanelDrinks.Controls.Clear()
+        flowpanelCombos.Controls.Clear()
+        flowpanelSpecial.Controls.Clear()
+
+        LoadMenuDariDatabase()
+    End Sub
+
+
 
     ' === Update total keseluruhan dan pajak ===
     Private Sub UpdateTotal()

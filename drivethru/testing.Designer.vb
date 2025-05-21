@@ -36,13 +36,22 @@ Partial Class testing
         btnorder = New Button()
         tabControl = New Guna.UI2.WinForms.Guna2TabControl()
         TabPage1 = New TabPage()
+        flowpanelBurgers = New FlowLayoutPanel()
         TabPage2 = New TabPage()
+        flowpanelSides = New FlowLayoutPanel()
         TabPage3 = New TabPage()
         flowpanelDrinks = New FlowLayoutPanel()
         TabPage4 = New TabPage()
+        flowpanelCombos = New FlowLayoutPanel()
+        TabPage5 = New TabPage()
+        flowpanelSpecial = New FlowLayoutPanel()
         TableLayoutPanel2.SuspendLayout()
         tabControl.SuspendLayout()
+        TabPage1.SuspendLayout()
+        TabPage2.SuspendLayout()
         TabPage3.SuspendLayout()
+        TabPage4.SuspendLayout()
+        TabPage5.SuspendLayout()
         SuspendLayout()
         ' 
         ' paymentbox
@@ -194,6 +203,7 @@ Partial Class testing
         tabControl.Controls.Add(TabPage2)
         tabControl.Controls.Add(TabPage3)
         tabControl.Controls.Add(TabPage4)
+        tabControl.Controls.Add(TabPage5)
         tabControl.Font = New Font("Montserrat Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         tabControl.ItemSize = New Size(200, 40)
         tabControl.Location = New Point(0, 0)
@@ -210,7 +220,7 @@ Partial Class testing
         tabControl.TabButtonIdleState.Font = New Font("Montserrat SemiBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         tabControl.TabButtonIdleState.ForeColor = Color.LightGray
         tabControl.TabButtonIdleState.InnerColor = Color.DarkGoldenrod
-        tabControl.TabButtonSelectedState.BorderColor = Color.DarkGoldenrod
+        tabControl.TabButtonSelectedState.BorderColor = Color.Transparent
         tabControl.TabButtonSelectedState.FillColor = Color.Firebrick
         tabControl.TabButtonSelectedState.Font = New Font("Montserrat SemiBold", 12.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         tabControl.TabButtonSelectedState.ForeColor = Color.White
@@ -223,6 +233,7 @@ Partial Class testing
         ' TabPage1
         ' 
         TabPage1.BackColor = Color.Transparent
+        TabPage1.Controls.Add(flowpanelBurgers)
         TabPage1.Location = New Point(204, 4)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
@@ -230,8 +241,18 @@ Partial Class testing
         TabPage1.TabIndex = 0
         TabPage1.Text = "Burgers"
         ' 
+        ' flowpanelBurgers
+        ' 
+        flowpanelBurgers.BackColor = Color.Transparent
+        flowpanelBurgers.BackgroundImageLayout = ImageLayout.Zoom
+        flowpanelBurgers.Location = New Point(3, 1)
+        flowpanelBurgers.Name = "flowpanelBurgers"
+        flowpanelBurgers.Size = New Size(691, 718)
+        flowpanelBurgers.TabIndex = 1
+        ' 
         ' TabPage2
         ' 
+        TabPage2.Controls.Add(flowpanelSides)
         TabPage2.Location = New Point(204, 4)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
@@ -240,8 +261,16 @@ Partial Class testing
         TabPage2.Text = "Sides"
         TabPage2.UseVisualStyleBackColor = True
         ' 
+        ' flowpanelSides
+        ' 
+        flowpanelSides.Location = New Point(3, 1)
+        flowpanelSides.Name = "flowpanelSides"
+        flowpanelSides.Size = New Size(691, 718)
+        flowpanelSides.TabIndex = 1
+        ' 
         ' TabPage3
         ' 
+        TabPage3.BackgroundImageLayout = ImageLayout.Center
         TabPage3.Controls.Add(flowpanelDrinks)
         TabPage3.Location = New Point(204, 4)
         TabPage3.Name = "TabPage3"
@@ -259,12 +288,37 @@ Partial Class testing
         ' 
         ' TabPage4
         ' 
+        TabPage4.Controls.Add(flowpanelCombos)
         TabPage4.Location = New Point(204, 4)
         TabPage4.Name = "TabPage4"
         TabPage4.Size = New Size(696, 721)
         TabPage4.TabIndex = 3
         TabPage4.Text = "Combos"
         TabPage4.UseVisualStyleBackColor = True
+        ' 
+        ' flowpanelCombos
+        ' 
+        flowpanelCombos.Location = New Point(3, 1)
+        flowpanelCombos.Name = "flowpanelCombos"
+        flowpanelCombos.Size = New Size(691, 718)
+        flowpanelCombos.TabIndex = 1
+        ' 
+        ' TabPage5
+        ' 
+        TabPage5.Controls.Add(flowpanelSpecial)
+        TabPage5.Location = New Point(204, 4)
+        TabPage5.Name = "TabPage5"
+        TabPage5.Size = New Size(696, 721)
+        TabPage5.TabIndex = 4
+        TabPage5.Text = "Special"
+        TabPage5.UseVisualStyleBackColor = True
+        ' 
+        ' flowpanelSpecial
+        ' 
+        flowpanelSpecial.Location = New Point(3, 1)
+        flowpanelSpecial.Name = "flowpanelSpecial"
+        flowpanelSpecial.Size = New Size(691, 718)
+        flowpanelSpecial.TabIndex = 2
         ' 
         ' testing
         ' 
@@ -278,13 +332,18 @@ Partial Class testing
         Controls.Add(Label1)
         Controls.Add(pembelian)
         Controls.Add(paymentbox)
+        DoubleBuffered = True
         Name = "testing"
         StartPosition = FormStartPosition.CenterScreen
         Text = "testing"
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel2.PerformLayout()
         tabControl.ResumeLayout(False)
+        TabPage1.ResumeLayout(False)
+        TabPage2.ResumeLayout(False)
         TabPage3.ResumeLayout(False)
+        TabPage4.ResumeLayout(False)
+        TabPage5.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -306,4 +365,9 @@ Partial Class testing
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents flowpanelDrinks As FlowLayoutPanel
+    Friend WithEvents flowpanelBurgers As FlowLayoutPanel
+    Friend WithEvents flowpanelSides As FlowLayoutPanel
+    Friend WithEvents flowpanelCombos As FlowLayoutPanel
+    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents flowpanelSpecial As FlowLayoutPanel
 End Class
