@@ -73,7 +73,7 @@
                                      End Sub
     End Sub
 
-    ' Tambahkan parameter namaKasir di sini
+    ' 
     Public Sub SetData(items As ListView.ListViewItemCollection, subtotal As String, tax As String, total As String, paymentMethod As String, transactionId As String, tanggal As String)
         lvStruk.Items.Clear()
         For Each item As ListViewItem In items

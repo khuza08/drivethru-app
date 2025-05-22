@@ -280,6 +280,9 @@ Public Class testing
 
             Me.Hide()
             Me.Close()
+            formStruk.kasier.Text = ""
+            formStruk.dot.Text = ""
+            formStruk.lblTy.Text = "Tunjukkan struk ke kasir."
             formStruk.ShowDialog()
 
         Catch ex As Exception

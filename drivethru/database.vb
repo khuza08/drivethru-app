@@ -28,7 +28,7 @@ Public Class database
 
         reader = cmd.ExecuteReader()
         If reader.Read() Then
-            Userlevel = reader("level").ToString() ' <-- Ini penting
+            Userlevel = reader("level").ToString()
             reader.Close()
             conn.Close()
             Return True

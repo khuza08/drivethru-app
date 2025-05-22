@@ -22,8 +22,8 @@ Partial Class formStruk
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         lvStruk = New ListView()
         Item = New ColumnHeader()
@@ -54,8 +54,8 @@ Partial Class formStruk
         lblTanggal = New Label()
         lblWaktu = New Label()
         lblTransaksi = New Label()
-        Label22 = New Label()
-        kasieer = New Label()
+        dot = New Label()
+        kasier = New Label()
         Label13 = New Label()
         Label14 = New Label()
         TableLayoutPanel2 = New TableLayoutPanel()
@@ -64,7 +64,7 @@ Partial Class formStruk
         Label5 = New Label()
         TableLayoutPanel4 = New TableLayoutPanel()
         Label15 = New Label()
-        Label16 = New Label()
+        lblTy = New Label()
         btnExit = New Guna.UI2.WinForms.Guna2Button()
         TableLayoutPanel1.SuspendLayout()
         tblStruk.SuspendLayout()
@@ -302,8 +302,8 @@ Partial Class formStruk
         TableLayoutPanel3.Controls.Add(lblTanggal, 2, 0)
         TableLayoutPanel3.Controls.Add(lblWaktu, 2, 1)
         TableLayoutPanel3.Controls.Add(lblTransaksi, 2, 2)
-        TableLayoutPanel3.Controls.Add(Label22, 1, 3)
-        TableLayoutPanel3.Controls.Add(kasieer, 0, 3)
+        TableLayoutPanel3.Controls.Add(dot, 1, 3)
+        TableLayoutPanel3.Controls.Add(kasier, 0, 3)
         TableLayoutPanel3.Location = New Point(3, 113)
         TableLayoutPanel3.Name = "TableLayoutPanel3"
         TableLayoutPanel3.RowCount = 4
@@ -413,25 +413,25 @@ Partial Class formStruk
         lblTransaksi.TabIndex = 5
         lblTransaksi.Text = "lblTransaksi"
         ' 
-        ' Label22
+        ' dot
         ' 
-        Label22.AutoSize = True
-        Label22.Font = New Font("Courier New", 9F)
-        Label22.Location = New Point(406, 69)
-        Label22.Name = "Label22"
-        Label22.Size = New Size(20, 20)
-        Label22.TabIndex = 11
-        Label22.Text = ":"
+        dot.AutoSize = True
+        dot.Font = New Font("Courier New", 9F)
+        dot.Location = New Point(406, 69)
+        dot.Name = "dot"
+        dot.Size = New Size(20, 20)
+        dot.TabIndex = 11
+        dot.Text = ":"
         ' 
-        ' kasieer
+        ' kasier
         ' 
-        kasieer.AutoSize = True
-        kasieer.Font = New Font("Courier New", 12F)
-        kasieer.Location = New Point(3, 69)
-        kasieer.Name = "kasieer"
-        kasieer.Size = New Size(82, 23)
-        kasieer.TabIndex = 9
-        kasieer.Text = "Kasir"
+        kasier.AutoSize = True
+        kasier.Font = New Font("Courier New", 12F)
+        kasier.Location = New Point(3, 69)
+        kasier.Name = "kasier"
+        kasier.Size = New Size(82, 23)
+        kasier.TabIndex = 9
+        kasier.Text = "Kasir"
         ' 
         ' Label13
         ' 
@@ -514,7 +514,7 @@ Partial Class formStruk
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.Controls.Add(Label15, 0, 0)
-        TableLayoutPanel4.Controls.Add(Label16, 0, 1)
+        TableLayoutPanel4.Controls.Add(lblTy, 0, 1)
         TableLayoutPanel4.Location = New Point(162, 567)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 2
@@ -533,16 +533,16 @@ Partial Class formStruk
         Label15.TabIndex = 9
         Label15.Text = "★☆★"
         ' 
-        ' Label16
+        ' lblTy
         ' 
-        Label16.Anchor = AnchorStyles.Top
-        Label16.AutoSize = True
-        Label16.Font = New Font("Courier New", 11F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label16.Location = New Point(176, 30)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(168, 25)
-        Label16.TabIndex = 10
-        Label16.Text = "Terimakasih!"
+        lblTy.Anchor = AnchorStyles.Top
+        lblTy.AutoSize = True
+        lblTy.Font = New Font("Courier New", 11F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblTy.Location = New Point(176, 30)
+        lblTy.Name = "lblTy"
+        lblTy.Size = New Size(168, 25)
+        lblTy.TabIndex = 10
+        lblTy.Text = "Terimakasih!"
         ' 
         ' btnExit
         ' 
@@ -551,7 +551,7 @@ Partial Class formStruk
         btnExit.AnimatedGIF = True
         btnExit.AutoRoundedCorners = True
         btnExit.BorderRadius = 54
-        btnExit.CustomizableEdges = CustomizableEdges1
+        btnExit.CustomizableEdges = CustomizableEdges3
         btnExit.DefaultAutoSize = True
         btnExit.DisabledState.BorderColor = Color.DarkGray
         btnExit.DisabledState.CustomBorderColor = Color.DarkGray
@@ -562,7 +562,7 @@ Partial Class formStruk
         btnExit.ForeColor = Color.Black
         btnExit.Location = New Point(3, 633)
         btnExit.Name = "btnExit"
-        btnExit.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnExit.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnExit.Size = New Size(839, 110)
         btnExit.TabIndex = 12
         btnExit.Text = "CLOSE RECEIPT"
@@ -622,7 +622,7 @@ Partial Class formStruk
     Friend WithEvents Label10 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents Label16 As Label
+    Friend WithEvents lblTy As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents Label15 As Label
@@ -632,6 +632,6 @@ Partial Class formStruk
     Friend WithEvents Label20 As Label
     Friend WithEvents btnExit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblKasir As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents kasieer As Label
+    Friend WithEvents dot As Label
+    Friend WithEvents kasier As Label
 End Class

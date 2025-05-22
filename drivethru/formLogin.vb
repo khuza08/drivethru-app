@@ -4,6 +4,7 @@ Public Class FormLogin
     Private Sub loginBack_Click_1(sender As Object, e As EventArgs) Handles loginBack.Click
         Form1.Show()
         Me.Hide()
+
     End Sub
     Private Sub tbpw_TextChanged(sender As Object, e As EventArgs)
         tbpw.UseSystemPasswordChar = True
@@ -14,8 +15,10 @@ Public Class FormLogin
         Dim db As New database()
         If db.Login(tbuser.Text, tbpw.Text) Then
             If db.Userlevel = "admin" Then
+                MessageBox.Show("Login Berhasil.")
                 adminpanel.Show()
             ElseIf db.Userlevel = "kasir" Then
+                MessageBox.Show("Login Sukses.")
                 formIdTransaksi.Show()
             Else
                 MessageBox.Show("Level user tidak dikenali.")
