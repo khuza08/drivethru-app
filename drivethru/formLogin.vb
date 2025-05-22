@@ -1,4 +1,4 @@
-﻿
+﻿Imports MySql.Data.MySqlClient
 Public Class FormLogin
 
     Private Sub loginBack_Click_1(sender As Object, e As EventArgs) Handles loginBack.Click
@@ -11,19 +11,19 @@ Public Class FormLogin
     End Sub
 
     Private Sub login_Click(sender As Object, e As EventArgs) Handles login.Click
-        Dim db As New database
-        Dim user = tbuser.Text
-        Dim pass = tbpw.Text
-
-        If db.Login(user, pass) Then
-            MessageBox.Show("Admin telah Datang Wak!!!")
-            ' lanjut ke atmin panel
-            tbuser.Clear()
-            tbpw.Clear()
-            adminpanel.Show()
+        Dim db As New database()
+        If db.Login(tbuser.Text, tbpw.Text) Then
+            If db.Userlevel = "admin" Then
+                adminpanel.Show()
+            ElseIf db.Userlevel = "kasir" Then
+                formIdTransaksi.Show()
+            Else
+                MessageBox.Show("Level user tidak dikenali.")
+                Exit Sub
+            End If
             Me.Hide()
         Else
-            MessageBox.Show("username atau password salah!")
+            MessageBox.Show("Username atau password salah.")
         End If
     End Sub
 

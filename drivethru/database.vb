@@ -6,6 +6,8 @@ Public Class database
     Private cmd As MySqlCommand
     Private reader As MySqlDataReader
 
+    Public Userlevel As String
+
     ' Koneksi ke database
     Public Sub Connect()
         conn = New MySqlConnection("server=localhost;user id=root;password=killvoid;database=db_ambafood")
@@ -25,7 +27,8 @@ Public Class database
         cmd.Parameters.AddWithValue("@password", password)
 
         reader = cmd.ExecuteReader()
-        If reader.HasRows Then
+        If reader.Read() Then
+            Userlevel = reader("level").ToString() ' <-- Ini penting
             reader.Close()
             conn.Close()
             Return True
@@ -35,4 +38,5 @@ Public Class database
             Return False
         End If
     End Function
+
 End Class
