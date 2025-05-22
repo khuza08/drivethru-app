@@ -13,6 +13,13 @@ Public Class FormLogin
 
     Private Sub login_Click(sender As Object, e As EventArgs) Handles login.Click
         Dim db As New database()
+
+        If tbuser.Text = "" OrElse tbpw.Text = "" Then
+            MessageBox.Show("Isi semua field login!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+
         If db.Login(tbuser.Text, tbpw.Text) Then
             If db.Userlevel = "admin" Then
                 MessageBox.Show("Login Berhasil.")
