@@ -74,7 +74,7 @@
     End Sub
 
     ' Tambahkan parameter namaKasir di sini
-    Public Sub SetData(items As ListView.ListViewItemCollection, subtotal As String, tax As String, total As String, paymentMethod As String, transactionId As String, tanggal As String, namaKasir As String)
+    Public Sub SetData(items As ListView.ListViewItemCollection, subtotal As String, tax As String, total As String, paymentMethod As String, transactionId As String, tanggal As String)
         lvStruk.Items.Clear()
         For Each item As ListViewItem In items
             lvStruk.Items.Add(CType(item.Clone(), ListViewItem))
@@ -88,8 +88,6 @@
         lblWaktu.Text = Now.ToString("HH:mm:ss")
         lblTransaksi.Text = transactionId
 
-        ' Tampilkan nama kasir di label
-        lblKasir.Text = namaKasir
     End Sub
 
     ' Drag form code tetap sama...

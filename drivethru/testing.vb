@@ -15,19 +15,7 @@ Public Class testing
         LoadMenuDariDatabase()
         menuRefreshTimer.Interval = 1000
         menuRefreshTimer.Start()
-        Try
-            conn.Open()
-            Dim cmd As New MySqlCommand("SELECT username FROM kasir", conn)
-            Dim reader As MySqlDataReader = cmd.ExecuteReader()
-            cmbKasir.Items.Clear()
-            While reader.Read()
-                cmbKasir.Items.Add(reader("username").ToString())
-            End While
-            conn.Close()
-        Catch ex As Exception
-            MessageBox.Show("Gagal memuat data kasir: " & ex.Message)
-            If conn.State = ConnectionState.Open Then conn.Close()
-        End Try
+
     End Sub
 
     ' === Load kategori Drinks dari database ke FlowLayoutPanel ===
@@ -233,17 +221,6 @@ Public Class testing
         labeltotal.Text = 0.ToString("C2", cultureID)
     End Sub
 
-    Sub LoadKasir()
-        conn.Open()
-        Dim cmd As New MySqlCommand("SELECT username FROM kasir", conn)
-        Dim rdr As MySqlDataReader = cmd.ExecuteReader()
-        cmbKasir.Items.Clear()
-        While rdr.Read()
-            cmbKasir.Items.Add(rdr("username").ToString())
-        End While
-        conn.Close()
-    End Sub
-
 
 
     ' === Proses pesanan dan tampilkan form struk ===
@@ -265,20 +242,15 @@ Public Class testing
         Try
             conn.Open()
             Dim trans = conn.BeginTransaction()
-            Dim transactionId As String = "KHZX" & Now.ToString("yyyyMMddHHmmss")
+            Dim transactionId As String = "" & Now.ToString("HHmm")
             Dim tanggal As String = Now.ToString("yyyy-MM-dd HH:mm:ss")
-            Dim kasirDipilih As String = If(cmbKasir.SelectedItem IsNot Nothing, cmbKasir.SelectedItem.ToString(), "")
-            If String.IsNullOrEmpty(kasirDipilih) Then
-                MessageBox.Show("Pilih kasir dulu")
-                Exit Sub
-            End If
+
 
             ' Insert transaksi
-            Dim sqlTrans = "INSERT INTO transaksi (id_transaksi, tanggal, nama_kasir, total_bayar, metode_bayar) VALUES (@id_transaksi, @tanggal, @nama_kasir, @total_bayar, @metode_bayar)"
+            Dim sqlTrans = "INSERT INTO transaksi (id_transaksi, tanggal, total_bayar, metode_bayar) VALUES (@id_transaksi, @tanggal, @total_bayar, @metode_bayar)"
             Dim cmdTrans As New MySqlCommand(sqlTrans, conn, trans)
             cmdTrans.Parameters.AddWithValue("@id_transaksi", transactionId)
             cmdTrans.Parameters.AddWithValue("@tanggal", tanggal)
-            cmdTrans.Parameters.AddWithValue("@nama_kasir", kasirDipilih)
 
             Dim totalBersih As Decimal = Decimal.Parse(labeltotal.Text.Replace("Rp", "").Replace(".", "").Trim())
             cmdTrans.Parameters.AddWithValue("@total_bayar", totalBersih)
@@ -304,7 +276,7 @@ Public Class testing
 
             ' Tampilkan form struk dengan parameter namaKasir
             Dim formStruk As New formStruk()
-            formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text, paymentbox.Text, transactionId, Now.ToString("dd MMMM yyyy HH:mm"), kasirDipilih)
+            formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text, paymentbox.Text, transactionId, Now.ToString("HH:mm"))
 
             Me.Hide()
             Me.Close()

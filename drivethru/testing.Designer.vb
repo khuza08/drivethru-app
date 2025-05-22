@@ -45,8 +45,6 @@ Partial Class testing
         flowpanelCombos = New FlowLayoutPanel()
         TabPage5 = New TabPage()
         flowpanelSpecial = New FlowLayoutPanel()
-        Label2 = New Label()
-        cmbKasir = New ComboBox()
         TableLayoutPanel2.SuspendLayout()
         tabControl.SuspendLayout()
         TabPage1.SuspendLayout()
@@ -323,34 +321,11 @@ Partial Class testing
         flowpanelSpecial.Size = New Size(691, 718)
         flowpanelSpecial.TabIndex = 2
         ' 
-        ' Label2
-        ' 
-        Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
-        Label2.Location = New Point(916, 9)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(61, 28)
-        Label2.TabIndex = 19
-        Label2.Text = "Kasir:"
-        ' 
-        ' cmbKasir
-        ' 
-        cmbKasir.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        cmbKasir.FormattingEnabled = True
-        cmbKasir.Items.AddRange(New Object() {"Tunai", "Kartu Kredit", "Kartu Debit", "Amba Card"})
-        cmbKasir.Location = New Point(920, 43)
-        cmbKasir.Name = "cmbKasir"
-        cmbKasir.Size = New Size(182, 33)
-        cmbKasir.TabIndex = 18
-        ' 
         ' testing
         ' 
         AutoScaleDimensions = New SizeF(144F, 144F)
         AutoScaleMode = AutoScaleMode.Dpi
         ClientSize = New Size(1411, 727)
-        Controls.Add(Label2)
-        Controls.Add(cmbKasir)
         Controls.Add(tabControl)
         Controls.Add(btnorder)
         Controls.Add(TableLayoutPanel2)
@@ -396,6 +371,4 @@ Partial Class testing
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents flowpanelSpecial As FlowLayoutPanel
     Friend WithEvents flowpanelSides As FlowLayoutPanel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents cmbKasir As ComboBox
 End Class
