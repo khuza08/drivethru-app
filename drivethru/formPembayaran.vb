@@ -43,9 +43,11 @@ Public Class formPembayaran
         If db.conn Is Nothing OrElse db.conn.State <> ConnectionState.Open Then Exit Sub
 
         Dim query As String = "
-        SELECT d.item, d.qty, d.total 
-        FROM transaksi_detail d
-        WHERE d.id_transaksi = @id
+        SELECT item, qty, harga_satuan 
+        FROM transaksi_detail 
+        WHERE id_transaksi = @id
+
+
     "
 
         Try
@@ -57,12 +59,14 @@ Public Class formPembayaran
             While reader.Read()
                 Dim item As New ListViewItem(reader("item").ToString())
                 item.SubItems.Add(reader("qty").ToString())
-                Dim harga As Decimal = Convert.ToDecimal(reader("harga"))
-                item.SubItems.Add("Rp " & Format(harga, "#,##0"))
 
+                Dim harga As Decimal = Convert.ToDecimal(reader("harga_satuan")) / 100
                 item.SubItems.Add("Rp " & harga.ToString("N0", New Globalization.CultureInfo("id-ID")))
+
+
                 lvTotal.Items.Add(item)
             End While
+
 
             reader.Close()
         Catch ex As Exception
