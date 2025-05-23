@@ -2,9 +2,9 @@
 
 Public Class database
 
-    Private conn As MySqlConnection
-    Private cmd As MySqlCommand
-    Private reader As MySqlDataReader
+    Public conn As MySqlConnection
+    Public cmd As MySqlCommand
+    Public reader As MySqlDataReader
 
     Public Userlevel As String
 
