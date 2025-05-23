@@ -146,28 +146,32 @@ Public Class formPembayaran
             Return
         End If
 
-        ' Hitung total transaksi dari ListView
+        ' Hitung total transaksi
         transactionTotal = 0
         For Each item As ListViewItem In lvTotal.Items
-            Dim hargaStr = item.SubItems(2).Text.Replace("Rp", "").Trim()
-            Dim harga = Convert.ToDecimal(hargaStr)
+            Dim hargaStr = item.SubItems(2).Text.Replace("Rp", "").Replace(".", "").Trim()
+            Dim harga As Decimal
+            Decimal.TryParse(hargaStr, harga)
             transactionTotal += harga
         Next
 
         If currentAmount >= transactionTotal Then
             Dim kembalian = currentAmount - transactionTotal
+            lblKembalian.Text = "Rp " & kembalian.ToString("N0")
             MessageBox.Show($"Pembayaran berhasil! Kembalian: Rp {kembalian:N0}", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            ' Reset
+            ' Reset setelah pembayaran sukses
             currentAmount = 0
             transactionTotal = 0
-            transactionId = ""
             UpdateDisplay()
-            lblTotalPembelian.Text = "Rp 0"
+            lblTotalPembelian.Text = "Rp "
             lvTotal.Items.Clear()
+            lblKembalian.Text = "Rp"
         Else
             Dim kurang = transactionTotal - currentAmount
             MessageBox.Show($"Pembayaran kurang! Kurang: Rp {kurang:N0}", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
+
+
+
 End Class

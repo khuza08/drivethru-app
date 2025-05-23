@@ -16,6 +16,7 @@
         pembayaranForm.lblIdTransaksi.Text = id
         pembayaranForm.ShowDialog()
 
-        formPembayaran.Show()
+
     End Sub
+
 End Class
