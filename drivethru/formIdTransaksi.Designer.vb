@@ -22,12 +22,12 @@ Partial Class formIdTransaksi
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        tbInput = New Guna.UI2.WinForms.Guna2TextBox()
         btnEnter = New Guna.UI2.WinForms.Guna2Button()
         SuspendLayout()
         ' 
@@ -42,33 +42,33 @@ Partial Class formIdTransaksi
         Guna2HtmlLabel1.TabIndex = 0
         Guna2HtmlLabel1.Text = "Masukkan ID Transaksi"
         ' 
-        ' Guna2TextBox1
+        ' tbInput
         ' 
-        Guna2TextBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges1
-        Guna2TextBox1.DefaultText = ""
-        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2TextBox1.ForeColor = Color.Black
-        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(14, 53)
-        Guna2TextBox1.Margin = New Padding(4, 5, 4, 5)
-        Guna2TextBox1.Name = "Guna2TextBox1"
-        Guna2TextBox1.PlaceholderText = ""
-        Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2TextBox1.Size = New Size(243, 38)
-        Guna2TextBox1.TabIndex = 1
+        tbInput.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        tbInput.CustomizableEdges = CustomizableEdges5
+        tbInput.DefaultText = ""
+        tbInput.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        tbInput.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        tbInput.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        tbInput.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        tbInput.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        tbInput.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        tbInput.ForeColor = Color.Black
+        tbInput.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        tbInput.Location = New Point(14, 53)
+        tbInput.Margin = New Padding(4, 5, 4, 5)
+        tbInput.Name = "tbInput"
+        tbInput.PlaceholderText = ""
+        tbInput.SelectedText = ""
+        tbInput.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        tbInput.Size = New Size(243, 38)
+        tbInput.TabIndex = 1
         ' 
         ' btnEnter
         ' 
         btnEnter.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         btnEnter.AutoRoundedCorners = True
-        btnEnter.CustomizableEdges = CustomizableEdges3
+        btnEnter.CustomizableEdges = CustomizableEdges7
         btnEnter.DisabledState.BorderColor = Color.DarkGray
         btnEnter.DisabledState.CustomBorderColor = Color.DarkGray
         btnEnter.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -78,7 +78,7 @@ Partial Class formIdTransaksi
         btnEnter.ForeColor = Color.White
         btnEnter.Location = New Point(13, 113)
         btnEnter.Name = "btnEnter"
-        btnEnter.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnEnter.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnEnter.Size = New Size(245, 48)
         btnEnter.TabIndex = 2
         btnEnter.Text = "ENTER"
@@ -89,7 +89,7 @@ Partial Class formIdTransaksi
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(271, 178)
         Controls.Add(btnEnter)
-        Controls.Add(Guna2TextBox1)
+        Controls.Add(tbInput)
         Controls.Add(Guna2HtmlLabel1)
         Name = "formIdTransaksi"
         Text = "formIdTransaksi"
@@ -98,6 +98,6 @@ Partial Class formIdTransaksi
     End Sub
 
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents tbInput As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnEnter As Guna.UI2.WinForms.Guna2Button
 End Class
