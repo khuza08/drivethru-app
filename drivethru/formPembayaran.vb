@@ -93,7 +93,7 @@ Public Class formPembayaran
             Dim result = cmd.ExecuteScalar()
             Dim total As Decimal = If(IsDBNull(result), 0, Convert.ToDecimal(result))
 
-            lblTotalPembelian.Text = "Rp " & total.ToString("N0")
+            lblTotalPembelian.Text = "Rp " & (total / 100).ToString("N0", New Globalization.CultureInfo("id-ID"))
         Catch ex As Exception
             MessageBox.Show("Gagal ambil total pembelian: " & ex.Message)
         Finally
