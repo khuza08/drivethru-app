@@ -36,8 +36,10 @@ Public Class formPembayaran
     End Sub
 
     ' --- Load Data dari DB ke ListView ---
+
     Private Sub LoadListView()
         lvTotal.Items.Clear()
+        Dim subtotal As Decimal = 0
 
         db.Connect()
         If db.conn Is Nothing OrElse db.conn.State <> ConnectionState.Open Then Exit Sub
@@ -46,27 +48,23 @@ Public Class formPembayaran
         SELECT item, qty, harga_satuan 
         FROM transaksi_detail 
         WHERE id_transaksi = @id
-
-
     "
 
         Try
             Dim cmd As New MySqlCommand(query, db.conn)
             cmd.Parameters.AddWithValue("@id", lblIdTransaksi.Text)
-
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
             While reader.Read()
-                Dim item As New ListViewItem(reader("item").ToString())
-                item.SubItems.Add(reader("qty").ToString())
-
                 Dim harga As Decimal = Convert.ToDecimal(reader("harga_satuan")) / 100
+                Dim qty As Integer = Convert.ToInt32(reader("qty"))
+                subtotal += harga * qty
+
+                Dim item As New ListViewItem(reader("item").ToString())
+                item.SubItems.Add(qty.ToString())
                 item.SubItems.Add("Rp " & harga.ToString("N0", New Globalization.CultureInfo("id-ID")))
-
-
                 lvTotal.Items.Add(item)
             End While
-
 
             reader.Close()
         Catch ex As Exception
@@ -74,6 +72,11 @@ Public Class formPembayaran
         Finally
             db.conn.Close()
         End Try
+
+        ' Hitung tax dan total bayar
+        Dim tax As Decimal = subtotal * 0.1D
+        transactionTotal = subtotal + tax
+        lblTotalPembelian.Text = "Rp " & transactionTotal.ToString("N0", New Globalization.CultureInfo("id-ID"))
     End Sub
 
     Private Sub LoadTotalPembelian()
@@ -146,26 +149,19 @@ Public Class formPembayaran
             Return
         End If
 
-        ' Hitung total transaksi
-        transactionTotal = 0
-        For Each item As ListViewItem In lvTotal.Items
-            Dim hargaStr = item.SubItems(2).Text.Replace("Rp", "").Replace(".", "").Trim()
-            Dim harga As Decimal
-            Decimal.TryParse(hargaStr, harga)
-            transactionTotal += harga
-        Next
-
+        ' Gunakan transactionTotal yg sudah include tax
         If currentAmount >= transactionTotal Then
             Dim kembalian = currentAmount - transactionTotal
-            lblKembalian.Text = "Rp " & kembalian.ToString("N0")
+            lblKembalian.Text = "Rp " & kembalian.ToString("N0", New Globalization.CultureInfo("id-ID"))
             MessageBox.Show($"Pembayaran berhasil! Kembalian: Rp {kembalian:N0}", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
             ' Reset setelah pembayaran sukses
             currentAmount = 0
             transactionTotal = 0
             UpdateDisplay()
-            lblTotalPembelian.Text = "Rp "
+            lblTotalPembelian.Text = "Rp 0"
             lvTotal.Items.Clear()
-            lblKembalian.Text = "Rp"
+            lblKembalian.Text = "Rp 0"
         Else
             Dim kurang = transactionTotal - currentAmount
             MessageBox.Show($"Pembayaran kurang! Kurang: Rp {kurang:N0}", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
