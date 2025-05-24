@@ -9,12 +9,12 @@ Public Class formPembayaran
     Private transactionTotal As Decimal = 0
     Private transactionId As String = ""
 
-    ' --- Update UI uang masuk ---
+    ' refresh
     Private Sub UpdateDisplay()
         lblJumlahUang.Text = "Rp " & currentAmount.ToString("N0")
     End Sub
 
-    ' --- Form Load ---
+    'form load
     Private Sub formPembayaran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim db As New database()
 
@@ -24,7 +24,7 @@ Public Class formPembayaran
         lvTotal.Columns.Add("Qty", 70, HorizontalAlignment.Center)
         lvTotal.Columns.Add("Price", 180, HorizontalAlignment.Right)
 
-        ' Set Tag tombol angka
+        ' btn angka pakai tag, efisiensi kode
         For i As Integer = 0 To 9
             Controls.Find("btn" & i.ToString(), True)(0).Tag = i.ToString()
         Next
@@ -39,8 +39,7 @@ Public Class formPembayaran
         LoadListView()
     End Sub
 
-    ' --- Load Data dari DB ke ListView ---
-
+    ' load data listview dari database
     Private Sub LoadListView()
         lvTotal.Items.Clear()
         Dim subtotal As Decimal = 0
@@ -77,7 +76,7 @@ Public Class formPembayaran
             db.conn.Close()
         End Try
 
-        ' Hitung tax dan total bayar
+        ' hitung tax dan total bayar
         Dim tax As Decimal = subtotal * 0.1D
         transactionTotal = subtotal + tax
         lblTotalPembelian.Text = "Rp " & transactionTotal.ToString("N0", New Globalization.CultureInfo("id-ID"))
@@ -110,7 +109,7 @@ Public Class formPembayaran
 
 
 
-    ' --- Tombol Angka ---
+    ' tombol angka 1-0
     Private Sub NumberButton_Click(sender As Object, e As EventArgs) Handles _
         btn0.Click, btn1.Click, btn2.Click, btn3.Click, btn4.Click,
         btn5.Click, btn6.Click, btn7.Click, btn8.Click, btn9.Click
@@ -129,7 +128,7 @@ Public Class formPembayaran
         End If
     End Sub
 
-    ' --- Tombol Delete ---
+    ' button delete 
     Private Sub btnDel_Click(sender As Object, e As EventArgs) Handles btnPembayaranDel.Click
         Dim text = currentAmount.ToString().Replace(",", "")
         If text.Length > 1 Then
@@ -141,7 +140,7 @@ Public Class formPembayaran
         UpdateDisplay()
     End Sub
 
-    ' --- Tombol Enter (Bayar) ---
+    ' button bayar
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnPembayaranEnter.Click
         If currentAmount <= 0 Then
             MessageBox.Show("Masukkan jumlah pembayaran yang valid", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -158,7 +157,7 @@ Public Class formPembayaran
             lblKembalian.Text = "Rp " & kembalian.ToString("N0", New Globalization.CultureInfo("id-ID"))
             MessageBox.Show($"Pembayaran berhasil! Kembalian: Rp {kembalian:N0}", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            ' ==== TAMPILKAN STRUK ====
+            ' show struk
             Try
                 Dim formStruk As New formStruk()
                 Dim cultureID As New Globalization.CultureInfo("id-ID")
@@ -166,7 +165,7 @@ Public Class formPembayaran
 
                 db.conn.Open()
 
-                ' Ambil data transaksi
+                ' ambil data transaksi
                 Dim cmdTrans As New MySqlCommand("SELECT tanggal, total_bayar, metode_bayar FROM transaksi WHERE id_transaksi = @id", db.conn)
                 cmdTrans.Parameters.AddWithValue("@id", lblIdTransaksi.Text)
                 Dim readerTrans = cmdTrans.ExecuteReader()
@@ -185,7 +184,7 @@ Public Class formPembayaran
                 End If
                 readerTrans.Close()
 
-                ' Ambil detail item
+                ' ambil detail item
                 Dim cmdDetail As New MySqlCommand("SELECT item, qty, harga_satuan, total FROM transaksi_detail WHERE id_transaksi = @id", db.conn)
                 cmdDetail.Parameters.AddWithValue("@id", lblIdTransaksi.Text)
                 Dim readerDetail = cmdDetail.ExecuteReader()
@@ -207,19 +206,18 @@ Public Class formPembayaran
                     item.SubItems.Add(hargaSatuanDecimal.ToString("C0", cultureID))
                     item.SubItems.Add(totalDecimal.ToString("C0", cultureID))
 
-
                     dummyList.Items.Add(item)
                 End While
                 readerDetail.Close()
 
-                ' Hitung tax & subtotal
+                ' hitung tax & subtotal
                 Dim totalDec = Decimal.Parse(total_bayar, Globalization.NumberStyles.Currency, cultureID)
                 Dim subtotalDec = totalDec / 1.1D
                 Dim taxDec = totalDec - subtotalDec
 
                 formStruk.SetData(dummyList.Items, subtotalDec.ToString("C2", cultureID), taxDec.ToString("C2", cultureID), total_bayar, metode_bayar, lblIdTransaksi.Text, tanggal)
                 formStruk.lblTy.Text = "LUNAS"
-                formStruk.lblKasir.Text = session.KasirNama
+                formStruk.lblKasir.Text = session.KasirUsername
                 formStruk.ShowDialog()
 
             Catch ex As Exception
@@ -227,9 +225,9 @@ Public Class formPembayaran
             Finally
                 If db.conn.State = ConnectionState.Open Then db.conn.Close()
             End Try
-            ' ==== END STRUK ====
 
-            ' Reset
+
+            ' reset lbl di form
             currentAmount = 0
             transactionTotal = 0
             UpdateDisplay()

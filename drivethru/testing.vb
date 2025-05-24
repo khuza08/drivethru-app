@@ -5,9 +5,9 @@ Public Class testing
     Dim WithEvents menuRefreshTimer As New Timer()
     Dim lastMenuCount As Integer = -1
     Dim conn As New MySqlConnection("server=localhost;user id=root;password=killvoid;database=db_ambafood")
-    Dim cultureID As New CultureInfo("id-ID") ' Format mata uang Rupiah
+    Dim cultureID As New CultureInfo("id-ID") ' format mata uang rupiah
 
-    ' === Form Load ===
+    ' form load
     Private Sub testing_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AturFullscreen()
         AturFlowPanel()
@@ -18,12 +18,6 @@ Public Class testing
 
     End Sub
 
-    ' === Load kategori Drinks dari database ke FlowLayoutPanel ===
-    ' -- [Custom Component Integration: items.vb - Future Proof] --
-    ' Mengganti tombol biasa dengan komponen custom "items"
-    ' Properti digunakan: NamaMenu, HargaMenu, GambarMenu
-    ' Event digunakan: ItemClicked (handle untuk AddToOrder)
-    ' ------------------------------------------------------------
     Public Sub LoadMenuDariDatabase()
         Try
             conn.Open()
@@ -45,7 +39,7 @@ Public Class testing
 
                 AddHandler menuItem.ItemClicked, AddressOf Item_Click
 
-                ' Tentukan panel berdasarkan kategori
+                ' tentuin panel berdasarkan kategori
                 Dim kategori As String = reader("kategori").ToString().ToLower()
                 Select Case kategori
                     Case "burgers"
@@ -70,13 +64,13 @@ Public Class testing
         End Try
     End Sub
 
-    ' === Set Fullscreen Form ===
+    ' form fullscreen no border
     Private Sub AturFullscreen()
         Me.FormBorderStyle = FormBorderStyle.None
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
-    ' === Atur FlowLayoutPanel ===
+    ' flowlayoutpanel
     Private Sub AturFlowPanel()
         'burgers
         flowpanelBurgers.Dock = DockStyle.Fill
@@ -109,7 +103,7 @@ Public Class testing
         flowpanelSpecial.FlowDirection = FlowDirection.LeftToRight
     End Sub
 
-    ' === Atur ListView untuk daftar pembelian ===   
+    ' ukuran header listview buat data pembelian
     Private Sub AturListViewPembelian()
         pembelian.View = View.Details
         pembelian.Columns.Add("Item", 150, HorizontalAlignment.Left)
@@ -118,7 +112,7 @@ Public Class testing
         pembelian.Columns.Add("Total", 142, HorizontalAlignment.Right)
     End Sub
 
-    ' === Tambahkan item ke daftar pesanan ===
+    ' tambah item ke data pesanan
     Private Sub AddToOrder(itemName As String, price As Decimal)
         Dim found As Boolean = False
 
@@ -142,6 +136,7 @@ Public Class testing
 
         UpdateTotal()
     End Sub
+
     'menuRefreshTimer buat refresh menu di form pas database udah di tambah/update/del items
     Private Sub menuRefreshTimer_Tick(sender As Object, e As EventArgs) Handles menuRefreshTimer.Tick
         Try
@@ -170,7 +165,7 @@ Public Class testing
 
 
 
-    ' === Update total keseluruhan dan pajak ===
+    ' update total keseluruhan dan tax / pajak
     Private Sub UpdateTotal()
         Dim subtotal As Decimal = 0
 
@@ -186,7 +181,7 @@ Public Class testing
         labeltotal.Text = total.ToString("C2", cultureID)
     End Sub
 
-    ' === Ambil harga dari database berdasarkan nama menu ===
+    ' ambil harga dari database menu 
     Private Function ambilHarga(namaMenu As String) As Decimal
         Try
             conn.Open()
@@ -207,13 +202,13 @@ Public Class testing
         Return 0
     End Function
 
-    ' === Event klik dari komponen item (custom button) ===
+    ' event handler
     Private Sub Item_Click(namaMenu As String)
         Dim harga = ambilHarga(namaMenu)
         AddToOrder(namaMenu, harga)
     End Sub
 
-    ' === Reset daftar pesanan ===
+    ' reset pesanan
     Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
         pembelian.Items.Clear()
         labelsubtotal.Text = 0.ToString("C2", cultureID)
@@ -223,7 +218,7 @@ Public Class testing
 
 
 
-    ' === Proses pesanan dan tampilkan form struk ===
+    ' proses pesanan
     Private Sub btnorder_Click(sender As Object, e As EventArgs) Handles btnorder.Click
 
         If pembelian.Items.Count = 0 Then
@@ -246,7 +241,7 @@ Public Class testing
             Dim tanggal As String = Now.ToString("yyyy-MM-dd HH:mm:ss")
 
 
-            ' Insert transaksi
+            ' insert db transaksi
             Dim sqlTrans = "INSERT INTO transaksi (id_transaksi, tanggal, total_bayar, metode_bayar) VALUES (@id_transaksi, @tanggal, @total_bayar, @metode_bayar)"
             Dim cmdTrans As New MySqlCommand(sqlTrans, conn, trans)
             cmdTrans.Parameters.AddWithValue("@id_transaksi", transactionId)
@@ -257,7 +252,7 @@ Public Class testing
             cmdTrans.Parameters.AddWithValue("@metode_bayar", paymentbox.Text)
             cmdTrans.ExecuteNonQuery()
 
-            ' Insert transaksi_detail
+            ' insert db transaksi_detail
             Dim sqlDetail = "INSERT INTO transaksi_detail (id_transaksi, item, qty, harga_satuan, total) VALUES (@id_transaksi, @item, @qty, @harga_satuan, @total)"
             For Each item As ListViewItem In pembelian.Items
                 Dim hargaSatuan As Decimal = Decimal.Parse(item.SubItems(2).Text.Replace("Rp", "").Replace(".", "").Trim())
@@ -274,7 +269,6 @@ Public Class testing
 
             trans.Commit()
 
-            ' Tampilkan form struk dengan parameter namaKasir
             Dim formStruk As New formStruk()
             formStruk.SetData(pembelian.Items, labelsubtotal.Text, labeltax.Text, labeltotal.Text, paymentbox.Text, transactionId, Now.ToString("HH:mm"))
 
@@ -293,7 +287,7 @@ Public Class testing
     End Sub
 
 
-    ' === zero ===
+    ' huzaaa
     Private Sub flowpanelDrinks_Paint(sender As Object, e As PaintEventArgs) Handles flowpanelDrinks.Paint
     End Sub
 

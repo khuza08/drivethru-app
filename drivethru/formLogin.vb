@@ -1,81 +1,17 @@
 ﻿Imports MySql.Data.MySqlClient
+
 Public Class FormLogin
-
-    Private Sub loginBack_Click_1(sender As Object, e As EventArgs) Handles loginBack.Click
-        Form1.Show()
-        Me.Hide()
-
-    End Sub
-    Private Sub tbpw_TextChanged(sender As Object, e As EventArgs)
-        tbpw.UseSystemPasswordChar = True
-
-    End Sub
-
-    Private Sub login_Click(sender As Object, e As EventArgs) Handles login.Click
-        Dim db As New database()
-
-        If tbuser.Text = "" OrElse tbpw.Text = "" Then
-            MessageBox.Show("Isi semua field login!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Exit Sub
-        End If
-
-        session.KasirUsername = tbuser.Text
-        session.KasirNama = db.Nama
-
-        If db.Login(tbuser.Text, tbpw.Text) Then
-            If db.Userlevel = "admin" Then
-                MessageBox.Show("Login Berhasil.")
-                adminpanel.Show()
-            ElseIf db.Userlevel = "kasir" Then
-                MessageBox.Show("Login Sukses.")
-                formIdTransaksi.Show()
-            Else
-                MessageBox.Show("Level user tidak dikenali.")
-                Exit Sub
-            End If
-            Me.Hide()
-        Else
-            MessageBox.Show("Username atau password salah.")
-        End If
-    End Sub
-
-    Private Sub formLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.FormBorderStyle = FormBorderStyle.FixedSingle
-        Me.MaximizeBox = False
-        Me.AcceptButton = login
-
-    End Sub
 
     Private dragging As Boolean = False
     Private offset As Point
 
-    Private Sub formLoad_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
-        If e.Button = MouseButtons.Left Then
-            dragging = True
-            offset = e.Location
-        End If
-    End Sub
-
-    Private Sub formLoad_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
-        If dragging Then
-            Me.Location = New Point(Me.Location.X + e.X - offset.X, Me.Location.Y + e.Y - offset.Y)
-        End If
-    End Sub
-
-    Private Sub formLoad_MouseUp(sender As Object, e As MouseEventArgs) Handles Me.MouseUp
-        dragging = False
-    End Sub
-    Protected Overrides Sub OnLoad(e As EventArgs)
-        MyBase.OnLoad(e)
-
-        ' Hilangkan border dan control box
+    Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.FormBorderStyle = FormBorderStyle.None
         Me.ControlBox = False
+        Me.MaximizeBox = False
+        Me.AcceptButton = login
 
-        ' Atur ukuran form
-        ' Me.Size = New Size(400, 600) ' lebar > panjang
-
-        ' Buat rounded corners (radius 30)
+        ' buat rounded corner ui
         Dim radius As Integer = 30
         Dim path As New Drawing2D.GraphicsPath()
         path.AddArc(0, 0, radius, radius, 180, 90)
@@ -84,6 +20,59 @@ Public Class FormLogin
         path.AddArc(0, Me.Height - radius, radius, radius, 90, 90)
         path.CloseAllFigures()
         Me.Region = New Region(path)
+
+        tbpw.UseSystemPasswordChar = True
+    End Sub
+
+    Private Sub loginBack_Click(sender As Object, e As EventArgs) Handles loginBack.Click
+        Form1.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub login_Click(sender As Object, e As EventArgs) Handles login.Click
+        If tbuser.Text = "" OrElse tbpw.Text = "" Then
+            MessageBox.Show("Isi semua field login!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        Dim db As New database()
+        If db.Login(tbuser.Text, tbpw.Text) Then
+            session.KasirUsername = tbuser.Text
+            session.KasirNama = db.Nama
+
+            Select Case db.Userlevel
+                Case "admin"
+                    MessageBox.Show("Login Berhasil.")
+                    adminpanel.Show()
+                Case "kasir"
+                    MessageBox.Show("Login Sukses.")
+                    formIdTransaksi.Show()
+                Case Else
+                    MessageBox.Show("Level user tidak dikenali.")
+                    Exit Sub
+            End Select
+            Me.Hide()
+        Else
+            MessageBox.Show("Username atau password salah.")
+        End If
+    End Sub
+
+    ' drag logic
+    Private Sub FormLogin_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
+        If e.Button = MouseButtons.Left Then
+            dragging = True
+            offset = e.Location
+        End If
+    End Sub
+
+    Private Sub FormLogin_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
+        If dragging Then
+            Me.Location = New Point(Me.Location.X + e.X - offset.X, Me.Location.Y + e.Y - offset.Y)
+        End If
+    End Sub
+
+    Private Sub FormLogin_MouseUp(sender As Object, e As MouseEventArgs) Handles Me.MouseUp
+        dragging = False
     End Sub
 
 End Class

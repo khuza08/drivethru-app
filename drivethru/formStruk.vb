@@ -1,7 +1,7 @@
 ﻿Public Class formStruk
 
     Private Sub formStruk_Load(sender As Object, args As EventArgs) Handles MyBase.Load
-        ' Setup ListView
+        ' setup ListView responsif keknya
         lvStruk.View = View.Details
         lvStruk.Columns.Clear()
         lvStruk.Columns.Add("Item", 240, HorizontalAlignment.Left)
@@ -9,11 +9,11 @@
         lvStruk.Columns.Add("Price", 180, HorizontalAlignment.Right)
         lvStruk.Columns.Add("Total", 180, HorizontalAlignment.Right)
 
-        ' Hitung tinggi ListView
+        ' hittung tinggi ListView
         Dim itemHeight As Integer = If(lvStruk.Items.Count > 0, lvStruk.Items(0).Bounds.Height, 20)
         lvStruk.Height = itemHeight * lvStruk.Items.Count + 50
 
-        ' Hitung dan atur lebar form mengikuti ListView
+        ' hitung dan atur lebar form mengikuti listview
         Dim totalWidth As Integer = lvStruk.Columns.Cast(Of ColumnHeader)().Sum(Function(col) col.Width)
         lvStruk.Width = totalWidth
         Me.Width = lvStruk.Left + totalWidth + 40
@@ -23,14 +23,14 @@
         Me.MaximizeBox = False
         Me.MinimizeBox = False
 
-        ' ListView style
+        ' listview style
         lvStruk.FullRowSelect = False
         lvStruk.HideSelection = True
         lvStruk.BorderStyle = BorderStyle.None
         lvStruk.BackColor = Me.BackColor
         lvStruk.OwnerDraw = True
 
-        ' Disable item selection
+        ' disable item selection
         AddHandler lvStruk.ItemSelectionChanged, Sub(senderObj, evt)
                                                      evt.Item.Selected = False
                                                  End Sub
@@ -39,7 +39,7 @@
                                           lvStruk.SelectedItems.Clear()
                                       End Sub
 
-        ' Custom header (bold + alignment)
+        ' custom header (bold + alignment)
         AddHandler lvStruk.DrawColumnHeader,
             Sub(senderObj, evt)
                 evt.DrawBackground()
@@ -54,7 +54,7 @@
                 End Using
             End Sub
 
-        ' Custom item content
+        ' custom item content
         AddHandler lvStruk.DrawSubItem,
             Sub(senderObj, evt)
                 evt.DrawBackground()
@@ -67,9 +67,9 @@
                 evt.Graphics.DrawString(evt.SubItem.Text, lvStruk.Font, Brushes.Black, evt.Bounds, format)
             End Sub
 
-        ' Kosong karena hanya DrawSubItem yang digunakan
+        ' gatau ini apa, kalau di remove error.
         AddHandler lvStruk.DrawItem, Sub(senderObj, evt)
-                                         ' Kosong
+
                                      End Sub
     End Sub
 
@@ -90,7 +90,7 @@
 
     End Sub
 
-    ' Drag form code tetap sama...
+    ' drag / move form logic
     Private dragging As Boolean = False
     Private offset As Point
 
