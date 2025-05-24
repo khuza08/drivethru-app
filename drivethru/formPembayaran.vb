@@ -15,6 +15,8 @@ Public Class formPembayaran
 
     ' --- Form Load ---
     Private Sub formPembayaran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim db As New database()
+
         lvTotal.View = View.Details
         lvTotal.Columns.Clear()
         lvTotal.Columns.Add("Item", 240, HorizontalAlignment.Left)
@@ -30,6 +32,7 @@ Public Class formPembayaran
         transactionTotal = 0
         UpdateDisplay()
         lblTotalPembelian.Text = "Rp 0"
+        lblKembalian.Text = "Rp 0"
 
         LoadTotalPembelian()
         LoadListView()
@@ -149,24 +152,87 @@ Public Class formPembayaran
             Return
         End If
 
-        ' Gunakan transactionTotal yg sudah include tax
         If currentAmount >= transactionTotal Then
             Dim kembalian = currentAmount - transactionTotal
             lblKembalian.Text = "Rp " & kembalian.ToString("N0", New Globalization.CultureInfo("id-ID"))
             MessageBox.Show($"Pembayaran berhasil! Kembalian: Rp {kembalian:N0}", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            ' Reset setelah pembayaran sukses
+            ' ==== TAMPILKAN STRUK ====
+            Try
+                Dim formStruk As New formStruk()
+                Dim cultureID As New Globalization.CultureInfo("id-ID")
+
+
+                db.conn.Open()
+
+                ' Ambil data transaksi
+                Dim cmdTrans As New MySqlCommand("SELECT tanggal, total_bayar, metode_bayar FROM transaksi WHERE id_transaksi = @id", db.conn)
+                cmdTrans.Parameters.AddWithValue("@id", lblIdTransaksi.Text)
+                Dim readerTrans = cmdTrans.ExecuteReader()
+
+                Dim tanggal As String = ""
+                Dim total_bayar As String = ""
+                Dim metode_bayar As String = ""
+
+                If readerTrans.Read() Then
+                    tanggal = readerTrans("tanggal").ToString()
+                    total_bayar = Convert.ToDecimal(readerTrans("total_bayar")).ToString("C2", cultureID)
+                    metode_bayar = readerTrans("metode_bayar").ToString()
+                End If
+                readerTrans.Close()
+
+                ' Ambil detail item
+                Dim cmdDetail As New MySqlCommand("SELECT item, qty, harga_satuan, total FROM transaksi_detail WHERE id_transaksi = @id", db.conn)
+                cmdDetail.Parameters.AddWithValue("@id", lblIdTransaksi.Text)
+                Dim readerDetail = cmdDetail.ExecuteReader()
+
+                Dim dummyList As New ListView()
+                dummyList.View = View.Details
+                dummyList.Columns.Add("Item")
+                dummyList.Columns.Add("Qty")
+                dummyList.Columns.Add("Harga")
+                dummyList.Columns.Add("Total")
+
+                While readerDetail.Read()
+                    Dim item As New ListViewItem(readerDetail("item").ToString())
+                    item.SubItems.Add(readerDetail("qty").ToString())
+                    item.SubItems.Add(FormatCurrency(readerDetail("harga_satuan"), 0, -1, 0))
+                    item.SubItems.Add(FormatCurrency(readerDetail("total"), 0, -1, 0))
+                    dummyList.Items.Add(item)
+                End While
+                readerDetail.Close()
+
+                ' Hitung tax & subtotal
+                Dim totalDec = Decimal.Parse(total_bayar, Globalization.NumberStyles.Currency, cultureID)
+
+                Dim subtotalDec = totalDec / 1.1D
+                Dim taxDec = totalDec - subtotalDec
+
+                formStruk.SetData(dummyList.Items, subtotalDec.ToString("C2", cultureID), taxDec.ToString("C2", cultureID), total_bayar, metode_bayar, lblIdTransaksi.Text, tanggal)
+                formStruk.lblTy.Text = "LUNAS"
+                formStruk.ShowDialog()
+
+            Catch ex As Exception
+                MessageBox.Show("Gagal menampilkan struk: " & ex.Message)
+            Finally
+                If db.conn.State = ConnectionState.Open Then db.conn.Close()
+            End Try
+            ' ==== END STRUK ====
+
+            ' Reset
             currentAmount = 0
             transactionTotal = 0
             UpdateDisplay()
             lblTotalPembelian.Text = "Rp 0"
             lvTotal.Items.Clear()
             lblKembalian.Text = "Rp 0"
+
         Else
             Dim kurang = transactionTotal - currentAmount
             MessageBox.Show($"Pembayaran kurang! Kurang: Rp {kurang:N0}", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
+
 
 
 

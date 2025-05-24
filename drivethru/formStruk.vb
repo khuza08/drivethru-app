@@ -97,15 +97,15 @@
     Private Sub lvStruk_MouseDown(sender As Object, e As MouseEventArgs) Handles lvStruk.MouseDown
         If e.Button = MouseButtons.Left Then
             dragging = True
-            offset = Me.PointToClient(lvStruk.PointToScreen(e.Location))
+            offset = PointToClient(lvStruk.PointToScreen(e.Location))
         End If
     End Sub
 
     Private Sub lvStruk_MouseMove(sender As Object, e As MouseEventArgs) Handles lvStruk.MouseMove
         If dragging Then
-            Dim screenPos As Point = lvStruk.PointToScreen(e.Location)
-            Dim newLocation As Point = New Point(screenPos.X - offset.X, screenPos.Y - offset.Y)
-            Me.Location = newLocation
+            Dim screenPos = lvStruk.PointToScreen(e.Location)
+            Dim newLocation = New Point(screenPos.X - offset.X, screenPos.Y - offset.Y)
+            Location = newLocation
         End If
     End Sub
 
@@ -144,6 +144,6 @@
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Me.Hide()
+        Hide
     End Sub
 End Class

@@ -22,30 +22,30 @@ Partial Class formPembayaran
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges47 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         btnPembayaranDel = New Guna.UI2.WinForms.Guna2Button()
         btn0 = New Guna.UI2.WinForms.Guna2Button()
         btnPembayaranEnter = New Guna.UI2.WinForms.Guna2Button()
@@ -63,17 +63,17 @@ Partial Class formPembayaran
         Label1 = New Label()
         lvTotal = New ListView()
         TableLayoutPanel1 = New TableLayoutPanel()
+        lblKembalian = New Label()
+        lblJumlahUang = New Label()
+        lblTotalPembelian = New Label()
+        lblIdTransaksi = New Label()
+        Label5 = New Label()
         Label2 = New Label()
         Label3 = New Label()
         Label4 = New Label()
-        Label5 = New Label()
         Label6 = New Label()
         Label7 = New Label()
         Label8 = New Label()
-        lblIdTransaksi = New Label()
-        lblTotalPembelian = New Label()
-        lblJumlahUang = New Label()
-        lblKembalian = New Label()
         tblbtnPembayaran.SuspendLayout()
         Guna2ShadowPanel1.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
@@ -82,16 +82,17 @@ Partial Class formPembayaran
         ' btnPembayaranDel
         ' 
         btnPembayaranDel.AutoRoundedCorners = True
-        btnPembayaranDel.CustomizableEdges = CustomizableEdges25
+        btnPembayaranDel.CustomizableEdges = CustomizableEdges1
         btnPembayaranDel.DisabledState.BorderColor = Color.DarkGray
         btnPembayaranDel.DisabledState.CustomBorderColor = Color.DarkGray
         btnPembayaranDel.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnPembayaranDel.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnPembayaranDel.FillColor = Color.Firebrick
         btnPembayaranDel.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnPembayaranDel.ForeColor = Color.White
         btnPembayaranDel.Location = New Point(251, 375)
         btnPembayaranDel.Name = "btnPembayaranDel"
-        btnPembayaranDel.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        btnPembayaranDel.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnPembayaranDel.Size = New Size(118, 118)
         btnPembayaranDel.TabIndex = 11
         btnPembayaranDel.Text = "D"
@@ -99,16 +100,17 @@ Partial Class formPembayaran
         ' btn0
         ' 
         btn0.AutoRoundedCorners = True
-        btn0.CustomizableEdges = CustomizableEdges27
+        btn0.CustomizableEdges = CustomizableEdges3
         btn0.DisabledState.BorderColor = Color.DarkGray
         btn0.DisabledState.CustomBorderColor = Color.DarkGray
         btn0.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btn0.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn0.FillColor = Color.Firebrick
         btn0.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn0.ForeColor = Color.White
         btn0.Location = New Point(127, 375)
         btn0.Name = "btn0"
-        btn0.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        btn0.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btn0.Size = New Size(118, 118)
         btn0.TabIndex = 10
         btn0.Text = "0"
@@ -116,16 +118,17 @@ Partial Class formPembayaran
         ' btnPembayaranEnter
         ' 
         btnPembayaranEnter.AutoRoundedCorners = True
-        btnPembayaranEnter.CustomizableEdges = CustomizableEdges29
+        btnPembayaranEnter.CustomizableEdges = CustomizableEdges5
         btnPembayaranEnter.DisabledState.BorderColor = Color.DarkGray
         btnPembayaranEnter.DisabledState.CustomBorderColor = Color.DarkGray
         btnPembayaranEnter.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnPembayaranEnter.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnPembayaranEnter.FillColor = Color.Firebrick
         btnPembayaranEnter.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnPembayaranEnter.ForeColor = Color.White
         btnPembayaranEnter.Location = New Point(3, 375)
         btnPembayaranEnter.Name = "btnPembayaranEnter"
-        btnPembayaranEnter.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        btnPembayaranEnter.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnPembayaranEnter.Size = New Size(118, 118)
         btnPembayaranEnter.TabIndex = 9
         btnPembayaranEnter.Text = "EN"
@@ -133,16 +136,17 @@ Partial Class formPembayaran
         ' btn9
         ' 
         btn9.AutoRoundedCorners = True
-        btn9.CustomizableEdges = CustomizableEdges31
+        btn9.CustomizableEdges = CustomizableEdges7
         btn9.DisabledState.BorderColor = Color.DarkGray
         btn9.DisabledState.CustomBorderColor = Color.DarkGray
         btn9.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btn9.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn9.FillColor = Color.Firebrick
         btn9.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn9.ForeColor = Color.White
         btn9.Location = New Point(251, 251)
         btn9.Name = "btn9"
-        btn9.ShadowDecoration.CustomizableEdges = CustomizableEdges32
+        btn9.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btn9.Size = New Size(118, 118)
         btn9.TabIndex = 8
         btn9.Text = "9"
@@ -150,16 +154,17 @@ Partial Class formPembayaran
         ' btn8
         ' 
         btn8.AutoRoundedCorners = True
-        btn8.CustomizableEdges = CustomizableEdges33
+        btn8.CustomizableEdges = CustomizableEdges9
         btn8.DisabledState.BorderColor = Color.DarkGray
         btn8.DisabledState.CustomBorderColor = Color.DarkGray
         btn8.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btn8.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn8.FillColor = Color.Firebrick
         btn8.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn8.ForeColor = Color.White
         btn8.Location = New Point(127, 251)
         btn8.Name = "btn8"
-        btn8.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        btn8.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         btn8.Size = New Size(118, 118)
         btn8.TabIndex = 7
         btn8.Text = "8"
@@ -167,16 +172,17 @@ Partial Class formPembayaran
         ' btn7
         ' 
         btn7.AutoRoundedCorners = True
-        btn7.CustomizableEdges = CustomizableEdges35
+        btn7.CustomizableEdges = CustomizableEdges11
         btn7.DisabledState.BorderColor = Color.DarkGray
         btn7.DisabledState.CustomBorderColor = Color.DarkGray
         btn7.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btn7.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn7.FillColor = Color.Firebrick
         btn7.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn7.ForeColor = Color.White
         btn7.Location = New Point(3, 251)
         btn7.Name = "btn7"
-        btn7.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        btn7.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btn7.Size = New Size(118, 118)
         btn7.TabIndex = 6
         btn7.Text = "7"
@@ -184,16 +190,17 @@ Partial Class formPembayaran
         ' btn6
         ' 
         btn6.AutoRoundedCorners = True
-        btn6.CustomizableEdges = CustomizableEdges37
+        btn6.CustomizableEdges = CustomizableEdges13
         btn6.DisabledState.BorderColor = Color.DarkGray
         btn6.DisabledState.CustomBorderColor = Color.DarkGray
         btn6.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btn6.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn6.FillColor = Color.Firebrick
         btn6.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn6.ForeColor = Color.White
         btn6.Location = New Point(251, 127)
         btn6.Name = "btn6"
-        btn6.ShadowDecoration.CustomizableEdges = CustomizableEdges38
+        btn6.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btn6.Size = New Size(118, 118)
         btn6.TabIndex = 5
         btn6.Text = "6"
@@ -201,16 +208,17 @@ Partial Class formPembayaran
         ' btn5
         ' 
         btn5.AutoRoundedCorners = True
-        btn5.CustomizableEdges = CustomizableEdges39
+        btn5.CustomizableEdges = CustomizableEdges15
         btn5.DisabledState.BorderColor = Color.DarkGray
         btn5.DisabledState.CustomBorderColor = Color.DarkGray
         btn5.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btn5.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn5.FillColor = Color.Firebrick
         btn5.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn5.ForeColor = Color.White
         btn5.Location = New Point(127, 127)
         btn5.Name = "btn5"
-        btn5.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        btn5.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         btn5.Size = New Size(118, 118)
         btn5.TabIndex = 4
         btn5.Text = "5"
@@ -218,16 +226,17 @@ Partial Class formPembayaran
         ' btn4
         ' 
         btn4.AutoRoundedCorners = True
-        btn4.CustomizableEdges = CustomizableEdges41
+        btn4.CustomizableEdges = CustomizableEdges17
         btn4.DisabledState.BorderColor = Color.DarkGray
         btn4.DisabledState.CustomBorderColor = Color.DarkGray
         btn4.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btn4.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn4.FillColor = Color.Firebrick
         btn4.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn4.ForeColor = Color.White
         btn4.Location = New Point(3, 127)
         btn4.Name = "btn4"
-        btn4.ShadowDecoration.CustomizableEdges = CustomizableEdges42
+        btn4.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         btn4.Size = New Size(118, 118)
         btn4.TabIndex = 3
         btn4.Text = "4"
@@ -235,16 +244,17 @@ Partial Class formPembayaran
         ' btn3
         ' 
         btn3.AutoRoundedCorners = True
-        btn3.CustomizableEdges = CustomizableEdges43
+        btn3.CustomizableEdges = CustomizableEdges19
         btn3.DisabledState.BorderColor = Color.DarkGray
         btn3.DisabledState.CustomBorderColor = Color.DarkGray
         btn3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btn3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn3.FillColor = Color.Firebrick
         btn3.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn3.ForeColor = Color.White
         btn3.Location = New Point(251, 3)
         btn3.Name = "btn3"
-        btn3.ShadowDecoration.CustomizableEdges = CustomizableEdges44
+        btn3.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         btn3.Size = New Size(118, 118)
         btn3.TabIndex = 2
         btn3.Text = "3"
@@ -252,16 +262,17 @@ Partial Class formPembayaran
         ' btn2
         ' 
         btn2.AutoRoundedCorners = True
-        btn2.CustomizableEdges = CustomizableEdges45
+        btn2.CustomizableEdges = CustomizableEdges21
         btn2.DisabledState.BorderColor = Color.DarkGray
         btn2.DisabledState.CustomBorderColor = Color.DarkGray
         btn2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btn2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn2.FillColor = Color.Firebrick
         btn2.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn2.ForeColor = Color.White
         btn2.Location = New Point(127, 3)
         btn2.Name = "btn2"
-        btn2.ShadowDecoration.CustomizableEdges = CustomizableEdges46
+        btn2.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         btn2.Size = New Size(118, 118)
         btn2.TabIndex = 1
         btn2.Text = "2"
@@ -269,16 +280,17 @@ Partial Class formPembayaran
         ' btn1
         ' 
         btn1.AutoRoundedCorners = True
-        btn1.CustomizableEdges = CustomizableEdges47
+        btn1.CustomizableEdges = CustomizableEdges23
         btn1.DisabledState.BorderColor = Color.DarkGray
         btn1.DisabledState.CustomBorderColor = Color.DarkGray
         btn1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btn1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn1.FillColor = Color.Firebrick
         btn1.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn1.ForeColor = Color.White
         btn1.Location = New Point(3, 3)
         btn1.Name = "btn1"
-        btn1.ShadowDecoration.CustomizableEdges = CustomizableEdges48
+        btn1.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         btn1.Size = New Size(118, 118)
         btn1.TabIndex = 0
         btn1.Text = "1"
@@ -374,6 +386,56 @@ Partial Class formPembayaran
         TableLayoutPanel1.Size = New Size(488, 171)
         TableLayoutPanel1.TabIndex = 4
         ' 
+        ' lblKembalian
+        ' 
+        lblKembalian.AutoSize = True
+        lblKembalian.Font = New Font("Montserrat", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblKembalian.Location = New Point(275, 113)
+        lblKembalian.Name = "lblKembalian"
+        lblKembalian.Size = New Size(209, 38)
+        lblKembalian.TabIndex = 13
+        lblKembalian.Text = "UangKembalian"
+        ' 
+        ' lblJumlahUang
+        ' 
+        lblJumlahUang.AutoSize = True
+        lblJumlahUang.Font = New Font("Montserrat", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblJumlahUang.Location = New Point(275, 75)
+        lblJumlahUang.Name = "lblJumlahUang"
+        lblJumlahUang.Size = New Size(177, 38)
+        lblJumlahUang.TabIndex = 12
+        lblJumlahUang.Text = "Jumlah Uang"
+        ' 
+        ' lblTotalPembelian
+        ' 
+        lblTotalPembelian.AutoSize = True
+        lblTotalPembelian.Font = New Font("Montserrat", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblTotalPembelian.Location = New Point(275, 37)
+        lblTotalPembelian.Name = "lblTotalPembelian"
+        lblTotalPembelian.Size = New Size(203, 38)
+        lblTotalPembelian.TabIndex = 11
+        lblTotalPembelian.Text = "TotalPembelian"
+        ' 
+        ' lblIdTransaksi
+        ' 
+        lblIdTransaksi.AutoSize = True
+        lblIdTransaksi.Font = New Font("Montserrat", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblIdTransaksi.Location = New Point(275, 0)
+        lblIdTransaksi.Name = "lblIdTransaksi"
+        lblIdTransaksi.Size = New Size(155, 37)
+        lblIdTransaksi.TabIndex = 10
+        lblIdTransaksi.Text = "IDTransaksi"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(236, 0)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(23, 37)
+        Label5.TabIndex = 6
+        Label5.Text = ":"
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -404,16 +466,6 @@ Partial Class formPembayaran
         Label4.TabIndex = 5
         Label4.Text = "Uang Kembalian"
         ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Montserrat", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(236, 0)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(23, 37)
-        Label5.TabIndex = 6
-        Label5.Text = ":"
-        ' 
         ' Label6
         ' 
         Label6.AutoSize = True
@@ -443,46 +495,6 @@ Partial Class formPembayaran
         Label8.Size = New Size(23, 38)
         Label8.TabIndex = 9
         Label8.Text = ":"
-        ' 
-        ' lblIdTransaksi
-        ' 
-        lblIdTransaksi.AutoSize = True
-        lblIdTransaksi.Font = New Font("Montserrat", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblIdTransaksi.Location = New Point(275, 0)
-        lblIdTransaksi.Name = "lblIdTransaksi"
-        lblIdTransaksi.Size = New Size(155, 37)
-        lblIdTransaksi.TabIndex = 10
-        lblIdTransaksi.Text = "IDTransaksi"
-        ' 
-        ' lblTotalPembelian
-        ' 
-        lblTotalPembelian.AutoSize = True
-        lblTotalPembelian.Font = New Font("Montserrat", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblTotalPembelian.Location = New Point(275, 37)
-        lblTotalPembelian.Name = "lblTotalPembelian"
-        lblTotalPembelian.Size = New Size(203, 38)
-        lblTotalPembelian.TabIndex = 11
-        lblTotalPembelian.Text = "TotalPembelian"
-        ' 
-        ' lblJumlahUang
-        ' 
-        lblJumlahUang.AutoSize = True
-        lblJumlahUang.Font = New Font("Montserrat", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblJumlahUang.Location = New Point(275, 75)
-        lblJumlahUang.Name = "lblJumlahUang"
-        lblJumlahUang.Size = New Size(177, 38)
-        lblJumlahUang.TabIndex = 12
-        lblJumlahUang.Text = "Jumlah Uang"
-        ' 
-        ' lblKembalian
-        ' 
-        lblKembalian.AutoSize = True
-        lblKembalian.Font = New Font("Montserrat", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblKembalian.Location = New Point(275, 113)
-        lblKembalian.Name = "lblKembalian"
-        lblKembalian.Size = New Size(209, 38)
-        lblKembalian.TabIndex = 13
-        lblKembalian.Text = "UangKembalian"
         ' 
         ' formPembayaran
         ' 
