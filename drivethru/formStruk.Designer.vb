@@ -22,8 +22,8 @@ Partial Class formStruk
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         lvStruk = New ListView()
         Item = New ColumnHeader()
@@ -148,14 +148,14 @@ Partial Class formStruk
         tblStruk.Controls.Add(Label20, 1, 4)
         tblStruk.Location = New Point(3, 328)
         tblStruk.Name = "tblStruk"
-        tblStruk.RowCount = 5
+        tblStruk.RowCount = 6
         tblStruk.RowStyles.Add(New RowStyle())
         tblStruk.RowStyles.Add(New RowStyle())
         tblStruk.RowStyles.Add(New RowStyle(SizeType.Absolute, 27F))
         tblStruk.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         tblStruk.RowStyles.Add(New RowStyle(SizeType.Absolute, 43F))
-        tblStruk.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        tblStruk.Size = New Size(680, 216)
+        tblStruk.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        tblStruk.Size = New Size(680, 198)
         tblStruk.TabIndex = 4
         ' 
         ' Label19
@@ -515,7 +515,7 @@ Partial Class formStruk
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.Controls.Add(Label15, 0, 0)
         TableLayoutPanel4.Controls.Add(lblTy, 0, 1)
-        TableLayoutPanel4.Location = New Point(162, 567)
+        TableLayoutPanel4.Location = New Point(162, 549)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 2
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
@@ -550,8 +550,8 @@ Partial Class formStruk
         btnExit.Animated = True
         btnExit.AnimatedGIF = True
         btnExit.AutoRoundedCorners = True
-        btnExit.BorderRadius = 54
-        btnExit.CustomizableEdges = CustomizableEdges3
+        btnExit.BorderRadius = 63
+        btnExit.CustomizableEdges = CustomizableEdges1
         btnExit.DefaultAutoSize = True
         btnExit.DisabledState.BorderColor = Color.DarkGray
         btnExit.DisabledState.CustomBorderColor = Color.DarkGray
@@ -560,10 +560,10 @@ Partial Class formStruk
         btnExit.FillColor = SystemColors.ControlDark
         btnExit.Font = New Font("Montserrat", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnExit.ForeColor = Color.Black
-        btnExit.Location = New Point(3, 633)
+        btnExit.Location = New Point(3, 615)
         btnExit.Name = "btnExit"
-        btnExit.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnExit.Size = New Size(839, 110)
+        btnExit.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnExit.Size = New Size(839, 128)
         btnExit.TabIndex = 12
         btnExit.Text = "CLOSE RECEIPT"
         ' 

@@ -19,6 +19,8 @@ Public Class FormLogin
             Exit Sub
         End If
 
+        session.KasirUsername = tbuser.Text
+        session.KasirNama = db.Nama
 
         If db.Login(tbuser.Text, tbpw.Text) Then
             If db.Userlevel = "admin" Then

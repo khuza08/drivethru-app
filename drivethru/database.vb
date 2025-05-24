@@ -7,6 +7,7 @@ Public Class database
     Public reader As MySqlDataReader
 
     Public Userlevel As String
+    Public Nama As String
 
     ' Koneksi ke database
     Public Sub Connect()
@@ -29,6 +30,7 @@ Public Class database
         reader = cmd.ExecuteReader()
         If reader.Read() Then
             Userlevel = reader("level").ToString()
+            Nama = reader("username").ToString()
             reader.Close()
             conn.Close()
             Return True

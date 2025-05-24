@@ -1,6 +1,7 @@
 ﻿Imports drivethru.adminpanel
 Imports Guna.UI2.Native.WinApi
 Imports MySql.Data.MySqlClient
+Imports Mysqlx.XDevAPI
 
 Public Class formPembayaran
     Private db As New database() ' ✅ Inisialisasi langsung
@@ -176,7 +177,10 @@ Public Class formPembayaran
 
                 If readerTrans.Read() Then
                     tanggal = readerTrans("tanggal").ToString()
-                    total_bayar = Convert.ToDecimal(readerTrans("total_bayar")).ToString("C2", cultureID)
+
+                    total_bayar = (Convert.ToDecimal(readerTrans("total_bayar")) / 100D).ToString("C2", cultureID)
+
+
                     metode_bayar = readerTrans("metode_bayar").ToString()
                 End If
                 readerTrans.Close()
@@ -196,20 +200,26 @@ Public Class formPembayaran
                 While readerDetail.Read()
                     Dim item As New ListViewItem(readerDetail("item").ToString())
                     item.SubItems.Add(readerDetail("qty").ToString())
-                    item.SubItems.Add(FormatCurrency(readerDetail("harga_satuan"), 0, -1, 0))
-                    item.SubItems.Add(FormatCurrency(readerDetail("total"), 0, -1, 0))
+
+                    Dim hargaSatuanDecimal As Decimal = Convert.ToDecimal(readerDetail("harga_satuan")) / 100D
+                    Dim totalDecimal As Decimal = Convert.ToDecimal(readerDetail("total")) / 100D
+
+                    item.SubItems.Add(hargaSatuanDecimal.ToString("C0", cultureID))
+                    item.SubItems.Add(totalDecimal.ToString("C0", cultureID))
+
+
                     dummyList.Items.Add(item)
                 End While
                 readerDetail.Close()
 
                 ' Hitung tax & subtotal
                 Dim totalDec = Decimal.Parse(total_bayar, Globalization.NumberStyles.Currency, cultureID)
-
                 Dim subtotalDec = totalDec / 1.1D
                 Dim taxDec = totalDec - subtotalDec
 
                 formStruk.SetData(dummyList.Items, subtotalDec.ToString("C2", cultureID), taxDec.ToString("C2", cultureID), total_bayar, metode_bayar, lblIdTransaksi.Text, tanggal)
                 formStruk.lblTy.Text = "LUNAS"
+                formStruk.lblKasir.Text = session.KasirNama
                 formStruk.ShowDialog()
 
             Catch ex As Exception
