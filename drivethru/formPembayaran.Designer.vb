@@ -327,6 +327,7 @@ Partial Class formPembayaran
         ' 
         ' Guna2ShadowPanel1
         ' 
+        Guna2ShadowPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
         Guna2ShadowPanel1.AutoSize = True
         Guna2ShadowPanel1.BackColor = Color.Transparent
         Guna2ShadowPanel1.Controls.Add(tblbtnPembayaran)
@@ -350,6 +351,7 @@ Partial Class formPembayaran
         ' 
         ' lvTotal
         ' 
+        lvTotal.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         lvTotal.Location = New Point(12, 9)
         lvTotal.Name = "lvTotal"
         lvTotal.Size = New Size(498, 146)
@@ -358,6 +360,7 @@ Partial Class formPembayaran
         ' 
         ' TableLayoutPanel1
         ' 
+        TableLayoutPanel1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         TableLayoutPanel1.AutoSize = True
         TableLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
         TableLayoutPanel1.ColumnCount = 3
@@ -383,7 +386,7 @@ Partial Class formPembayaran
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 22.2222233F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 22.2222233F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333359F))
-        TableLayoutPanel1.Size = New Size(488, 171)
+        TableLayoutPanel1.Size = New Size(487, 171)
         TableLayoutPanel1.TabIndex = 4
         ' 
         ' lblKembalian
