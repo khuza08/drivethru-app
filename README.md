@@ -2,7 +2,9 @@
 
 <p>Guru: Bu Mega<br>
 Mapel: Pemrograman Desktop<br>
-Kelas: XI RPL 1</p>
+Kelas: XI RPL 1
+Bahasa: Visual Busuk .NET</p>
+
 
 <strong><i>Minimum screen resolution: 1920x1080 (1080p). Lower resolutions may cause UI misalignment.
 dwyor~
