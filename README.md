@@ -2,7 +2,7 @@
 
 <p>Guru: Bu Mega<br>
 Mapel: Pemrograman Desktop<br>
-Kelas: XI RPL 1
+Kelas: XI RPL 1<br>
 Bahasa: Visual Busuk .NET</p>
 
 
