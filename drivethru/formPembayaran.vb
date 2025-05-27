@@ -1,10 +1,11 @@
-﻿Imports drivethru.adminpanel
+﻿Imports System.Reflection
+Imports drivethru.adminpanel
 Imports Guna.UI2.Native.WinApi
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI
 
 Public Class formPembayaran
-    Private db As New database() ' ✅ Inisialisasi langsung
+    Private db As New database()
     Private currentAmount As Decimal = 0
     Private transactionTotal As Decimal = 0
     Private transactionId As String = ""
@@ -29,12 +30,15 @@ Public Class formPembayaran
             Controls.Find("btn" & i.ToString(), True)(0).Tag = i.ToString()
         Next
 
+        Me.KeyPreview = True
+        Me.AcceptButton = btnPembayaranEnter
+
+
         currentAmount = 0
         transactionTotal = 0
         UpdateDisplay()
         lblTotalPembelian.Text = "Rp 0"
         lblKembalian.Text = "Rp 0"
-
         LoadTotalPembelian()
         LoadListView()
     End Sub
@@ -108,6 +112,44 @@ Public Class formPembayaran
     End Sub
 
 
+    Private Sub formPembayaran_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        ' Tangani tombol Enter dan Delete secara langsung
+        If e.KeyCode = Keys.Enter Then
+            Me.btnPembayaranEnter.PerformClick()
+            e.Handled = True
+            Return
+        ElseIf e.KeyCode = Keys.Delete Then
+            Me.btnPembayaranDel.PerformClick()
+            e.Handled = True
+            Return
+        End If
+
+        ' Tangani tombol angka dengan Select Case
+        Select Case e.KeyCode
+            Case Keys.D0, Keys.NumPad0
+                NumberButton_Click(Me.btn0, EventArgs.Empty)
+            Case Keys.D1, Keys.NumPad1
+                NumberButton_Click(Me.btn1, EventArgs.Empty)
+            Case Keys.D2, Keys.NumPad2
+                NumberButton_Click(Me.btn2, EventArgs.Empty)
+            Case Keys.D3, Keys.NumPad3
+                NumberButton_Click(Me.btn3, EventArgs.Empty)
+            Case Keys.D4, Keys.NumPad4
+                NumberButton_Click(Me.btn4, EventArgs.Empty)
+            Case Keys.D5, Keys.NumPad5
+                NumberButton_Click(Me.btn5, EventArgs.Empty)
+            Case Keys.D6, Keys.NumPad6
+                NumberButton_Click(Me.btn6, EventArgs.Empty)
+            Case Keys.D7, Keys.NumPad7
+                NumberButton_Click(Me.btn7, EventArgs.Empty)
+            Case Keys.D8, Keys.NumPad8
+                NumberButton_Click(Me.btn8, EventArgs.Empty)
+            Case Keys.D9, Keys.NumPad9
+                NumberButton_Click(Me.btn9, EventArgs.Empty)
+        End Select
+    End Sub
+
+
 
     ' tombol angka 1-0
     Private Sub NumberButton_Click(sender As Object, e As EventArgs) Handles _
@@ -127,6 +169,7 @@ Public Class formPembayaran
             UpdateDisplay()
         End If
     End Sub
+
 
     ' button delete 
     Private Sub btnDel_Click(sender As Object, e As EventArgs) Handles btnPembayaranDel.Click
@@ -240,8 +283,5 @@ Public Class formPembayaran
             MessageBox.Show($"Pembayaran kurang! Kurang: Rp {kurang:N0}", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
-
-
-
 
 End Class
