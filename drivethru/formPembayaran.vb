@@ -31,8 +31,6 @@ Public Class formPembayaran
         Next
 
         Me.KeyPreview = True
-        Me.AcceptButton = btnPembayaranEnter
-
 
         currentAmount = 0
         transactionTotal = 0
@@ -111,20 +109,7 @@ Public Class formPembayaran
         End Try
     End Sub
 
-
     Private Sub formPembayaran_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-        ' Tangani tombol Enter dan Delete secara langsung
-        If e.KeyCode = Keys.Enter Then
-            Me.btnPembayaranEnter.PerformClick()
-            e.Handled = True
-            Return
-        ElseIf e.KeyCode = Keys.Delete Then
-            Me.btnPembayaranDel.PerformClick()
-            e.Handled = True
-            Return
-        End If
-
-        ' Tangani tombol angka dengan Select Case
         Select Case e.KeyCode
             Case Keys.D0, Keys.NumPad0
                 NumberButton_Click(Me.btn0, EventArgs.Empty)
@@ -148,8 +133,6 @@ Public Class formPembayaran
                 NumberButton_Click(Me.btn9, EventArgs.Empty)
         End Select
     End Sub
-
-
 
     ' tombol angka 1-0
     Private Sub NumberButton_Click(sender As Object, e As EventArgs) Handles _
