@@ -44,9 +44,13 @@ Public Class FormLogin
                 Case "admin"
                     MessageBox.Show("Login Berhasil.")
                     adminpanel.Show()
+                    tbuser.Text = ""
+                    tbpw.Text = ""
                 Case "kasir"
                     MessageBox.Show("Login Sukses.")
-                    formIdTransaksi.Show()
+                    bridge.Show()
+                    tbuser.Text = ""
+                    tbpw.Text = ""
                 Case Else
                     MessageBox.Show("Level user tidak dikenali.")
                     Exit Sub

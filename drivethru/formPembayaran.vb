@@ -187,11 +187,17 @@ Public Class formPembayaran
                 Dim formStruk As New formStruk()
                 Dim cultureID As New Globalization.CultureInfo("id-ID")
 
-
                 db.conn.Open()
 
+                ' --- UPDATE NAMA KASIR PADA TRANSAKSI ---
+                Dim cmdUpdate As New MySql.Data.MySqlClient.MySqlCommand("UPDATE transaksi SET nama_kasir = @nama_kasir WHERE id_transaksi = @id", db.conn)
+                cmdUpdate.Parameters.AddWithValue("@nama_kasir", session.KasirNama)
+                cmdUpdate.Parameters.AddWithValue("@id", lblIdTransaksi.Text)
+                cmdUpdate.ExecuteNonQuery()
+                ' -----------------------------------------
+
                 ' ambil data transaksi
-                Dim cmdTrans As New MySqlCommand("SELECT tanggal, total_bayar, metode_bayar FROM transaksi WHERE id_transaksi = @id", db.conn)
+                Dim cmdTrans As New MySql.Data.MySqlClient.MySqlCommand("SELECT tanggal, total_bayar, metode_bayar FROM transaksi WHERE id_transaksi = @id", db.conn)
                 cmdTrans.Parameters.AddWithValue("@id", lblIdTransaksi.Text)
                 Dim readerTrans = cmdTrans.ExecuteReader()
 
@@ -201,16 +207,13 @@ Public Class formPembayaran
 
                 If readerTrans.Read() Then
                     tanggal = readerTrans("tanggal").ToString()
-
                     total_bayar = (Convert.ToDecimal(readerTrans("total_bayar")) / 100D).ToString("C2", cultureID)
-
-
                     metode_bayar = readerTrans("metode_bayar").ToString()
                 End If
                 readerTrans.Close()
 
                 ' ambil detail item
-                Dim cmdDetail As New MySqlCommand("SELECT item, qty, harga_satuan, total FROM transaksi_detail WHERE id_transaksi = @id", db.conn)
+                Dim cmdDetail As New MySql.Data.MySqlClient.MySqlCommand("SELECT item, qty, harga_satuan, total FROM transaksi_detail WHERE id_transaksi = @id", db.conn)
                 cmdDetail.Parameters.AddWithValue("@id", lblIdTransaksi.Text)
                 Dim readerDetail = cmdDetail.ExecuteReader()
 
@@ -245,13 +248,13 @@ Public Class formPembayaran
                 formStruk.lblKasir.Text = session.KasirUsername
                 formStruk.ShowDialog()
                 Me.Hide()
+                FormLogin.Show()
 
             Catch ex As Exception
                 MessageBox.Show("Gagal menampilkan struk: " & ex.Message)
             Finally
                 If db.conn.State = ConnectionState.Open Then db.conn.Close()
             End Try
-
 
             ' reset lbl di form
             currentAmount = 0
@@ -266,5 +269,6 @@ Public Class formPembayaran
             MessageBox.Show($"Pembayaran kurang! Kurang: Rp {kurang:N0}", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
+
 
 End Class
