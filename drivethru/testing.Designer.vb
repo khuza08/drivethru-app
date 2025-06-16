@@ -58,7 +58,7 @@ Partial Class testing
         ' 
         paymentbox.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         paymentbox.FormattingEnabled = True
-        paymentbox.Items.AddRange(New Object() {"Tunai", "Kartu Kredit", "Kartu Debit", "Amba Card"})
+        paymentbox.Items.AddRange(New Object() {"Tunai"})
         paymentbox.Location = New Point(1103, 580)
         paymentbox.Name = "paymentbox"
         paymentbox.Size = New Size(182, 33)
@@ -204,7 +204,7 @@ Partial Class testing
         tabControl.Controls.Add(TabPage3)
         tabControl.Controls.Add(TabPage4)
         tabControl.Controls.Add(TabPage5)
-        tabControl.Font = New Font("Montserrat Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        tabControl.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         tabControl.ItemSize = New Size(200, 40)
         tabControl.Location = New Point(0, 0)
         tabControl.Name = "tabControl"
@@ -212,17 +212,17 @@ Partial Class testing
         tabControl.Size = New Size(914, 729)
         tabControl.TabButtonHoverState.BorderColor = Color.Transparent
         tabControl.TabButtonHoverState.FillColor = Color.Firebrick
-        tabControl.TabButtonHoverState.Font = New Font("Montserrat SemiBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        tabControl.TabButtonHoverState.Font = New Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         tabControl.TabButtonHoverState.ForeColor = Color.White
         tabControl.TabButtonHoverState.InnerColor = Color.DarkGoldenrod
         tabControl.TabButtonIdleState.BorderColor = Color.Empty
         tabControl.TabButtonIdleState.FillColor = Color.Firebrick
-        tabControl.TabButtonIdleState.Font = New Font("Montserrat SemiBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        tabControl.TabButtonIdleState.Font = New Font("Microsoft Sans Serif", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         tabControl.TabButtonIdleState.ForeColor = Color.LightGray
         tabControl.TabButtonIdleState.InnerColor = Color.DarkGoldenrod
         tabControl.TabButtonSelectedState.BorderColor = Color.Transparent
         tabControl.TabButtonSelectedState.FillColor = Color.Firebrick
-        tabControl.TabButtonSelectedState.Font = New Font("Montserrat SemiBold", 12.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        tabControl.TabButtonSelectedState.Font = New Font("Microsoft Sans Serif", 12.999999F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         tabControl.TabButtonSelectedState.ForeColor = Color.White
         tabControl.TabButtonSelectedState.InnerColor = Color.Gold
         tabControl.TabButtonSize = New Size(200, 40)

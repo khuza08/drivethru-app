@@ -13,9 +13,9 @@
         End If
 
         Dim pembayaranForm As New formPembayaran()
+        Me.Hide()
         pembayaranForm.lblIdTransaksi.Text = id
         pembayaranForm.ShowDialog()
-
     End Sub
 
 End Class

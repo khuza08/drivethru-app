@@ -22,10 +22,10 @@ Partial Class formIdTransaksi
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         tbInput = New Guna.UI2.WinForms.Guna2TextBox()
         btnEnter = New Guna.UI2.WinForms.Guna2Button()
@@ -35,17 +35,17 @@ Partial Class formIdTransaksi
         ' 
         Guna2HtmlLabel1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Montserrat", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel1.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel1.Location = New Point(12, 12)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(247, 33)
+        Guna2HtmlLabel1.Size = New Size(230, 27)
         Guna2HtmlLabel1.TabIndex = 0
         Guna2HtmlLabel1.Text = "Masukkan ID Transaksi"
         ' 
         ' tbInput
         ' 
         tbInput.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        tbInput.CustomizableEdges = CustomizableEdges5
+        tbInput.CustomizableEdges = CustomizableEdges1
         tbInput.DefaultText = ""
         tbInput.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         tbInput.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -60,7 +60,7 @@ Partial Class formIdTransaksi
         tbInput.Name = "tbInput"
         tbInput.PlaceholderText = ""
         tbInput.SelectedText = ""
-        tbInput.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        tbInput.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         tbInput.Size = New Size(243, 38)
         tbInput.TabIndex = 1
         ' 
@@ -68,7 +68,7 @@ Partial Class formIdTransaksi
         ' 
         btnEnter.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         btnEnter.AutoRoundedCorners = True
-        btnEnter.CustomizableEdges = CustomizableEdges7
+        btnEnter.CustomizableEdges = CustomizableEdges3
         btnEnter.DisabledState.BorderColor = Color.DarkGray
         btnEnter.DisabledState.CustomBorderColor = Color.DarkGray
         btnEnter.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -78,7 +78,7 @@ Partial Class formIdTransaksi
         btnEnter.ForeColor = Color.White
         btnEnter.Location = New Point(13, 113)
         btnEnter.Name = "btnEnter"
-        btnEnter.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnEnter.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnEnter.Size = New Size(245, 48)
         btnEnter.TabIndex = 2
         btnEnter.Text = "ENTER"
@@ -92,6 +92,7 @@ Partial Class formIdTransaksi
         Controls.Add(tbInput)
         Controls.Add(Guna2HtmlLabel1)
         Name = "formIdTransaksi"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "formIdTransaksi"
         ResumeLayout(False)
         PerformLayout()

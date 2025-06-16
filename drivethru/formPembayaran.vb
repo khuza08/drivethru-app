@@ -52,8 +52,7 @@ Public Class formPembayaran
         Dim query As String = "
         SELECT item, qty, harga_satuan 
         FROM transaksi_detail 
-        WHERE id_transaksi = @id
-    "
+        WHERE id_transaksi = @id "
 
         Try
             Dim cmd As New MySqlCommand(query, db.conn)
@@ -245,6 +244,7 @@ Public Class formPembayaran
                 formStruk.lblTy.Text = "LUNAS"
                 formStruk.lblKasir.Text = session.KasirUsername
                 formStruk.ShowDialog()
+                Me.Hide()
 
             Catch ex As Exception
                 MessageBox.Show("Gagal menampilkan struk: " & ex.Message)
