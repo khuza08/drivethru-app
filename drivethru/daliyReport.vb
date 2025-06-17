@@ -61,8 +61,6 @@ Public Class daliyReport
             dgvLog.DataSource = dtDisplay
 
 
-
-
             lblTotal.Text = "Rp " & totalPenghasilan.ToString("N0", cultureID)
 
         Catch ex As Exception
@@ -104,8 +102,6 @@ Public Class daliyReport
             dgvLog.Columns("Total Bayar").Width = 120
         End If
     End Sub
-
-
 
 
 End Class

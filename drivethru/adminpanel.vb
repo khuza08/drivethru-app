@@ -1,5 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
-Imports System.IO
+﻿Imports System.IO
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Window
+Imports MySql.Data.MySqlClient
 
 Public Class adminpanel
     Dim WithEvents laporanRefreshTimer As New Timer()
@@ -16,6 +17,9 @@ Public Class adminpanel
         LoadLaporan()
         laporanRefreshTimer.Interval = 3000 ' setiap 3 detik
         laporanRefreshTimer.Start()
+        dtpFrom.Value = Date.Today.AddDays(-7)
+        dtpTo.Value = Date.Today
+        LoadKasirList()
     End Sub
 
     Private Sub LoadMenu()
@@ -357,43 +361,122 @@ Public Class adminpanel
         Public Property Metode_Bayar As String
     End Class
 
-
+    Private Sub LoadKasirList()
+        cbKasir.Items.Clear()
+        cbKasir.Items.Add("Semua Kasir")
+        Try
+            If conn.State = ConnectionState.Open Then conn.Close()
+            conn.Open()
+            Dim cmd As New MySqlCommand("SELECT DISTINCT nama_kasir FROM transaksi WHERE nama_kasir IS NOT NULL AND nama_kasir <> ''", conn)
+            Dim reader = cmd.ExecuteReader()
+            While reader.Read()
+                cbKasir.Items.Add(reader("nama_kasir").ToString())
+            End While
+            reader.Close()
+        Catch ex As Exception
+            MessageBox.Show("Gagal load daftar kasir: " & ex.Message)
+        Finally
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+        cbKasir.SelectedIndex = 0
+    End Sub
 
     Private Sub LoadLaporan()
         Try
+            If conn.State = ConnectionState.Open Then conn.Close()
             conn.Open()
-            Dim query As String = "SELECT t.id_transaksi, t.tanggal, t.nama_kasir, 
-                                    GROUP_CONCAT(td.item SEPARATOR ', ') AS items,
-                                    SUM(td.total) AS subtotal,
-                                    t.total_bayar,
-                                    (t.total_bayar - SUM(td.total)) AS tax,
-                                    t.metode_bayar
-                             FROM transaksi t
-                             JOIN transaksi_detail td ON t.id_transaksi = td.id_transaksi
-                             GROUP BY t.id_transaksi, t.tanggal, t.nama_kasir, t.total_bayar, t.metode_bayar
-                             ORDER BY t.tanggal DESC"
+            Dim tanggalAwal As String = dtpFrom.Value.ToString("yyyy-MM-dd") & " 00:00:00"
+            Dim tanggalAkhir As String = dtpTo.Value.ToString("yyyy-MM-dd") & " 23:59:59"
+
+            Dim query As String = "SELECT id_transaksi, tanggal, nama_kasir, metode_bayar, total_bayar " &
+                                  "FROM transaksi " &
+                                  "WHERE tanggal BETWEEN @awal AND @akhir"
+            If cbKasir.SelectedIndex > 0 Then
+                query &= " AND nama_kasir = @kasir"
+            End If
+            query &= " ORDER BY tanggal DESC"
+
             Dim cmd As New MySqlCommand(query, conn)
-            Dim adapter As New MySqlDataAdapter(cmd)
+            cmd.Parameters.AddWithValue("@awal", tanggalAwal)
+            cmd.Parameters.AddWithValue("@akhir", tanggalAkhir)
+            If cbKasir.SelectedIndex > 0 Then
+                cmd.Parameters.AddWithValue("@kasir", cbKasir.SelectedItem.ToString())
+            End If
+
+            Dim da As New MySqlDataAdapter(cmd)
             Dim dt As New DataTable()
-            adapter.Fill(dt)
-            conn.Close()
+            da.Fill(dt)
 
-            dgvLaporan.DataSource = dt
+            Dim dtDisplay As New DataTable()
+            dtDisplay.Columns.Add("ID Transaksi", GetType(String))
+            dtDisplay.Columns.Add("Tanggal", GetType(String))
+            dtDisplay.Columns.Add("Kasir", GetType(String))
+            dtDisplay.Columns.Add("Metode Bayar", GetType(String))
+            dtDisplay.Columns.Add("Total Bayar", GetType(String))
 
-            dgvLaporan.Columns("id_transaksi").HeaderText = "ID Transaksi"
-            dgvLaporan.Columns("tanggal").HeaderText = "Tanggal/Waktu"
-            dgvLaporan.Columns("nama_kasir").HeaderText = "Nama Kasir"
-            dgvLaporan.Columns("items").HeaderText = "Items"
-            dgvLaporan.Columns("subtotal").HeaderText = "Subtotal"
-            dgvLaporan.Columns("tax").HeaderText = "Tax"
-            dgvLaporan.Columns("total_bayar").HeaderText = "Total Bayar"
-            dgvLaporan.Columns("metode_bayar").HeaderText = "Metode Bayar"
+            Dim totalPenghasilan As Decimal = 0
+            Dim cultureID As New Globalization.CultureInfo("id-ID")
+
+            For Each row As DataRow In dt.Rows
+                Dim totalBayarDecimal As Decimal = Convert.ToDecimal(row("total_bayar")) / 100D
+                totalPenghasilan += totalBayarDecimal
+                dtDisplay.Rows.Add(
+                    row("tanggal").ToString(),
+                    row("id_transaksi").ToString(),
+                    row("nama_kasir").ToString(),
+                    row("metode_bayar").ToString(),
+                    totalBayarDecimal.ToString("C0", cultureID)
+                )
+            Next
+
+            dgvLaporan.DataSource = dtDisplay
+
+
+            lblTotal.Text = "Total Pendapatan: Rp " & totalPenghasilan.ToString("N0", cultureID)
 
         Catch ex As Exception
-            MessageBox.Show("Gagal load laporan: " & ex.Message)
+            MessageBox.Show("Error load laporan: " & ex.Message)
+        Finally
             If conn.State = ConnectionState.Open Then conn.Close()
         End Try
     End Sub
+
+    Private Sub cbKasir_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbKasir.SelectedIndexChanged
+        LoadLaporan()
+    End Sub
+
+    Private Sub dtpFrom_ValueChanged(sender As Object, e As EventArgs) Handles dtpFrom.ValueChanged
+        If dtpFrom.Value > dtpTo.Value Then dtpTo.Value = dtpFrom.Value
+        LoadLaporan()
+    End Sub
+
+    Private Sub dtpTo_ValueChanged(sender As Object, e As EventArgs) Handles dtpTo.ValueChanged
+        If dtpTo.Value < dtpFrom.Value Then dtpFrom.Value = dtpTo.Value
+        LoadLaporan()
+    End Sub
+    Private Sub dgvLaporan_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvLaporan.DataBindingComplete
+        If dgvLaporan.Columns.Contains("ID Transaksi") Then
+            dgvLaporan.Columns("ID Transaksi").AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+            dgvLaporan.Columns("ID Transaksi").Width = 230 ' ngatur width tanggal disini, kebalik soalnya
+        End If
+        If dgvLaporan.Columns.Contains("Tanggal") Then
+            dgvLaporan.Columns("Tanggal").AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+            dgvLaporan.Columns("Tanggal").Width = 200 ' bukan disini
+        End If
+        If dgvLaporan.Columns.Contains("Kasir") Then
+            dgvLaporan.Columns("Kasir").AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+            dgvLaporan.Columns("Kasir").Width = 100
+        End If
+        If dgvLaporan.Columns.Contains("Metode Bayar") Then
+            dgvLaporan.Columns("Metode Bayar").AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+            dgvLaporan.Columns("Metode Bayar").Width = 100
+        End If
+        If dgvLaporan.Columns.Contains("Total Bayar") Then
+            dgvLaporan.Columns("Total Bayar").AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+            dgvLaporan.Columns("Total Bayar").Width = 120
+        End If
+    End Sub
+
 
 
 End Class

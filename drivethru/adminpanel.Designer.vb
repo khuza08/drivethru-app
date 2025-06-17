@@ -22,54 +22,66 @@ Partial Class adminpanel
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges47 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges49 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges50 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges51 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges52 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges53 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges54 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges57 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges58 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges55 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges56 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges59 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges60 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges61 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges62 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges63 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges64 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges65 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges66 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges67 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges68 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges69 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges70 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges71 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges72 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges73 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges74 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim DataGridViewCellStyle13 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges75 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges76 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim DataGridViewCellStyle16 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As DataGridViewCellStyle = New DataGridViewCellStyle()
         TabPage3 = New TabPage()
+        dgvLaporan = New Guna.UI2.WinForms.Guna2DataGridView()
+        lblTotal = New Label()
+        TableLayoutPanel5 = New TableLayoutPanel()
+        cbKasir = New Guna.UI2.WinForms.Guna2ComboBox()
+        dtpTo = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        dtpFrom = New Guna.UI2.WinForms.Guna2DateTimePicker()
         TabPage2 = New TabPage()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         TableLayoutPanel3 = New TableLayoutPanel()
@@ -110,8 +122,9 @@ Partial Class adminpanel
         dgvMenu = New Guna.UI2.WinForms.Guna2DataGridView()
         tabcontrol = New Guna.UI2.WinForms.Guna2TabControl()
         btnExit = New Guna.UI2.WinForms.Guna2Button()
-        dgvLaporan = New Guna.UI2.WinForms.Guna2DataGridView()
         TabPage3.SuspendLayout()
+        CType(dgvLaporan, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel5.SuspendLayout()
         TabPage2.SuspendLayout()
         Guna2Panel2.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
@@ -124,29 +137,160 @@ Partial Class adminpanel
         TableLayoutPanel1.SuspendLayout()
         CType(dgvMenu, ComponentModel.ISupportInitialize).BeginInit()
         tabcontrol.SuspendLayout()
-        CType(dgvLaporan, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' TabPage3
         ' 
         TabPage3.Controls.Add(dgvLaporan)
-        TabPage3.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        TabPage3.Controls.Add(lblTotal)
+        TabPage3.Controls.Add(TableLayoutPanel5)
+        TabPage3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         TabPage3.Location = New Point(184, 4)
         TabPage3.Name = "TabPage3"
-        TabPage3.Size = New Size(612, 598)
+        TabPage3.Size = New Size(829, 598)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Laporan"
         TabPage3.UseVisualStyleBackColor = True
+        ' 
+        ' dgvLaporan
+        ' 
+        DataGridViewCellStyle1.BackColor = Color.White
+        dgvLaporan.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        dgvLaporan.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvLaporan.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        dgvLaporan.ColumnHeadersHeight = 4
+        dgvLaporan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = Color.White
+        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+        dgvLaporan.DefaultCellStyle = DataGridViewCellStyle3
+        dgvLaporan.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvLaporan.Location = New Point(7, 69)
+        dgvLaporan.Name = "dgvLaporan"
+        dgvLaporan.RowHeadersVisible = False
+        dgvLaporan.RowHeadersWidth = 62
+        dgvLaporan.Size = New Size(814, 304)
+        dgvLaporan.TabIndex = 1
+        dgvLaporan.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        dgvLaporan.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        dgvLaporan.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
+        dgvLaporan.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
+        dgvLaporan.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
+        dgvLaporan.ThemeStyle.BackColor = Color.White
+        dgvLaporan.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvLaporan.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        dgvLaporan.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+        dgvLaporan.ThemeStyle.HeaderStyle.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        dgvLaporan.ThemeStyle.HeaderStyle.ForeColor = Color.White
+        dgvLaporan.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        dgvLaporan.ThemeStyle.HeaderStyle.Height = 4
+        dgvLaporan.ThemeStyle.ReadOnly = False
+        dgvLaporan.ThemeStyle.RowsStyle.BackColor = Color.White
+        dgvLaporan.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        dgvLaporan.ThemeStyle.RowsStyle.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        dgvLaporan.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        dgvLaporan.ThemeStyle.RowsStyle.Height = 33
+        dgvLaporan.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvLaporan.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        ' 
+        ' lblTotal
+        ' 
+        lblTotal.AutoSize = True
+        lblTotal.Location = New Point(457, 376)
+        lblTotal.Name = "lblTotal"
+        lblTotal.Size = New Size(70, 22)
+        lblTotal.TabIndex = 6
+        lblTotal.Text = "Label1"
+        ' 
+        ' TableLayoutPanel5
+        ' 
+        TableLayoutPanel5.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        TableLayoutPanel5.AutoSize = True
+        TableLayoutPanel5.ColumnCount = 3
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle())
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle())
+        TableLayoutPanel5.ColumnStyles.Add(New ColumnStyle())
+        TableLayoutPanel5.Controls.Add(cbKasir, 2, 0)
+        TableLayoutPanel5.Controls.Add(dtpTo, 1, 0)
+        TableLayoutPanel5.Controls.Add(dtpFrom, 0, 0)
+        TableLayoutPanel5.Location = New Point(4, 3)
+        TableLayoutPanel5.Name = "TableLayoutPanel5"
+        TableLayoutPanel5.RowCount = 1
+        TableLayoutPanel5.RowStyles.Add(New RowStyle())
+        TableLayoutPanel5.Size = New Size(829, 60)
+        TableLayoutPanel5.TabIndex = 4
+        ' 
+        ' cbKasir
+        ' 
+        cbKasir.BackColor = Color.Transparent
+        cbKasir.CustomizableEdges = CustomizableEdges1
+        cbKasir.DrawMode = DrawMode.OwnerDrawFixed
+        cbKasir.DropDownStyle = ComboBoxStyle.DropDownList
+        cbKasir.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cbKasir.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cbKasir.Font = New Font("Segoe UI", 10F)
+        cbKasir.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cbKasir.ItemHeight = 30
+        cbKasir.Location = New Point(615, 3)
+        cbKasir.Name = "cbKasir"
+        cbKasir.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        cbKasir.Size = New Size(210, 36)
+        cbKasir.TabIndex = 6
+        ' 
+        ' dtpTo
+        ' 
+        dtpTo.BorderRadius = 10
+        dtpTo.Checked = True
+        dtpTo.CustomizableEdges = CustomizableEdges3
+        dtpTo.Dock = DockStyle.Fill
+        dtpTo.Font = New Font("Segoe UI", 9F)
+        dtpTo.Format = DateTimePickerFormat.Long
+        dtpTo.Location = New Point(309, 3)
+        dtpTo.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        dtpTo.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        dtpTo.Name = "dtpTo"
+        dtpTo.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        dtpTo.Size = New Size(300, 54)
+        dtpTo.TabIndex = 3
+        dtpTo.Value = New Date(2025, 6, 17, 23, 35, 56, 953)
+        ' 
+        ' dtpFrom
+        ' 
+        dtpFrom.BorderRadius = 10
+        dtpFrom.Checked = True
+        dtpFrom.CustomizableEdges = CustomizableEdges5
+        dtpFrom.Dock = DockStyle.Fill
+        dtpFrom.Font = New Font("Segoe UI", 9F)
+        dtpFrom.Format = DateTimePickerFormat.Long
+        dtpFrom.Location = New Point(3, 3)
+        dtpFrom.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        dtpFrom.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        dtpFrom.Name = "dtpFrom"
+        dtpFrom.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        dtpFrom.Size = New Size(300, 54)
+        dtpFrom.TabIndex = 2
+        dtpFrom.Value = New Date(2025, 6, 17, 23, 35, 56, 953)
         ' 
         ' TabPage2
         ' 
         TabPage2.Controls.Add(Guna2Panel2)
         TabPage2.Controls.Add(dgvKasir)
-        TabPage2.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        TabPage2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         TabPage2.Location = New Point(184, 4)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(612, 598)
+        TabPage2.Size = New Size(829, 598)
         TabPage2.TabIndex = 1
         TabPage2.Text = "Data Kasir"
         TabPage2.UseVisualStyleBackColor = True
@@ -156,11 +300,11 @@ Partial Class adminpanel
         Guna2Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Guna2Panel2.Controls.Add(TableLayoutPanel3)
         Guna2Panel2.Controls.Add(TableLayoutPanel4)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges39
-        Guna2Panel2.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2Panel2.CustomizableEdges = CustomizableEdges21
+        Guna2Panel2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Guna2Panel2.Location = New Point(6, 316)
         Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         Guna2Panel2.Size = New Size(600, 259)
         Guna2Panel2.TabIndex = 4
         ' 
@@ -187,17 +331,17 @@ Partial Class adminpanel
         ' btnkasirUpdate
         ' 
         btnkasirUpdate.BorderRadius = 15
-        btnkasirUpdate.CustomizableEdges = CustomizableEdges41
+        btnkasirUpdate.CustomizableEdges = CustomizableEdges7
         btnkasirUpdate.DisabledState.BorderColor = Color.DarkGray
         btnkasirUpdate.DisabledState.CustomBorderColor = Color.DarkGray
         btnkasirUpdate.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnkasirUpdate.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnkasirUpdate.FillColor = SystemColors.ControlDarkDark
-        btnkasirUpdate.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnkasirUpdate.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnkasirUpdate.ForeColor = Color.White
         btnkasirUpdate.Location = New Point(479, 3)
         btnkasirUpdate.Name = "btnkasirUpdate"
-        btnkasirUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges42
+        btnkasirUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnkasirUpdate.Size = New Size(112, 41)
         btnkasirUpdate.TabIndex = 4
         btnkasirUpdate.Text = "Update"
@@ -205,17 +349,17 @@ Partial Class adminpanel
         ' btnkasirReset
         ' 
         btnkasirReset.BorderRadius = 15
-        btnkasirReset.CustomizableEdges = CustomizableEdges43
+        btnkasirReset.CustomizableEdges = CustomizableEdges9
         btnkasirReset.DisabledState.BorderColor = Color.DarkGray
         btnkasirReset.DisabledState.CustomBorderColor = Color.DarkGray
         btnkasirReset.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnkasirReset.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnkasirReset.FillColor = SystemColors.ControlDarkDark
-        btnkasirReset.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnkasirReset.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnkasirReset.ForeColor = Color.White
         btnkasirReset.Location = New Point(360, 3)
         btnkasirReset.Name = "btnkasirReset"
-        btnkasirReset.ShadowDecoration.CustomizableEdges = CustomizableEdges44
+        btnkasirReset.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         btnkasirReset.Size = New Size(113, 41)
         btnkasirReset.TabIndex = 3
         btnkasirReset.Text = "Reset"
@@ -223,17 +367,17 @@ Partial Class adminpanel
         ' btnkasirHapus
         ' 
         btnkasirHapus.BorderRadius = 15
-        btnkasirHapus.CustomizableEdges = CustomizableEdges45
+        btnkasirHapus.CustomizableEdges = CustomizableEdges11
         btnkasirHapus.DisabledState.BorderColor = Color.DarkGray
         btnkasirHapus.DisabledState.CustomBorderColor = Color.DarkGray
         btnkasirHapus.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnkasirHapus.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnkasirHapus.FillColor = SystemColors.ControlDarkDark
-        btnkasirHapus.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnkasirHapus.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnkasirHapus.ForeColor = Color.White
         btnkasirHapus.Location = New Point(241, 3)
         btnkasirHapus.Name = "btnkasirHapus"
-        btnkasirHapus.ShadowDecoration.CustomizableEdges = CustomizableEdges46
+        btnkasirHapus.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btnkasirHapus.Size = New Size(113, 41)
         btnkasirHapus.TabIndex = 2
         btnkasirHapus.Text = "Hapus"
@@ -241,17 +385,17 @@ Partial Class adminpanel
         ' btnkasirEdit
         ' 
         btnkasirEdit.BorderRadius = 15
-        btnkasirEdit.CustomizableEdges = CustomizableEdges47
+        btnkasirEdit.CustomizableEdges = CustomizableEdges13
         btnkasirEdit.DisabledState.BorderColor = Color.DarkGray
         btnkasirEdit.DisabledState.CustomBorderColor = Color.DarkGray
         btnkasirEdit.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnkasirEdit.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnkasirEdit.FillColor = SystemColors.ControlDarkDark
-        btnkasirEdit.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnkasirEdit.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnkasirEdit.ForeColor = Color.White
         btnkasirEdit.Location = New Point(122, 3)
         btnkasirEdit.Name = "btnkasirEdit"
-        btnkasirEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges48
+        btnkasirEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btnkasirEdit.Size = New Size(113, 41)
         btnkasirEdit.TabIndex = 1
         btnkasirEdit.Text = "Edit"
@@ -259,17 +403,17 @@ Partial Class adminpanel
         ' btnkasirTambah
         ' 
         btnkasirTambah.BorderRadius = 15
-        btnkasirTambah.CustomizableEdges = CustomizableEdges49
+        btnkasirTambah.CustomizableEdges = CustomizableEdges15
         btnkasirTambah.DisabledState.BorderColor = Color.DarkGray
         btnkasirTambah.DisabledState.CustomBorderColor = Color.DarkGray
         btnkasirTambah.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnkasirTambah.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnkasirTambah.FillColor = SystemColors.ControlDarkDark
-        btnkasirTambah.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnkasirTambah.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnkasirTambah.ForeColor = Color.White
         btnkasirTambah.Location = New Point(3, 3)
         btnkasirTambah.Name = "btnkasirTambah"
-        btnkasirTambah.ShadowDecoration.CustomizableEdges = CustomizableEdges50
+        btnkasirTambah.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         btnkasirTambah.Size = New Size(113, 41)
         btnkasirTambah.TabIndex = 0
         btnkasirTambah.Text = "Tambah"
@@ -298,7 +442,7 @@ Partial Class adminpanel
         ' 
         ' txtUsername
         ' 
-        txtUsername.CustomizableEdges = CustomizableEdges51
+        txtUsername.CustomizableEdges = CustomizableEdges17
         txtUsername.DefaultText = ""
         txtUsername.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtUsername.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -307,58 +451,58 @@ Partial Class adminpanel
         txtUsername.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtUsername.Font = New Font("Segoe UI", 9F)
         txtUsername.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtUsername.Location = New Point(121, 5)
+        txtUsername.Location = New Point(118, 5)
         txtUsername.Margin = New Padding(4, 5, 4, 5)
         txtUsername.Name = "txtUsername"
         txtUsername.PlaceholderText = ""
         txtUsername.SelectedText = ""
-        txtUsername.ShadowDecoration.CustomizableEdges = CustomizableEdges52
+        txtUsername.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         txtUsername.Size = New Size(208, 36)
         txtUsername.TabIndex = 13
         ' 
         ' Guna2HtmlLabel11
         ' 
         Guna2HtmlLabel11.BackColor = Color.Transparent
-        Guna2HtmlLabel11.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel11.Location = New Point(107, 3)
+        Guna2HtmlLabel11.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        Guna2HtmlLabel11.Location = New Point(102, 3)
         Guna2HtmlLabel11.Name = "Guna2HtmlLabel11"
-        Guna2HtmlLabel11.Size = New Size(7, 30)
+        Guna2HtmlLabel11.Size = New Size(9, 24)
         Guna2HtmlLabel11.TabIndex = 9
         Guna2HtmlLabel11.Text = ":"
         ' 
         ' Guna2HtmlLabel14
         ' 
         Guna2HtmlLabel14.BackColor = Color.Transparent
-        Guna2HtmlLabel14.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel14.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Guna2HtmlLabel14.Location = New Point(3, 49)
         Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
-        Guna2HtmlLabel14.Size = New Size(94, 30)
+        Guna2HtmlLabel14.Size = New Size(90, 24)
         Guna2HtmlLabel14.TabIndex = 3
         Guna2HtmlLabel14.Text = "Password"
         ' 
         ' Guna2HtmlLabel15
         ' 
         Guna2HtmlLabel15.BackColor = Color.Transparent
-        Guna2HtmlLabel15.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel15.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Guna2HtmlLabel15.Location = New Point(3, 3)
         Guna2HtmlLabel15.Name = "Guna2HtmlLabel15"
-        Guna2HtmlLabel15.Size = New Size(98, 30)
+        Guna2HtmlLabel15.Size = New Size(93, 24)
         Guna2HtmlLabel15.TabIndex = 2
         Guna2HtmlLabel15.Text = "Username"
         ' 
         ' Guna2HtmlLabel16
         ' 
         Guna2HtmlLabel16.BackColor = Color.Transparent
-        Guna2HtmlLabel16.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel16.Location = New Point(107, 49)
+        Guna2HtmlLabel16.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        Guna2HtmlLabel16.Location = New Point(102, 49)
         Guna2HtmlLabel16.Name = "Guna2HtmlLabel16"
-        Guna2HtmlLabel16.Size = New Size(7, 30)
+        Guna2HtmlLabel16.Size = New Size(9, 24)
         Guna2HtmlLabel16.TabIndex = 7
         Guna2HtmlLabel16.Text = ":"
         ' 
         ' txtPassword
         ' 
-        txtPassword.CustomizableEdges = CustomizableEdges53
+        txtPassword.CustomizableEdges = CustomizableEdges19
         txtPassword.DefaultText = ""
         txtPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -367,39 +511,38 @@ Partial Class adminpanel
         txtPassword.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtPassword.Font = New Font("Segoe UI", 9F)
         txtPassword.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtPassword.Location = New Point(121, 51)
+        txtPassword.Location = New Point(118, 51)
         txtPassword.Margin = New Padding(4, 5, 4, 5)
         txtPassword.Name = "txtPassword"
         txtPassword.PlaceholderText = ""
         txtPassword.SelectedText = ""
-        txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges54
+        txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         txtPassword.Size = New Size(208, 36)
         txtPassword.TabIndex = 11
         ' 
         ' dgvKasir
         ' 
-        DataGridViewCellStyle10.BackColor = Color.White
-        dgvKasir.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.BackColor = Color.White
+        dgvKasir.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         dgvKasir.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        dgvKasir.BackgroundColor = Color.LightGray
-        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        DataGridViewCellStyle11.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        DataGridViewCellStyle11.ForeColor = Color.White
-        DataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.True
-        dgvKasir.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        DataGridViewCellStyle5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        DataGridViewCellStyle5.ForeColor = Color.White
+        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
+        dgvKasir.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         dgvKasir.ColumnHeadersHeight = 4
         dgvKasir.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = Color.White
-        DataGridViewCellStyle12.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        DataGridViewCellStyle12.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        DataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.False
-        dgvKasir.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = Color.White
+        DataGridViewCellStyle6.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        DataGridViewCellStyle6.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        DataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.False
+        dgvKasir.DefaultCellStyle = DataGridViewCellStyle6
         dgvKasir.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         dgvKasir.Location = New Point(6, 8)
         dgvKasir.Name = "dgvKasir"
@@ -412,18 +555,18 @@ Partial Class adminpanel
         dgvKasir.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
         dgvKasir.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
         dgvKasir.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
-        dgvKasir.ThemeStyle.BackColor = Color.LightGray
+        dgvKasir.ThemeStyle.BackColor = Color.White
         dgvKasir.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         dgvKasir.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
         dgvKasir.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        dgvKasir.ThemeStyle.HeaderStyle.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        dgvKasir.ThemeStyle.HeaderStyle.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         dgvKasir.ThemeStyle.HeaderStyle.ForeColor = Color.White
         dgvKasir.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         dgvKasir.ThemeStyle.HeaderStyle.Height = 4
         dgvKasir.ThemeStyle.ReadOnly = False
         dgvKasir.ThemeStyle.RowsStyle.BackColor = Color.White
         dgvKasir.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        dgvKasir.ThemeStyle.RowsStyle.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        dgvKasir.ThemeStyle.RowsStyle.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         dgvKasir.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         dgvKasir.ThemeStyle.RowsStyle.Height = 33
         dgvKasir.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
@@ -433,11 +576,11 @@ Partial Class adminpanel
         ' 
         TabPage1.Controls.Add(Guna2Panel1)
         TabPage1.Controls.Add(dgvMenu)
-        TabPage1.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        TabPage1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         TabPage1.Location = New Point(184, 4)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(612, 598)
+        TabPage1.Size = New Size(829, 598)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Menu Makanan"
         TabPage1.UseVisualStyleBackColor = True
@@ -448,21 +591,21 @@ Partial Class adminpanel
         Guna2Panel1.Controls.Add(gambarMenu)
         Guna2Panel1.Controls.Add(TableLayoutPanel2)
         Guna2Panel1.Controls.Add(TableLayoutPanel1)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges57
-        Guna2Panel1.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2Panel1.CustomizableEdges = CustomizableEdges41
+        Guna2Panel1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Guna2Panel1.Location = New Point(7, 315)
         Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges58
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges42
         Guna2Panel1.Size = New Size(600, 237)
         Guna2Panel1.TabIndex = 2
         ' 
         ' gambarMenu
         ' 
-        gambarMenu.CustomizableEdges = CustomizableEdges55
+        gambarMenu.CustomizableEdges = CustomizableEdges23
         gambarMenu.ImageRotate = 0F
         gambarMenu.Location = New Point(363, 6)
         gambarMenu.Name = "gambarMenu"
-        gambarMenu.ShadowDecoration.CustomizableEdges = CustomizableEdges56
+        gambarMenu.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         gambarMenu.Size = New Size(234, 169)
         gambarMenu.TabIndex = 6
         gambarMenu.TabStop = False
@@ -488,17 +631,17 @@ Partial Class adminpanel
         ' btnReset
         ' 
         btnReset.BorderRadius = 15
-        btnReset.CustomizableEdges = CustomizableEdges59
+        btnReset.CustomizableEdges = CustomizableEdges25
         btnReset.DisabledState.BorderColor = Color.DarkGray
         btnReset.DisabledState.CustomBorderColor = Color.DarkGray
         btnReset.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnReset.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnReset.FillColor = SystemColors.ControlDarkDark
-        btnReset.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnReset.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnReset.ForeColor = Color.White
         btnReset.Location = New Point(360, 3)
         btnReset.Name = "btnReset"
-        btnReset.ShadowDecoration.CustomizableEdges = CustomizableEdges60
+        btnReset.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         btnReset.Size = New Size(113, 41)
         btnReset.TabIndex = 3
         btnReset.Text = "Reset"
@@ -506,17 +649,17 @@ Partial Class adminpanel
         ' btnHapus
         ' 
         btnHapus.BorderRadius = 15
-        btnHapus.CustomizableEdges = CustomizableEdges61
+        btnHapus.CustomizableEdges = CustomizableEdges27
         btnHapus.DisabledState.BorderColor = Color.DarkGray
         btnHapus.DisabledState.CustomBorderColor = Color.DarkGray
         btnHapus.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnHapus.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnHapus.FillColor = SystemColors.ControlDarkDark
-        btnHapus.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnHapus.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnHapus.ForeColor = Color.White
         btnHapus.Location = New Point(241, 3)
         btnHapus.Name = "btnHapus"
-        btnHapus.ShadowDecoration.CustomizableEdges = CustomizableEdges62
+        btnHapus.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         btnHapus.Size = New Size(113, 41)
         btnHapus.TabIndex = 2
         btnHapus.Text = "Hapus"
@@ -524,17 +667,17 @@ Partial Class adminpanel
         ' btnUpdate
         ' 
         btnUpdate.BorderRadius = 15
-        btnUpdate.CustomizableEdges = CustomizableEdges63
+        btnUpdate.CustomizableEdges = CustomizableEdges29
         btnUpdate.DisabledState.BorderColor = Color.DarkGray
         btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray
         btnUpdate.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnUpdate.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnUpdate.FillColor = SystemColors.ControlDarkDark
-        btnUpdate.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnUpdate.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnUpdate.ForeColor = Color.White
         btnUpdate.Location = New Point(122, 3)
         btnUpdate.Name = "btnUpdate"
-        btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges64
+        btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         btnUpdate.Size = New Size(113, 41)
         btnUpdate.TabIndex = 1
         btnUpdate.Text = "Update"
@@ -542,17 +685,17 @@ Partial Class adminpanel
         ' btnTambah
         ' 
         btnTambah.BorderRadius = 15
-        btnTambah.CustomizableEdges = CustomizableEdges65
+        btnTambah.CustomizableEdges = CustomizableEdges31
         btnTambah.DisabledState.BorderColor = Color.DarkGray
         btnTambah.DisabledState.CustomBorderColor = Color.DarkGray
         btnTambah.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnTambah.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnTambah.FillColor = SystemColors.ControlDarkDark
-        btnTambah.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTambah.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnTambah.ForeColor = Color.White
         btnTambah.Location = New Point(3, 3)
         btnTambah.Name = "btnTambah"
-        btnTambah.ShadowDecoration.CustomizableEdges = CustomizableEdges66
+        btnTambah.ShadowDecoration.CustomizableEdges = CustomizableEdges32
         btnTambah.Size = New Size(113, 41)
         btnTambah.TabIndex = 0
         btnTambah.Text = "Tambah"
@@ -588,17 +731,17 @@ Partial Class adminpanel
         ' btnUpload
         ' 
         btnUpload.BorderRadius = 15
-        btnUpload.CustomizableEdges = CustomizableEdges67
+        btnUpload.CustomizableEdges = CustomizableEdges33
         btnUpload.DisabledState.BorderColor = Color.DarkGray
         btnUpload.DisabledState.CustomBorderColor = Color.DarkGray
         btnUpload.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnUpload.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnUpload.FillColor = SystemColors.ControlDarkDark
-        btnUpload.Font = New Font("Montserrat Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnUpload.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnUpload.ForeColor = Color.White
-        btnUpload.Location = New Point(138, 137)
+        btnUpload.Location = New Point(132, 137)
         btnUpload.Name = "btnUpload"
-        btnUpload.ShadowDecoration.CustomizableEdges = CustomizableEdges68
+        btnUpload.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         btnUpload.Size = New Size(208, 32)
         btnUpload.TabIndex = 16
         btnUpload.Text = "Pilih Gambar"
@@ -606,26 +749,26 @@ Partial Class adminpanel
         ' Guna2HtmlLabel8
         ' 
         Guna2HtmlLabel8.BackColor = Color.Transparent
-        Guna2HtmlLabel8.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel8.Location = New Point(125, 137)
+        Guna2HtmlLabel8.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        Guna2HtmlLabel8.Location = New Point(117, 137)
         Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Guna2HtmlLabel8.Size = New Size(7, 30)
+        Guna2HtmlLabel8.Size = New Size(9, 24)
         Guna2HtmlLabel8.TabIndex = 15
         Guna2HtmlLabel8.Text = ":"
         ' 
         ' Guna2HtmlLabel5
         ' 
         Guna2HtmlLabel5.BackColor = Color.Transparent
-        Guna2HtmlLabel5.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Guna2HtmlLabel5.Location = New Point(3, 137)
         Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Guna2HtmlLabel5.Size = New Size(78, 30)
+        Guna2HtmlLabel5.Size = New Size(73, 24)
         Guna2HtmlLabel5.TabIndex = 14
         Guna2HtmlLabel5.Text = "Gambar"
         ' 
         ' tbNama
         ' 
-        tbNama.CustomizableEdges = CustomizableEdges69
+        tbNama.CustomizableEdges = CustomizableEdges35
         tbNama.DefaultText = ""
         tbNama.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         tbNama.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -634,79 +777,79 @@ Partial Class adminpanel
         tbNama.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         tbNama.Font = New Font("Segoe UI", 9F)
         tbNama.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        tbNama.Location = New Point(139, 5)
+        tbNama.Location = New Point(133, 5)
         tbNama.Margin = New Padding(4, 5, 4, 5)
         tbNama.Name = "tbNama"
         tbNama.PlaceholderText = ""
         tbNama.SelectedText = ""
-        tbNama.ShadowDecoration.CustomizableEdges = CustomizableEdges70
+        tbNama.ShadowDecoration.CustomizableEdges = CustomizableEdges36
         tbNama.Size = New Size(208, 36)
         tbNama.TabIndex = 12
         ' 
         ' Guna2HtmlLabel6
         ' 
         Guna2HtmlLabel6.BackColor = Color.Transparent
-        Guna2HtmlLabel6.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel6.Location = New Point(125, 49)
+        Guna2HtmlLabel6.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        Guna2HtmlLabel6.Location = New Point(117, 49)
         Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-        Guna2HtmlLabel6.Size = New Size(7, 30)
+        Guna2HtmlLabel6.Size = New Size(9, 24)
         Guna2HtmlLabel6.TabIndex = 9
         Guna2HtmlLabel6.Text = ":"
         ' 
         ' Guna2HtmlLabel4
         ' 
         Guna2HtmlLabel4.BackColor = Color.Transparent
-        Guna2HtmlLabel4.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel4.Location = New Point(125, 3)
+        Guna2HtmlLabel4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        Guna2HtmlLabel4.Location = New Point(117, 3)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Guna2HtmlLabel4.Size = New Size(7, 30)
+        Guna2HtmlLabel4.Size = New Size(9, 24)
         Guna2HtmlLabel4.TabIndex = 4
         Guna2HtmlLabel4.Text = ":"
         ' 
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Guna2HtmlLabel1.Location = New Point(3, 3)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(116, 30)
+        Guna2HtmlLabel1.Size = New Size(108, 24)
         Guna2HtmlLabel1.TabIndex = 1
         Guna2HtmlLabel1.Text = "Nama Menu"
         ' 
         ' Guna2HtmlLabel3
         ' 
         Guna2HtmlLabel3.BackColor = Color.Transparent
-        Guna2HtmlLabel3.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Guna2HtmlLabel3.Location = New Point(3, 91)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Guna2HtmlLabel3.Size = New Size(60, 30)
+        Guna2HtmlLabel3.Size = New Size(57, 24)
         Guna2HtmlLabel3.TabIndex = 3
         Guna2HtmlLabel3.Text = "Harga"
         ' 
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        Guna2HtmlLabel2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         Guna2HtmlLabel2.Location = New Point(3, 49)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(83, 30)
+        Guna2HtmlLabel2.Size = New Size(78, 24)
         Guna2HtmlLabel2.TabIndex = 2
         Guna2HtmlLabel2.Text = "Kategori"
         ' 
         ' Guna2HtmlLabel7
         ' 
         Guna2HtmlLabel7.BackColor = Color.Transparent
-        Guna2HtmlLabel7.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        Guna2HtmlLabel7.Location = New Point(125, 91)
+        Guna2HtmlLabel7.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        Guna2HtmlLabel7.Location = New Point(117, 91)
         Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-        Guna2HtmlLabel7.Size = New Size(7, 30)
+        Guna2HtmlLabel7.Size = New Size(9, 24)
         Guna2HtmlLabel7.TabIndex = 7
         Guna2HtmlLabel7.Text = ":"
         ' 
         ' cmbKategori
         ' 
         cmbKategori.BackColor = Color.Transparent
-        cmbKategori.CustomizableEdges = CustomizableEdges71
+        cmbKategori.CustomizableEdges = CustomizableEdges37
         cmbKategori.DrawMode = DrawMode.OwnerDrawFixed
         cmbKategori.DropDownStyle = ComboBoxStyle.DropDownList
         cmbKategori.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
@@ -714,15 +857,15 @@ Partial Class adminpanel
         cmbKategori.Font = New Font("Segoe UI", 10F)
         cmbKategori.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cmbKategori.ItemHeight = 30
-        cmbKategori.Location = New Point(138, 49)
+        cmbKategori.Location = New Point(132, 49)
         cmbKategori.Name = "cmbKategori"
-        cmbKategori.ShadowDecoration.CustomizableEdges = CustomizableEdges72
+        cmbKategori.ShadowDecoration.CustomizableEdges = CustomizableEdges38
         cmbKategori.Size = New Size(208, 36)
         cmbKategori.TabIndex = 13
         ' 
         ' tbHarga
         ' 
-        tbHarga.CustomizableEdges = CustomizableEdges73
+        tbHarga.CustomizableEdges = CustomizableEdges39
         tbHarga.DefaultText = ""
         tbHarga.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         tbHarga.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -731,39 +874,38 @@ Partial Class adminpanel
         tbHarga.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         tbHarga.Font = New Font("Segoe UI", 9F)
         tbHarga.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        tbHarga.Location = New Point(139, 93)
+        tbHarga.Location = New Point(133, 93)
         tbHarga.Margin = New Padding(4, 5, 4, 5)
         tbHarga.Name = "tbHarga"
         tbHarga.PlaceholderText = ""
         tbHarga.SelectedText = ""
-        tbHarga.ShadowDecoration.CustomizableEdges = CustomizableEdges74
+        tbHarga.ShadowDecoration.CustomizableEdges = CustomizableEdges40
         tbHarga.Size = New Size(208, 36)
         tbHarga.TabIndex = 11
         ' 
         ' dgvMenu
         ' 
-        DataGridViewCellStyle13.BackColor = Color.White
-        dgvMenu.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle7.BackColor = Color.White
+        dgvMenu.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         dgvMenu.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        dgvMenu.BackgroundColor = Color.LightGray
-        DataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        DataGridViewCellStyle14.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        DataGridViewCellStyle14.ForeColor = Color.White
-        DataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = DataGridViewTriState.True
-        dgvMenu.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        DataGridViewCellStyle8.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        DataGridViewCellStyle8.ForeColor = Color.White
+        DataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = DataGridViewTriState.True
+        dgvMenu.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         dgvMenu.ColumnHeadersHeight = 4
         dgvMenu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = Color.White
-        DataGridViewCellStyle15.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        DataGridViewCellStyle15.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        DataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle15.WrapMode = DataGridViewTriState.False
-        dgvMenu.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = Color.White
+        DataGridViewCellStyle9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+        DataGridViewCellStyle9.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        DataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.False
+        dgvMenu.DefaultCellStyle = DataGridViewCellStyle9
         dgvMenu.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         dgvMenu.Location = New Point(7, 7)
         dgvMenu.Name = "dgvMenu"
@@ -776,18 +918,18 @@ Partial Class adminpanel
         dgvMenu.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
         dgvMenu.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
         dgvMenu.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
-        dgvMenu.ThemeStyle.BackColor = Color.LightGray
+        dgvMenu.ThemeStyle.BackColor = Color.White
         dgvMenu.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         dgvMenu.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
         dgvMenu.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        dgvMenu.ThemeStyle.HeaderStyle.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        dgvMenu.ThemeStyle.HeaderStyle.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         dgvMenu.ThemeStyle.HeaderStyle.ForeColor = Color.White
         dgvMenu.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         dgvMenu.ThemeStyle.HeaderStyle.Height = 4
         dgvMenu.ThemeStyle.ReadOnly = False
         dgvMenu.ThemeStyle.RowsStyle.BackColor = Color.White
         dgvMenu.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        dgvMenu.ThemeStyle.RowsStyle.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
+        dgvMenu.ThemeStyle.RowsStyle.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
         dgvMenu.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         dgvMenu.ThemeStyle.RowsStyle.Height = 33
         dgvMenu.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
@@ -804,7 +946,7 @@ Partial Class adminpanel
         tabcontrol.Location = New Point(0, 0)
         tabcontrol.Name = "tabcontrol"
         tabcontrol.SelectedIndex = 0
-        tabcontrol.Size = New Size(800, 606)
+        tabcontrol.Size = New Size(1017, 606)
         tabcontrol.TabButtonHoverState.BorderColor = Color.Empty
         tabcontrol.TabButtonHoverState.FillColor = Color.FromArgb(CByte(40), CByte(52), CByte(70))
         tabcontrol.TabButtonHoverState.Font = New Font("Segoe UI Semibold", 10F)
@@ -828,85 +970,36 @@ Partial Class adminpanel
         ' btnExit
         ' 
         btnExit.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        btnExit.CustomizableEdges = CustomizableEdges75
+        btnExit.BackColor = Color.Transparent
+        btnExit.CustomizableEdges = CustomizableEdges43
         btnExit.DisabledState.BorderColor = Color.DarkGray
         btnExit.DisabledState.CustomBorderColor = Color.DarkGray
         btnExit.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         btnExit.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnExit.Font = New Font("Montserrat", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnExit.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnExit.ForeColor = Color.White
         btnExit.Location = New Point(0, 559)
         btnExit.Name = "btnExit"
-        btnExit.ShadowDecoration.CustomizableEdges = CustomizableEdges76
+        btnExit.ShadowDecoration.CustomizableEdges = CustomizableEdges44
         btnExit.Size = New Size(180, 48)
         btnExit.TabIndex = 1
         btnExit.Text = "EXIT"
-        ' 
-        ' dgvLaporan
-        ' 
-        DataGridViewCellStyle16.BackColor = Color.White
-        dgvLaporan.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
-        dgvLaporan.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        dgvLaporan.BackgroundColor = Color.LightGray
-        DataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        DataGridViewCellStyle17.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        DataGridViewCellStyle17.ForeColor = Color.White
-        DataGridViewCellStyle17.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = DataGridViewTriState.True
-        dgvLaporan.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
-        dgvLaporan.ColumnHeadersHeight = 4
-        dgvLaporan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = Color.White
-        DataGridViewCellStyle18.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        DataGridViewCellStyle18.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        DataGridViewCellStyle18.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle18.WrapMode = DataGridViewTriState.False
-        dgvLaporan.DefaultCellStyle = DataGridViewCellStyle18
-        dgvLaporan.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        dgvLaporan.Location = New Point(7, 8)
-        dgvLaporan.Name = "dgvLaporan"
-        dgvLaporan.RowHeadersVisible = False
-        dgvLaporan.RowHeadersWidth = 62
-        dgvLaporan.Size = New Size(597, 288)
-        dgvLaporan.TabIndex = 1
-        dgvLaporan.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
-        dgvLaporan.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        dgvLaporan.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
-        dgvLaporan.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
-        dgvLaporan.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
-        dgvLaporan.ThemeStyle.BackColor = Color.LightGray
-        dgvLaporan.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        dgvLaporan.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        dgvLaporan.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        dgvLaporan.ThemeStyle.HeaderStyle.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        dgvLaporan.ThemeStyle.HeaderStyle.ForeColor = Color.White
-        dgvLaporan.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        dgvLaporan.ThemeStyle.HeaderStyle.Height = 4
-        dgvLaporan.ThemeStyle.ReadOnly = False
-        dgvLaporan.ThemeStyle.RowsStyle.BackColor = Color.White
-        dgvLaporan.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        dgvLaporan.ThemeStyle.RowsStyle.Font = New Font("Montserrat SemiBold", 9F, FontStyle.Bold)
-        dgvLaporan.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        dgvLaporan.ThemeStyle.RowsStyle.Height = 33
-        dgvLaporan.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        dgvLaporan.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
         ' adminpanel
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(800, 606)
+        ClientSize = New Size(1017, 606)
         Controls.Add(btnExit)
         Controls.Add(tabcontrol)
         Name = "adminpanel"
         StartPosition = FormStartPosition.CenterScreen
         Text = "adminpanel"
         TabPage3.ResumeLayout(False)
+        TabPage3.PerformLayout()
+        CType(dgvLaporan, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel5.ResumeLayout(False)
         TabPage2.ResumeLayout(False)
         Guna2Panel2.ResumeLayout(False)
         TableLayoutPanel3.ResumeLayout(False)
@@ -921,7 +1014,6 @@ Partial Class adminpanel
         TableLayoutPanel1.PerformLayout()
         CType(dgvMenu, ComponentModel.ISupportInitialize).EndInit()
         tabcontrol.ResumeLayout(False)
-        CType(dgvLaporan, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -968,4 +1060,9 @@ Partial Class adminpanel
     Friend WithEvents txtUsername As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnkasirUpdate As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents dgvLaporan As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
+    Friend WithEvents dtpTo As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents dtpFrom As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents cbKasir As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents lblTotal As Label
 End Class

@@ -22,21 +22,21 @@ Partial Class daliyReport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2TabControl1 = New Guna.UI2.WinForms.Guna2TabControl()
         TabPage1 = New TabPage()
+        lblTotal = New Label()
         dgvLog = New Guna.UI2.WinForms.Guna2DataGridView()
         TableLayoutPanel1 = New TableLayoutPanel()
         dtpFrom = New Guna.UI2.WinForms.Guna2DateTimePicker()
         dtpTo = New Guna.UI2.WinForms.Guna2DateTimePicker()
         TabPage2 = New TabPage()
-        lblTotal = New Label()
         Guna2TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         CType(dgvLog, ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +53,7 @@ Partial Class daliyReport
         Guna2TabControl1.Location = New Point(0, 0)
         Guna2TabControl1.Name = "Guna2TabControl1"
         Guna2TabControl1.SelectedIndex = 0
-        Guna2TabControl1.Size = New Size(849, 436)
+        Guna2TabControl1.Size = New Size(872, 436)
         Guna2TabControl1.TabButtonHoverState.BorderColor = Color.Empty
         Guna2TabControl1.TabButtonHoverState.FillColor = Color.FromArgb(CByte(40), CByte(52), CByte(70))
         Guna2TabControl1.TabButtonHoverState.Font = New Font("Segoe UI Semibold", 10F)
@@ -81,40 +81,50 @@ Partial Class daliyReport
         TabPage1.Location = New Point(184, 4)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(661, 428)
+        TabPage1.Size = New Size(684, 428)
         TabPage1.TabIndex = 0
         TabPage1.Text = "TabPage1"
         TabPage1.UseVisualStyleBackColor = True
         ' 
+        ' lblTotal
+        ' 
+        lblTotal.AutoSize = True
+        lblTotal.Font = New Font("Segoe UI", 11F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblTotal.Location = New Point(502, 348)
+        lblTotal.Name = "lblTotal"
+        lblTotal.Size = New Size(88, 30)
+        lblTotal.TabIndex = 4
+        lblTotal.Text = "totalan"
+        ' 
         ' dgvLog
         ' 
-        DataGridViewCellStyle4.BackColor = Color.White
-        dgvLog.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-        dgvLog.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        DataGridViewCellStyle5.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle5.ForeColor = Color.White
-        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
-        dgvLog.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.BackColor = Color.White
+        dgvLog.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        dgvLog.Anchor = AnchorStyles.Left Or AnchorStyles.Right
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvLog.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         dgvLog.ColumnHeadersHeight = 4
         dgvLog.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = Color.White
-        DataGridViewCellStyle6.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle6.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        DataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.False
-        dgvLog.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = Color.White
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+        dgvLog.DefaultCellStyle = DataGridViewCellStyle3
         dgvLog.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         dgvLog.Location = New Point(6, 77)
         dgvLog.Name = "dgvLog"
         dgvLog.RowHeadersVisible = False
         dgvLog.RowHeadersWidth = 62
-        dgvLog.Size = New Size(647, 225)
+        dgvLog.Size = New Size(670, 225)
         dgvLog.TabIndex = 3
         dgvLog.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         dgvLog.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -151,13 +161,13 @@ Partial Class daliyReport
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 1
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.Size = New Size(647, 63)
+        TableLayoutPanel1.Size = New Size(670, 63)
         TableLayoutPanel1.TabIndex = 1
         ' 
         ' dtpFrom
         ' 
         dtpFrom.Checked = True
-        dtpFrom.CustomizableEdges = CustomizableEdges5
+        dtpFrom.CustomizableEdges = CustomizableEdges1
         dtpFrom.Dock = DockStyle.Fill
         dtpFrom.Font = New Font("Segoe UI", 9F)
         dtpFrom.Format = DateTimePickerFormat.Long
@@ -165,24 +175,24 @@ Partial Class daliyReport
         dtpFrom.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         dtpFrom.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         dtpFrom.Name = "dtpFrom"
-        dtpFrom.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        dtpFrom.Size = New Size(317, 57)
+        dtpFrom.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        dtpFrom.Size = New Size(329, 57)
         dtpFrom.TabIndex = 0
         dtpFrom.Value = New Date(2025, 6, 16, 21, 59, 36, 808)
         ' 
         ' dtpTo
         ' 
         dtpTo.Checked = True
-        dtpTo.CustomizableEdges = CustomizableEdges7
+        dtpTo.CustomizableEdges = CustomizableEdges3
         dtpTo.Dock = DockStyle.Fill
         dtpTo.Font = New Font("Segoe UI", 9F)
         dtpTo.Format = DateTimePickerFormat.Long
-        dtpTo.Location = New Point(326, 3)
+        dtpTo.Location = New Point(338, 3)
         dtpTo.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         dtpTo.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         dtpTo.Name = "dtpTo"
-        dtpTo.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        dtpTo.Size = New Size(318, 57)
+        dtpTo.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        dtpTo.Size = New Size(329, 57)
         dtpTo.TabIndex = 1
         dtpTo.Value = New Date(2025, 6, 16, 22, 0, 8, 178)
         ' 
@@ -191,26 +201,16 @@ Partial Class daliyReport
         TabPage2.Location = New Point(184, 4)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(637, 428)
+        TabPage2.Size = New Size(684, 428)
         TabPage2.TabIndex = 1
         TabPage2.Text = "TabPage2"
         TabPage2.UseVisualStyleBackColor = True
-        ' 
-        ' lblTotal
-        ' 
-        lblTotal.AutoSize = True
-        lblTotal.Font = New Font("Segoe UI", 11F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        lblTotal.Location = New Point(502, 348)
-        lblTotal.Name = "lblTotal"
-        lblTotal.Size = New Size(88, 30)
-        lblTotal.TabIndex = 4
-        lblTotal.Text = "totalan"
         ' 
         ' daliyReport
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(849, 436)
+        ClientSize = New Size(872, 436)
         Controls.Add(Guna2TabControl1)
         Name = "daliyReport"
         Text = "daliyReport"
